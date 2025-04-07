@@ -1,0 +1,152 @@
+// header.scss
+.header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+
+    .desktop-header {
+        display: block;
+        padding: 1rem 2rem;
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1440px;
+            margin: 0 auto;
+
+            .logo {
+                height: 50px;
+            }
+
+            .nav-links {
+                display: none;
+                gap: 2rem;
+
+                a {
+                    color: white;
+                    text-decoration: none;
+                    font-size: 1.1rem;
+                    transition: color 0.3s ease;
+
+                    &.active {
+                        color: #3b82f6;
+                        font-weight: 600;
+                    }
+
+                    &:hover {
+                        color: #3b82f6;
+                    }
+                }
+            }
+
+            .header-actions {
+                display: flex;
+
+                .login-btn {
+                    background: #3b82f6;
+                    padding: 0.75rem 1.5rem;
+                    border-radius: 8px;
+                    transition: all 0.3s ease;
+
+                    &:hover {
+                        background: #2563eb;
+                    }
+                }
+            }
+        }
+    }
+
+    .mobile-header {
+        display: none;
+        padding: 1rem;
+        justify-content: space-between;
+        align-items: center;
+        background: #1a1a1a;
+
+        .logo {
+            height: 32px;
+        }
+
+        .menu-icon {
+            background: none;
+            border: none;
+            color: white;
+            cursor: pointer;
+            padding: 8px;
+            border-radius: 8px;
+            transition: background 0.3s ease;
+
+            &:hover {
+                background: rgba(255, 255, 255, 0.1);
+            }
+        }
+    }
+
+    .mobile-nav {
+        position: fixed;
+        top: 60px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 60px);
+        background: rgba(0, 0, 0, 0.98);
+        backdrop-filter: blur(10px);
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        overflow-y: auto;
+
+        &.open {
+            left: 0;
+        }
+
+        .nav-content {
+            padding: 2rem 1.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+
+            a {
+                color: white;
+                text-decoration: none;
+                font-size: 1.25rem;
+                padding: 1rem;
+                border-radius: 8px;
+                transition: all 0.3s ease;
+
+                &.active {
+                    color: #3b82f6;
+                    font-weight: 600;
+                    background: rgba(255, 255, 255, 0.05);
+                }
+
+                &:hover {
+                    background: rgba(255, 255, 255, 0.1);
+                }
+            }
+
+            .mobile-login-btn {
+                margin-top: 2rem;
+                width: 100%;
+                padding: 1rem;
+                background: #3b82f6;
+                border-radius: 8px;
+                font-size: 1.1rem;
+                transition: all 0.3s ease;
+
+                &:hover {
+                    background: #2563eb;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 1000px) {
+        .desktop-header {
+            display: none;
+        }
+
+        .mobile-header {
+            display: flex;
+        }
+    }
+}

@@ -1,0 +1,15 @@
+.nav-link {
+    transition: transform 0.5s ease-in-out, color 0.3s ease-in-out;
+    transform-origin: left bottom;
+    font-size: 20px;
+}
+
+.nav-link:hover {
+    transform: scale(1.32);
+}
+
+@media (max-width: 1000px) {
+    .navbar {
+        display: none;
+    }
+}
