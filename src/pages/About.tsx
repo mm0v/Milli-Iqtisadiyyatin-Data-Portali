@@ -8,7 +8,7 @@ const About = () => {
         <div className="aboutPage  h-[110vh]">
             <div>
                 <div className="absolute top-0 left-0 w-full h-full object-cover -z-10"
-                    style={{ top: 0, left: 0, width: '100%', height: '100%', backgroundColor: '#050412' }}>
+                    style={{ top: 0, left: 0, width: '100%', height: '160vh', backgroundColor: '#050412' }}>
 
                 </div>
 
