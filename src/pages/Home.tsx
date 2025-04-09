@@ -1,10 +1,27 @@
 import Navbar from "@/layout/Navbar";
-import "../assets/sass/home.scss"
-import { useTranslation } from "react-i18next"; 
+import "../assets/sass/home.scss";
+import { useTranslation } from "react-i18next";
+import Chatbot from "../components/Chatbot"; // Adjust the path as needed
+import AccessibilityMenu from "@/components/AccessibilityMenu";
 
 const Home = () => {
-  const { t } = useTranslation(); // useTranslation() istifadə olunur
+  const { t } = useTranslation();
 
+  const handleDarkModeChange = (enabled: boolean) => {
+    console.log("Dark mode:", enabled);
+  };
+
+  const handleVoiceAccessChange = (enabled: boolean) => {
+    console.log("Voice access:", enabled);
+  };
+
+  const handleMagnifierChange = (enabled: boolean) => {
+    console.log("Magnifier:", enabled);
+  };
+
+  const handleLanguageChange = (language: string) => {
+    console.log("Language changed to:", language);
+  };
 
   return (
     <div className="homePage">
@@ -15,9 +32,8 @@ const Home = () => {
         </video>
       </div>
 
-      {/* Content overlay - perfectly centered */}
       <div className="mainWord">
-      <h1 className="font-bold texth1">
+        <h1 className="font-bold texth1">
           <span dangerouslySetInnerHTML={{ __html: t('data-portal') }} />
         </h1>
         <h6 className="texth6 mt-2">
@@ -28,20 +44,15 @@ const Home = () => {
         <Navbar />
       </div>
 
+      {/* Add accessibility menu component */}
+      <AccessibilityMenu
+        onDarkModeChange={handleDarkModeChange}
+        onVoiceAccessChange={handleVoiceAccessChange}
+        onMagnifierChange={handleMagnifierChange}
+        onLanguageChange={handleLanguageChange}
+      />
 
-      {/* Accessibility and Chatbot icons */}
-      <div className="absolute bottom-5 right-5 flex flex-col gap-4">
-        <img
-          src="./header/accessibility.svg"
-          alt="Accessibility Icon"
-          className="w-16 h-16 cursor-pointer mb-5"
-        />
-        <img
-          src="./header/chatbot.svg"
-          alt="Chatbot Icon"
-          className="w-16 h-16 cursor-pointer"
-        />
-      </div>
+      <Chatbot />
     </div>
   );
 };
