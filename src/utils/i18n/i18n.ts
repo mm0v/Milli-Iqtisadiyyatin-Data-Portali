@@ -15,7 +15,8 @@ const resources = {
       "analytics": "Analytics",
       "report": "Research and Reports",
       "help": "Help and Support",
-
+"data-portal": "National Economy <br /> Data portal",
+"data-world": "Journey into the World of Data",
     }
   },
   az: {
@@ -30,7 +31,8 @@ const resources = {
       "analytics": "Analitika",
       "report": "Araşdırma və hesabatlar",
       "help": "Yardım və Dəstək",
-
+"data-portal": "Milli iqtisadiyyatın <br /> Data portalı",
+"data-world": "Data dünyasına səyahət edin",
     }
   },
   ru: {
@@ -45,7 +47,8 @@ const resources = {
       "analytics": "Аналитика",
       "report": "Исследования и отчеты",
       "help": "Помощь и поддержка",
-
+"data-portal": "Портал данных <br /> национальной экономики",
+"data-world": "Путешествуйте по миру данных",
     }
   }
 };

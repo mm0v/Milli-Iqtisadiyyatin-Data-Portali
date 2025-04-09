@@ -4,7 +4,7 @@ import { FiMenu, FiSearch, FiX } from 'react-icons/fi';
 import { Link, useLocation } from 'react-router-dom';
 import i18n from '@/utils/i18n/i18n';
 import "../../src/assets/sass/header.scss";
-import { Input } from '@mui/material';
+import { InputBase } from '@mui/material';
 
 const Header = () => {
     const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
@@ -54,23 +54,37 @@ const Header = () => {
                             </Link>
                         </div>
 
-                        <div className="relative flex items-center group">
-                            <Input
-                                type="text"
-                                value={searchQuery}
-                                onChange={handleSearchChange}
-                                placeholder={i18n.t('search')}
-                                aria-label="Search"
-                                className="w-full pl-10 pr-4 py-3 rounded-xl border-none bg-white/5 text-white placeholder:text-white/60
-                                 transition-all duration-200
-                                 hover:bg-white/10 focus:bg-white/10
-                                [&>input]:text-white"
-                                style={{ color: 'white' }}
-                            />
-                            <FiSearch className="absolute left-3 top-1/2 transform -translate-y-1/2 
-                      text-white/60 group-hover:text-white 
-                      transition-colors duration-200 " />
-                        </div>
+                   
+
+<div className="relative flex items-center group">
+  <InputBase
+    value={searchQuery}
+    onChange={handleSearchChange}
+    placeholder={i18n.t('search')}
+    aria-label="Search"
+    fullWidth
+    sx={{
+      color: 'white',
+      bgcolor: 'rgba(255,255,255,0.05)',
+      borderRadius: '12px',
+      pl: 5,
+      pr: 2,
+      py: 1.5,
+      transition: 'all 0.2s',
+      '& input::placeholder': {
+        color: 'white', // Placeholder ağ rəngdə
+        opacity: 1,
+      },
+      '&:hover': {
+        bgcolor: 'rgba(255,255,255,0.1)',
+      },
+      '&.Mui-focused': {
+        bgcolor: 'rgba(255,255,255,0.1)',
+      },
+    }}
+  />
+  <FiSearch className="absolute left-3 top-1/2 text-xl -translate-y-1/2 transform text-white transition-colors duration-200" />
+</div>
 
                         <div className="header-actions">
                             <div className="mr-3 rounded-2xl bg-white/10 backdrop-blur-sm transition-all hover:bg-white/20 focus-within:ring-2 focus-within:ring-blue-500 focus-within:ring-offset-2 focus-within:ring-offset-gray-900">

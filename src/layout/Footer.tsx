@@ -59,7 +59,7 @@ const Footer = () => {
                             {/* Social media icons */}
                             <div className="footer-social order-3 flex space-x-4 md:space-x-6">
                                 <a
-                                    href="https://www.facebook.com/"
+                                    href="https://www.facebook.com/4sim.gov.az"
                                     target="_blank"
                                     rel="noreferrer"
                                     className="social-icon text-white hover:text-[#145DBF] transition duration-300"
@@ -68,7 +68,7 @@ const Footer = () => {
                                     <FacebookIcon fontSize="medium" />
                                 </a>
                                 <a
-                                    href="https://www.instagram.com/"
+                                    href="https://www.instagram.com/c4ir_azerbaijan/"
                                     target="_blank"
                                     rel="noreferrer"
                                     className="social-icon text-white hover:text-[#145DBF] transition duration-300"
@@ -77,7 +77,7 @@ const Footer = () => {
                                     <InstagramIcon fontSize="medium" />
                                 </a>
                                 <a
-                                    href="https://www.linkedin.com/"
+                                    href="https://www.linkedin.com/company/4simgovaz/"
                                     target="_blank"
                                     rel="noreferrer"
                                     className="social-icon text-white hover:text-[#145DBF] transition duration-300"
