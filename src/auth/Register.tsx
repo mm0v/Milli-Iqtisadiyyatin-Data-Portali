@@ -20,7 +20,7 @@ const Register = () => {
     return (
         <div>
             <div>
-                {/* <div className="fixed inset-0 -z-10">
+                <div className="fixed inset-0 -z-10">
                     <video
                         autoPlay
                         loop
@@ -30,13 +30,13 @@ const Register = () => {
                         <source src="./signIn/bg-video-signIn.mp4" type="video/mp4" />
                         Your browser does not support the video tag.
                     </video>
-                </div> */}
-                <div className="absolute top-0 left-0 w-full h-full object-cover -z-10"
-                    style={{ top: 0, left: 0, width: '100%', height: '100%', backgroundColor: '#050412' }}>
                 </div>
+                {/* <div className="absolute top-0 left-0 w-full h-full object-cover -z-10"
+                    style={{ top: 0, left: 0, width: '100%', height: '100%', backgroundColor: '#050412' }}>
+                </div> */}
             </div>
             <div className="flex justify-end items-center min-h-screen p-4">
-                <Card className="w-full max-w-lg bg-[#070618]">
+                <Card className="w-full max-w-lg text-white bg-[#070618]">
                     {/* bg-transparent */}
                     <CardHeader className="text-center">
                         <CardTitle className="text-white">Hesab Yarat</CardTitle>
@@ -77,6 +77,20 @@ const Register = () => {
                                 <p className="text-xs text-gray-500">
                                     8 və ya daha çox karakter, simvoldan istifadə edin
                                 </p>
+                                <Label className="text-white" htmlFor="password">Şifrə təkrar daxil edin</Label>
+                                <div className="relative">
+                                    <Input
+                                        id="password"
+                                        type={showPassword ? "text" : "password"} className="h-12" placeholder="Şifrənizi təkrar daxil edin"
+                                    />
+                                    <button
+                                        type="button"
+                                        className="absolute right-3 top-1/2 transform -translate-y-1/2"
+                                        onClick={() => setShowPassword(!showPassword)}
+                                    >
+                                        {showPassword ? <EyeOff size={18} className="text-white" /> : <Eye className="text-white" size={18} />}
+                                    </button>
+                                </div>
                             </div>
 
                             <div className="flex flex-col lg:flex-row">

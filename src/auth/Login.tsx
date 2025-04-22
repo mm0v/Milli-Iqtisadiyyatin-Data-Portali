@@ -15,7 +15,7 @@ const Login = () => {
     return (
         <div>
             <div>
-                {/* <div className="fixed inset-0 -z-10">
+                <div className="fixed inset-0 -z-10">
                     <video
                         autoPlay
                         loop
@@ -25,10 +25,10 @@ const Login = () => {
                         <source src="./signIn/bg-video-signIn.mp4" type="video/mp4" />
                         Your browser does not support the video tag.
                     </video>
-                </div> */}
-                <div className="absolute top-0 left-0 w-full h-full object-cover -z-10"
-                    style={{ top: 0, left: 0, width: '100%', height: '100%', backgroundColor: '#050412' }}>
                 </div>
+                {/* <div className="absolute top-0 left-0 w-full h-full object-cover -z-10"
+                    style={{ top: 0, left: 0, width: '100%', height: '100%', backgroundColor: '#050412' }}>
+                </div> */}
             </div>
             <div className="flex items-center justify-end min-h-screen p-4">
                 <Card className="w-full max-w-lg bg-[#070618] text-white">

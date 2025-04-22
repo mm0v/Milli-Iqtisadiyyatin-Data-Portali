@@ -4,7 +4,7 @@ import four_center from "/logoMinistry/4SIM.png";
 
 const LogoMinsitry = () => {
     return (
-        <div className="pt-4 bg-[#050412]">
+        <div className="pt-4 ">
             <div className="flex justify-around items-center flex-wrap">
                 <div className="p-6">
                     <a href="https://www.economy.gov.az" target="_blank" rel="noreferrer noopener">

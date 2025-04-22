@@ -4,7 +4,7 @@ import IconAccordion from "/report/IconAccordion.png"
 export default function CustomizedAccordionsAcademic() {
 
     return (
-        <div className='bg-[#050412]'>
+        <div className=''>
             <div className="px-4 lg:px-8 xl:px-10 py-6 flex justify-end items-center">
                 <div className="w-[830px]">
                     <div className="mb-8">
@@ -29,7 +29,7 @@ export default function CustomizedAccordionsAcademic() {
                     {/* Accordions */}
                     <div className="text-white">
                         <Link to={"/academic_reports/economic_reports"}>
-                            <div className='flex justify-between items-center mt-6 border-1 rounded-[8px] p-5'    style={{ borderColor: '#373641' }}>
+                            <div className='flex justify-between items-center mt-6 border-1 rounded-[8px] p-5' style={{ borderColor: '#373641' }}>
                                 <div>
                                     <h1>İqtisadi Tədqiqatları</h1>
                                 </div>
@@ -39,7 +39,7 @@ export default function CustomizedAccordionsAcademic() {
                             </div>
                         </Link>
                         <Link to={"/academic_reports/financial_reports"}>
-                            <div className='flex justify-between items-center mt-6 border-1 rounded-[8px] p-5'    style={{ borderColor: '#373641' }}>
+                            <div className='flex justify-between items-center mt-6 border-1 rounded-[8px] p-5' style={{ borderColor: '#373641' }}>
                                 <div>
                                     <h1>Maliyyə Tədqiqatları</h1>
                                 </div>
@@ -49,7 +49,7 @@ export default function CustomizedAccordionsAcademic() {
                             </div>
                         </Link>
                         <Link to={"/academic_reports/science_reports"}>
-                            <div className='flex justify-between items-center mt-6 border-1 rounded-[8px] p-5'   style={{ borderColor: '#373641' }}>
+                            <div className='flex justify-between items-center mt-6 border-1 rounded-[8px] p-5' style={{ borderColor: '#373641' }}>
                                 <div>
                                     <h1>Elmi Tədqiqatlar</h1>
                                 </div>

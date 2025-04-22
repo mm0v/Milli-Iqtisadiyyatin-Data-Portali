@@ -5,18 +5,24 @@ import LogoMinsitry from "@/components/LogoMinsitry"
 
 const About = () => {
     return (
-        <div className="aboutPage  h-[114vh] bg-[#050412]">
+        <div className="aboutPage  h-[114vh]">
             <div>
-                <div className="absolute top-0 left-0 w-full h-full object-cover -z-10"
+                {/* <div className="absolute top-0 left-0 w-full h-full object-cover -z-10"
                     style={{ top: 0, left: 0, width: '100%', height: '100%', backgroundColor: '#050412' }}>
 
-                </div>
-
-                {/* <div className="video-background">
-                    <video autoPlay loop muted>
-                        <source src="./bg/1.mp4" type="video/mp4" />
-                    </video>
                 </div> */}
+
+                <div className="fixed inset-0 -z-10">
+                    <video
+                        autoPlay
+                        loop
+                        muted
+                        className="w-full h-full object-cover"
+                    >
+                        <source src="./about/bg-about.mov" type="video/mp4" />
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
 
                 <div>
                     <CustomizedAccordions />
