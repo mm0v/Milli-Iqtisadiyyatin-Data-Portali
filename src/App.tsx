@@ -4,7 +4,6 @@ import Home from './pages/Home'
 import Header from './layout/Header'
 import Footer from './layout/Footer'
 import Login from './auth/Login'
-import Register from './auth/Register'
 import About from './pages/About'
 import HelpAndContact from './pages/HelpAndContact'
 import Analytics from './pages/Analytics'
@@ -21,6 +20,7 @@ import ScienceReports from './pages/ScienceReports'
 import PublicationEconomic from './pages/PublicationEconomic'
 import PublicationFinancial from './pages/PublicationFinancial'
 import PublicationScience from './pages/PublicationScience'
+import Register from './auth/Register'
 
 const MainLayout = () => {
   const location = useLocation();

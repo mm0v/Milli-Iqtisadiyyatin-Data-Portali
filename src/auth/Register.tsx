@@ -8,6 +8,7 @@ import { Eye, EyeOff } from "lucide-react";
 import CustomPhoneInput from "@/components/PhoneInput";
 import { Link } from "react-router-dom";
 import FileUpload from "@/components/FileUpload";
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 
 const Register = () => {
     const [showPassword, setShowPassword] = useState(false);
@@ -37,26 +38,35 @@ const Register = () => {
             </div>
             <div className="flex justify-end items-center min-h-screen p-4">
                 <Card className="w-full max-w-lg text-white bg-[#070618]">
-                    {/* bg-transparent */}
-                    <CardHeader className="text-center">
-                        <CardTitle className="text-white">Hesab Yarat</CardTitle>
-                    </CardHeader>
+                    <div className="flex">
+                        <div className="ml-4 bg-blue-400 rounded-2xl p-1">
+                            <Link to={"/"}>
+                                <ArrowBackIcon className="text-white" />
+                            </Link>
+                        </div>
+                        {/* bg-transparent */}
+                        <div className="w-full">
+                            <CardHeader className="text-center">
+                                <CardTitle className="text-white">Hesab Yarat</CardTitle>
+                            </CardHeader>
+                        </div>
+                    </div>
                     <CardContent>
                         <form>
                             <div className="flex flex-col md:flex-row mb-4 gap-2">
                                 <div className="space-y-2 w-full md:w-1/2">
                                     <Label className="text-white" htmlFor="firstName">Ad</Label>
-                                    <Input id="firstName" className="h-12" placeholder="Adınızı daxil edin" />
+                                    <Input id="firstName" className="h-12" />
                                 </div>
                                 <div className="space-y-2 w-full md:w-1/2">
                                     <Label className="text-white" htmlFor="lastName">Soyad</Label>
-                                    <Input id="lastName" className="h-12" placeholder="Soyadınızı daxil edin" />
+                                    <Input id="lastName" className="h-12" />
                                 </div>
                             </div>
 
                             <div className="space-y-2 mb-4">
                                 <Label className="text-white" htmlFor="email">E-mail</Label>
-                                <Input id="email" type="email" className="h-12" placeholder="E-poçt ünvanı daxil edin" />
+                                <Input id="email" type="email" className="h-12" />
                             </div>
 
                             <div className="space-y-2 mb-4">
@@ -64,7 +74,7 @@ const Register = () => {
                                 <div className="relative">
                                     <Input
                                         id="password"
-                                        type={showPassword ? "text" : "password"} className="h-12" placeholder="Şifrənizi daxil edin"
+                                        type={showPassword ? "text" : "password"} className="h-12"
                                     />
                                     <button
                                         type="button"
@@ -81,7 +91,7 @@ const Register = () => {
                                 <div className="relative">
                                     <Input
                                         id="password"
-                                        type={showPassword ? "text" : "password"} className="h-12" placeholder="Şifrənizi təkrar daxil edin"
+                                        type={showPassword ? "text" : "password"} className="h-12"
                                     />
                                     <button
                                         type="button"
@@ -98,12 +108,11 @@ const Register = () => {
                                     <Label htmlFor="phone"><p className="text-white">Nömrə</p></Label>
                                     <CustomPhoneInput />
                                     <Label className="text-white" htmlFor="workplace">İş Yeri</Label>
-                                    <Input id="workplace" className="h-12" placeholder="İş yerinizi daxil edin" />
+                                    <Input id="workplace" className="h-12" />
                                 </div>
                                 <div className="w-full lg:w-3/12 text-white">
                                     <FileUpload
                                         onFileChange={handleFileChange}
-                                        minSizeInMB={2.3}
                                         acceptedFormats={['image/jpeg', 'image/png']}
                                     />
                                 </div>

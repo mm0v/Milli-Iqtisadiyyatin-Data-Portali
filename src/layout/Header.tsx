@@ -54,37 +54,37 @@ const Header = () => {
                             </Link>
                         </div>
 
-                   
 
-<div className="relative flex items-center group">
-  <InputBase
-    value={searchQuery}
-    onChange={handleSearchChange}
-    placeholder={i18n.t('search')}
-    aria-label="Search"
-    fullWidth
-    sx={{
-      color: 'white',
-      bgcolor: 'rgba(255,255,255,0.05)',
-      borderRadius: '12px',
-      pl: 5,
-      pr: 2,
-      py: 1.5,
-      transition: 'all 0.2s',
-      '& input::placeholder': {
-        color: 'white', // Placeholder ağ rəngdə
-        opacity: 1,
-      },
-      '&:hover': {
-        bgcolor: 'rgba(255,255,255,0.1)',
-      },
-      '&.Mui-focused': {
-        bgcolor: 'rgba(255,255,255,0.1)',
-      },
-    }}
-  />
-  <FiSearch className="absolute left-3 top-1/2 text-xl -translate-y-1/2 transform text-white transition-colors duration-200" />
-</div>
+
+                        <div className="relative flex items-center group">
+                            <InputBase
+                                value={searchQuery}
+                                onChange={handleSearchChange}
+                                placeholder={i18n.t('search')}
+                                aria-label="Search"
+                                fullWidth
+                                sx={{
+                                    color: 'white',
+                                    bgcolor: 'rgba(255,255,255,0.05)',
+                                    borderRadius: '12px',
+                                    pl: 5,
+                                    pr: 2,
+                                    py: 1.5,
+                                    transition: 'all 0.2s',
+                                    '& input::placeholder': {
+                                        color: 'white', // Placeholder ağ rəngdə
+                                        opacity: 1,
+                                    },
+                                    '&:hover': {
+                                        bgcolor: 'rgba(255,255,255,0.1)',
+                                    },
+                                    '&.Mui-focused': {
+                                        bgcolor: 'rgba(255,255,255,0.1)',
+                                    },
+                                }}
+                            />
+                            <FiSearch className="absolute left-3 top-1/2 text-xl -translate-y-1/2 transform text-white transition-colors duration-200" />
+                        </div>
 
                         <div className="header-actions">
                             <div className="mr-3 rounded-2xl bg-white/10 backdrop-blur-sm transition-all hover:bg-white/20 focus-within:ring-2 focus-within:ring-blue-500 focus-within:ring-offset-2 focus-within:ring-offset-gray-900">
@@ -162,7 +162,12 @@ const Header = () => {
                             <Link to="/contact" onClick={toggleMobileNav} className={location.pathname === "/contact" ? "active" : ""}>
                                 {i18n.t('Yardım və Dəstək')}
                             </Link>
-                            <Button className="mobile-login-btn">{i18n.t('login')}</Button>
+                            <Link to="/login" onClick={toggleMobileNav} className={location.pathname === "/login" ? "active" : "bg-blue-900"}>
+                                <h1 className='text-white'>{i18n.t('Daxil ol')}</h1>
+                            </Link>
+                            <Link to="/register" onClick={toggleMobileNav} className={location.pathname === "/registr" ? "active" : "bg-blue-900"}>
+                                <h1 className='text-white'>{i18n.t('Qeydiyyatdan keç')}</h1>
+                            </Link>
                         </nav>
                     </div>
                 </>

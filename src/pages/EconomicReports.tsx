@@ -9,11 +9,18 @@ const EconomicReports = () => {
             <div className="absolute top-0 left-0 w-full h-full object-cover -z-10"
                 style={{ top: 0, left: 0, width: '100%', height: '250vh', backgroundColor: '#050412' }}>
             </div>
-            <div className="video-background">
-                <video autoPlay loop muted>
+            <div className="fixed inset-0 -z-10">
+                <video
+                    autoPlay
+                    loop
+                    muted
+                    className="w-full h-full object-cover"
+                >
                     <source src="./about/bg-about.mov" type="video/mp4" />
+                    Your browser does not support the video tag.
                 </video>
             </div>
+
             <div className="absolute top-30 left-10 wayOfReportsAndPublications">
                 <div>
                     <NavLink
@@ -126,11 +133,22 @@ const EconomicReports = () => {
                     <div className='flex items-center p-4 border-1 w-120 rounded-2xl mt-3'>
                         <div>
                             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M5.25842 16.1794C5.25842 10.1479 10.1479 5.25842 16.1794 5.25842C22.2109 5.25842 27.1003 10.1479 27.1003 16.1794C27.1003 22.2109 22.2109 27.1003 16.1794 27.1003C10.1479 27.1003 5.25842 22.2109 5.25842 16.1794ZM16.1794 2.83154C8.80757 2.83154 2.83154 8.80757 2.83154 16.1794C2.83154 23.5512 8.80757 29.5272 16.1794 29.5272C23.5512 29.5272 29.5272 23.5512 29.5272 16.1794C29.5272 8.80757 23.5512 2.83154 16.1794 2.83154ZM17.3928 10.6515C17.3928 9.98133 16.8495 9.43805 16.1794 9.43805C15.5092 9.43805 14.9659 9.98133 14.9659 10.6515V17.6625C14.9659 18.3327 15.5092 18.876 16.1794 18.876C16.8495 18.876 17.3928 18.3327 17.3928 17.6625V10.6515ZM17.5276 21.5725C17.5276 22.3171 16.924 22.9207 16.1794 22.9207C15.4347 22.9207 14.8311 22.3171 14.8311 21.5725C14.8311 20.8278 15.4347 20.2242 16.1794 20.2242C16.924 20.2242 17.5276 20.8278 17.5276 21.5725Z" fill="#F04438" />
+                                <path
+                                    fillRule="evenodd"
+                                    clipRule="evenodd"
+                                    d="M5.25842 16.1794C5.25842 10.1479 10.1479 5.25842 16.1794 5.25842C22.2109 5.25842 27.1003 10.1479 27.1003 16.1794C27.1003 22.2109 22.2109 27.1003 16.1794 27.1003C10.1479 27.1003 5.25842 22.2109 5.25842 16.1794ZM16.1794 2.83154C8.80757 2.83154 2.83154 8.80757 2.83154 16.1794C2.83154 23.5512 8.80757 29.5272 16.1794 29.5272C23.5512 29.5272 29.5272 23.5512 29.5272 16.1794C29.5272 8.80757 23.5512 2.83154 16.1794 2.83154ZM17.3928 10.6515C17.3928 9.98133 16.8495 9.43805 16.1794 9.43805C15.5092 9.43805 14.9659 9.98133 14.9659 10.6515V17.6625C14.9659 18.3327 15.5092 18.876 16.1794 18.876C16.8495 18.876 17.3928 18.3327 17.3928 17.6625V10.6515ZM17.5276 21.5725C17.5276 22.3171 16.924 22.9207 16.1794 22.9207C15.4347 22.9207 14.8311 22.3171 14.8311 21.5725C14.8311 20.8278 15.4347 20.2242 16.1794 20.2242C16.924 20.2242 17.5276 20.8278 17.5276 21.5725Z"
+                                    fill="#F04438"
+                                />
                             </svg>
                         </div>
                         <div className='ml-2'>
-                            <h1>Daha çox iqtisadi tədqiqatlar üçün qeydiyyatdan keçin</h1>
+                            <h1>
+                                Daha çox iqtisadi tədqiqatlar üçün{" "}
+                                <NavLink className='underline underline-offset-8 hover:text-blue-600 transition' to="/register">
+                                    qeydiyyatdan keçin
+                                </NavLink>
+                            </h1>
+
                         </div>
                     </div>
                     <div className='flex blur-xs'>

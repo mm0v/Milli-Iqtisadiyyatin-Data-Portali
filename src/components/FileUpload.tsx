@@ -7,15 +7,13 @@ import { Alert, AlertDescription } from '@/components/ui/alert';
 interface FileUploadProps {
     onFileChange: (file: File | null) => void;
     maxSizeInMB?: number;
-    minSizeInMB?: number;
     acceptedFormats?: string[];
     label?: string;
 }
 
 const FileUpload: React.FC<FileUploadProps> = ({
     onFileChange,
-    maxSizeInMB = 10,
-    minSizeInMB = 2.3,
+    maxSizeInMB = 3,
     acceptedFormats = ['image/jpeg', 'image/png'],
     label = 'Şəkil'
 }) => {
@@ -41,13 +39,8 @@ const FileUpload: React.FC<FileUploadProps> = ({
             return;
         }
 
-        // Check file size
+        // Check file size (only maximum)
         const fileSizeInMB = selectedFile.size / (1024 * 1024);
-        if (fileSizeInMB < minSizeInMB) {
-            setError(`Fayl ən azı ${minSizeInMB} MB olmalıdır.`);
-            return;
-        }
-
         if (fileSizeInMB > maxSizeInMB) {
             setError(`Fayl ${maxSizeInMB} MB-dan böyük ola bilməz.`);
             return;
@@ -106,7 +99,7 @@ const FileUpload: React.FC<FileUploadProps> = ({
                                 <Plus className="h-6 w-6 text-gray-500" />
                             </div>
                             <p className="text-xs text-gray-500 text-center">
-                                {minSizeInMB} MB-dan çox olmalıdır. JPEG, PNG formatında
+                                {maxSizeInMB} MB-dan çox olmamalıdır. JPEG, PNG formatında
                             </p>
                             <input
                                 id="file-upload"

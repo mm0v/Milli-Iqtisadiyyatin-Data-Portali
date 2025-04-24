@@ -70,7 +70,7 @@ export default function CustomizedAccordions() {
                         id="panel1d-header"
                     >
                         <Typography sx={{
-                            fontSize: { xs: '1.5rem', sm: '2rem', md: '3rem' },
+                            fontSize: { xs: '1.5rem', sm: '2rem', md: '2.32rem' },
                             fontWeight: "700",
                             color: "#8994D7",
                             lineHeight: 1.2
@@ -79,7 +79,7 @@ export default function CustomizedAccordions() {
                         </Typography>
                     </AccordionSummary>
                     <AccordionDetails>
-                        <Typography className='text-white' sx={{ fontSize: { xs: '0.875rem', sm: '1rem' } }}>
+                        <Typography className='text-white' sx={{ fontSize: { xs: '0.895rem' } }}>
                             Milli İqtisadiyyatın Data Portalı, Dördüncü Sənaye İnqilabının Təhlili və Koordinasiya Mərkəzi (4SİM)
                             tərəfindən yaradılan innovativ məlumat platformasıdır. Portalın məqsədi Azərbaycan iqtisadiyyatı
                             üzrə açıq, etibarlı və real vaxt rejimində yenilənən məlumatları vahid məkanda cəmləşdirmək,
@@ -95,7 +95,7 @@ export default function CustomizedAccordions() {
                         id="panel2d-header"
                     >
                         <Typography sx={{
-                            fontSize: { xs: '1.5rem', sm: '2rem', md: '3rem' },
+                            fontSize: { xs: '1.5rem', sm: '2rem', md: '2.32rem' },
                             fontWeight: "700",
                             color: "#8994D7",
                             lineHeight: 1.2
@@ -107,7 +107,7 @@ export default function CustomizedAccordions() {
                         <div className="flex justify-center mb-4">
                             <img className='w-full max-w-[400px]' src={Meqsed} alt="Meqsed" />
                         </div>
-                        <Typography className='text-white' sx={{ fontSize: { xs: '0.875rem', sm: '1rem' } }}>
+                        <Typography className='text-white' sx={{ fontSize: { xs: '0.895rem' } }}>
                             Milli İqtisadiyyatın Data Portalı Azərbaycan iqtisadiyyatına dair məlumatların
                             şəffaflığını və əlçatanlığını artıraraq dövlət qurumlarını, biznesləri, investorları
                             və tədqiqatçıları etibarlı məlumatlarla təmin etməyi hədəfləyir. Portal vasitəsilə iqtisadi
@@ -123,7 +123,7 @@ export default function CustomizedAccordions() {
                         id="panel3d-header"
                     >
                         <Typography sx={{
-                            fontSize: { xs: '1.5rem', sm: '2rem', md: '3rem' },
+                            fontSize: { xs: '1.5rem', sm: '2rem', md: '2.32rem' },
                             fontWeight: "700",
                             color: "#8994D7",
                             lineHeight: 1.2
@@ -135,7 +135,7 @@ export default function CustomizedAccordions() {
                         <div className="flex justify-center mb-4">
                             <img className='w-full max-w-[400px]' src={Missya} alt="Missya" />
                         </div>
-                        <Typography className='text-white' sx={{ fontSize: { xs: '0.875rem', sm: '1rem' } }}>
+                        <Typography className='text-white' sx={{ fontSize: { xs: '0.895rem' } }}>
                             Müasir data analitika metodları və rəqəmsal texnologiyalar əsasında milli
                             iqtisadiyyata dair açıq və sistemli məlumat mühitini formalaşdırmaqdır. Portal, məlumatların
                             vahid platformada toplanmasını, vizuallaşdırılmasını və analitik imkanların genişləndirilməsini

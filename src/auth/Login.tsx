@@ -7,6 +7,7 @@ import { Label } from "@/components/ui/label";
 // import { Separator } from "@/components/ui/separator";
 import { EyeIcon, EyeOffIcon } from "lucide-react";
 import { Link } from 'react-router-dom';
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 
 const Login = () => {
     const [showPassword, setShowPassword] = useState(false);
@@ -32,6 +33,11 @@ const Login = () => {
             </div>
             <div className="flex items-center justify-end min-h-screen p-4">
                 <Card className="w-full max-w-lg bg-[#070618] text-white">
+                    <div className="ml-4 w-8 bg-blue-400 rounded-2xl p-1">
+                        <Link to={"/"}>
+                            <ArrowBackIcon className="text-white" />
+                        </Link>
+                    </div>
                     <CardHeader className="space-y-1 text-center">
                         <CardTitle className="text-2xl font-bold">Daxil ol</CardTitle>
                         <p className="text-sm">Hesabın yoxdur? <Link to={"/register"} className='hover:underline'>Hesab Yarat</Link></p>
@@ -39,7 +45,7 @@ const Login = () => {
                     <CardContent className="space-y-4">
                         <div className="space-y-2">
                             <Label htmlFor="email">E-mail və ya istifadəçi adı</Label>
-                            <Input id="email" type="email" placeholder='E-poçt ünvanı daxil edin' className='h-12 border-2' />
+                            <Input id="email" type="email" className='h-12 border-2' />
                         </div>
 
                         <div className="space-y-2">
@@ -49,7 +55,6 @@ const Login = () => {
                                     id="password"
                                     type={showPassword ? "text" : "password"}
                                     className="h-12 border-2 pr-10" // Added right padding to make room for the icon
-                                    placeholder="Şifrənizi daxil edin"
                                 />
                                 <button
                                     type="button"
