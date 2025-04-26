@@ -1,9 +1,10 @@
 import CustomizedAccordions from "@/components/AccordionMUI"
 import "../assets/sass/about.scss"
 import Navbar from "@/layout/Navbar"
-import iqtisadiyyat from "/logoMinistry/iqtisadiyyat.png";
-import sim_center from "/logoMinistry/sim_center.png";
-import four_center from "/logoMinistry/4SIM.png";
+import LogoCarousel from "@/components/LogoCarousel"
+// import iqtisadiyyat from "/logoMinistry/iqtisadiyyat.png";
+// import sim_center from "/logoMinistry/sim_center.png";
+// import four_center from "/logoMinistry/4SIM.png";
 
 const About = () => {
     return (
@@ -21,7 +22,7 @@ const About = () => {
                         muted
                         className="w-full h-full object-cover"
                     >
-                        <source src="./about/bg-about.mov" type="video/mp4" />
+                        <source src="./about/bg-about.mp4" type="video/mp4" />
                         Your browser does not support the video tag.
                     </video>
                 </div>
@@ -29,7 +30,7 @@ const About = () => {
                 <div>
                     <CustomizedAccordions />
                 </div>
-                <div>
+                {/* <div>
                     <div className="pt-4 ">
                         <div className="flex justify-around items-center flex-wrap">
                             <div className="p-6">
@@ -59,6 +60,10 @@ const About = () => {
                             </div>
                         </div>
                     </div>
+                </div> */}
+                <div>
+                    <LogoCarousel />
+                    
                 </div>
                 <div className="absolute bottom-0">
                     <Navbar />

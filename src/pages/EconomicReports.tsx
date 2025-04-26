@@ -16,7 +16,7 @@ const EconomicReports = () => {
                     muted
                     className="w-full h-full object-cover"
                 >
-                    <source src="./about/bg-about.mov" type="video/mp4" />
+                    <source src="./about/bg-about.mp4" type="video/mp4" />
                     Your browser does not support the video tag.
                 </video>
             </div>

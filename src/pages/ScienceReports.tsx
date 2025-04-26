@@ -132,7 +132,7 @@ const ScienceReports = () => {
             </div>
             <div className='ml-2'>
               <h1>
-                Daha çox iqtisadi tədqiqatlar üçün{" "}
+                Daha çox elmi tədqiqatlar üçün{" "}
                 <NavLink className='underline underline-offset-8 hover:text-blue-600 transition' to="/register">
                   qeydiyyatdan keçin
                 </NavLink>
