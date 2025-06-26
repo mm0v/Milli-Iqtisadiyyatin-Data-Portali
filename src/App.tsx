@@ -21,6 +21,7 @@ import PublicationEconomic from './pages/PublicationEconomic'
 import PublicationFinancial from './pages/PublicationFinancial'
 import PublicationScience from './pages/PublicationScience'
 import Register from './auth/Register'
+import Profile from './pages/Profile'
 
 const MainLayout = () => {
   const location = useLocation();
@@ -83,6 +84,10 @@ function App() {
         <Route path="/academic_publications/financial_publication" element={<PublicationFinancial />} />
         <Route path="/academic_publications/science_publication" element={<PublicationScience />} />
         <Route path="/academic_publications" element={<AcademicPublications />} />
+
+
+
+        <Route path="/profile" element={<Profile/>} />
       </Route>
 
       <Route path="*" element={<NotFound />} />
