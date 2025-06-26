@@ -23,6 +23,7 @@ import PublicationScience from './pages/PublicationScience'
 import Register from './auth/Register'
 import Profile from './pages/Profile'
 
+
 const MainLayout = () => {
   const location = useLocation();
   const isHomePage = location.pathname === '/' || location.pathname === '';
