@@ -26,4 +26,4 @@ const HelpAndContact = () => {
 }
 
 export default HelpAndContact
-// test Səma branch
+// test Səma branch -- indi isə push edirik
