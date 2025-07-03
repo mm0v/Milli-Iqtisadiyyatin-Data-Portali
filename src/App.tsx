@@ -20,7 +20,10 @@ import ScienceReports from './pages/ScienceReports'
 import PublicationEconomic from './pages/PublicationEconomic'
 import PublicationFinancial from './pages/PublicationFinancial'
 import PublicationScience from './pages/PublicationScience'
+import EconomicIndicators from './pages/EconomicIndicators'
 import Register from './auth/Register'
+import InternationalDemonstrators from './pages/InternationalDemonstrators'
+import OpenInfobase from './pages/openInfobase'
 
 const MainLayout = () => {
   const location = useLocation();
@@ -83,6 +86,9 @@ function App() {
         <Route path="/academic_publications/financial_publication" element={<PublicationFinancial />} />
         <Route path="/academic_publications/science_publication" element={<PublicationScience />} />
         <Route path="/academic_publications" element={<AcademicPublications />} />
+        <Route path="/economic_indicators" element={<EconomicIndicators />} />
+        <Route path="/international_demonstrators" element={<InternationalDemonstrators />} />
+        <Route path="/open_infobase" element={<OpenInfobase/>} />
       </Route>
 
       <Route path="*" element={<NotFound />} />
