@@ -1,17 +1,16 @@
-import React from "react";
 import { Link } from "react-router-dom";
 
 const AccountSettingsNav = ({ activeTab }) => {
   const tabs = [
-    { id: "language", label: "Dil seçimi", href: "/account/language" },
-    { id: "subscriptions", label: "Abunəliklərim", href: "/account/subscriptions" },
-    { id: "deactivate", label: "Deaktiv et", href: "/account/deactivate" },
+    { id: "language", label: "Dil seçimi", href: "/language" },
+    { id: "subscriptions", label: "Abunəliklərim", href: "/subscriptions" },
+    { id: "deactivate", label: "Deaktiv et", href: "/deactivate" },
   ];
 
   return (
     <div className="mb-12 text-[#F9F9F9] font-['Poppins']">
       {/* Heading */}
-      <div className="w-68 h-11 mb-8">
+      <div className=" h-11 mb-8">
         <h1 className="text-3xl font-semibold text-white text-left">Hesab ayarları</h1>
       </div>
 

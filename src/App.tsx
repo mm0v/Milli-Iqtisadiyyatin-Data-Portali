@@ -22,6 +22,7 @@ import PublicationFinancial from './pages/PublicationFinancial'
 import PublicationScience from './pages/PublicationScience'
 import Register from './auth/Register'
 import Profile from './pages/Profile'
+import ProfileSettings from './pages/ProfileSettings'
 
 
 const MainLayout = () => {
@@ -89,6 +90,7 @@ function App() {
 
 
         <Route path="/profile" element={<Profile/>} />
+        <Route path='/profile_settings' element={<ProfileSettings/>} />
       </Route>
 
       <Route path="*" element={<NotFound />} />
