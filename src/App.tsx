@@ -22,6 +22,9 @@ import PublicationFinancial from './pages/PublicationFinancial'
 import PublicationScience from './pages/PublicationScience'
 import EconomicIndicators from './pages/EconomicIndicators'
 import Register from './auth/Register'
+import Profile from './pages/Profile'
+import ProfileSettings from './pages/ProfileSettings'
+
 import InternationalDemonstrators from './pages/InternationalDemonstrators'
 import OpenInfobase from './pages/openInfobase'
 
@@ -86,6 +89,11 @@ function App() {
         <Route path="/academic_publications/financial_publication" element={<PublicationFinancial />} />
         <Route path="/academic_publications/science_publication" element={<PublicationScience />} />
         <Route path="/academic_publications" element={<AcademicPublications />} />
+
+
+
+        <Route path="/profile" element={<Profile/>} />
+        <Route path='/profile_settings' element={<ProfileSettings/>} />
         <Route path="/economic_indicators" element={<EconomicIndicators />} />
         <Route path="/international_demonstrators" element={<InternationalDemonstrators />} />
         <Route path="/open_infobase" element={<OpenInfobase/>} />

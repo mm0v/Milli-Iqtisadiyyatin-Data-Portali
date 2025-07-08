@@ -31,6 +31,7 @@
     "react-phone-number-input": "^3.4.12",
     "react-router-dom": "^7.3.0",
     "react-spinners": "^0.15.0",
+    "styled-components": "^6.1.19",
     "tailwind-merge": "^3.0.2",
     "tailwindcss-animate": "^1.0.7"
   },
