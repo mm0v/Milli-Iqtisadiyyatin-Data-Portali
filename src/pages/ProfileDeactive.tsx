@@ -3,7 +3,6 @@ import Checkbox from "@/components/Checkbox";
 import ProfileButton from "@/components/ProfileButton";
 import { useState } from "react";
 
-
 const reasons = [
   "Müvəqqəti fasilə vermək istəyirəm.",
   "İstədiyim funksiyaları tapa bilmirəm.",
@@ -15,26 +14,27 @@ const reasons = [
 
 const ProfileDeactive = () => {
 
-    const [selectedReason, setSelectedReason] = useState("");
-    const [customReason, setCustomReason] = useState("");
+  const [selectedReason, setSelectedReason] = useState("");
+  const [customReason, setCustomReason] = useState("");
 
-    const handleSubmit = () => {
-        const finalReason = selectedReason === "Digər" ? customReason : selectedReason;
-        console.log("Sebeb",finalReason)
-    }
+  const handleSubmit = () => {
+    const finalReason = selectedReason === "Digər" ? customReason : selectedReason;
+    console.log("Sebeb", finalReason)
+  }
 
 
   return (
     <div className="w-full">
-        <AccountSettingsNav/>
-        <h3 className="text-white text-lg font-medium mb-14">Profiliniz və məzmununuz silinməyəcək, amma görünməz olacaq. Sonradan yenidən aktivləşdirə bilərsiniz. Zəhmət olmasa, səbəb seçin.</h3>
+      <AccountSettingsNav />
+      <h3 className="text-white text-lg font-medium mb-14">Profiliniz və məzmununuz silinməyəcək, amma görünməz olacaq. Sonradan yenidən aktivləşdirə bilərsiniz. Zəhmət olmasa, səbəb seçin.</h3>
 
-        <div className="deactive-form flex flex-col">
-            {reasons.map((reason) => (
-                    <Checkbox reason={reason} selectedReason={selectedReason} setSelectedReason={setSelectedReason}/>
-            ))}
+      <div className="deactive-form flex flex-col">
+        {reasons.map((reason) => (
+          <Checkbox reason={reason} selectedReason={selectedReason} setSelectedReason={setSelectedReason} />
+        ))}
 
         {selectedReason === "Digər" && (
+
             <input
               type="text"
               placeholder="Səbəbi daxil edin..."
@@ -46,6 +46,7 @@ const ProfileDeactive = () => {
 
           <ProfileButton value="Deaktiv et" width="w-xl" onClick={handleSubmit}/>
         </div>
+
 
     </div>
   )

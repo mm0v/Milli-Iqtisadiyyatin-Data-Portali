@@ -1,10 +1,4 @@
 import ProfileSidebar from "@/components/ProfileSidebar"
-import ProfileSettings from "./ProfileSettings"
-import ProfileDeactive from "./ProfileDeactive"
-import SecuritySettings from "./SecuritySettings"
-
-
-
 
 const Profile = () => {
   return (
@@ -16,17 +10,10 @@ const Profile = () => {
         </video>
       </div>
 
-
       <div className="flex pt-14 px-8">
-      <ProfileSidebar/>
 
-      {/* <ProfileSettings/> */}
-
-      {/* <ProfileDeactive/> */}
-      <SecuritySettings/>
-
+        <ProfileSidebar />
       </div>
-
     </section>
   )
 }

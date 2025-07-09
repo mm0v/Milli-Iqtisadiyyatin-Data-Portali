@@ -22,7 +22,7 @@ const ProfileSettings = () => {
       <div className="flex flex-col">
         <h3 className="text-white text-lg mb-1">Dili dəyişin</h3>
         <FormControl fullWidth sx={{
-          background: "rgba(7, 6, 24)", 
+          background: "rgba(7, 6, 24)",
           borderRadius: "8px",
           border: "1px solid rgb(166, 166, 166)",
           color: "#C6C6C6",

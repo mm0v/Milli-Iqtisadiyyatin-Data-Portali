@@ -10,7 +10,7 @@ const AccountSettingsNav = ({ activeTab }) => {
   return (
     <div className="mb-12 text-[#F9F9F9] font-['Poppins']">
       {/* Heading */}
-      <div className=" h-11 mb-8">
+      <div className="w-68 h-11 mb-8">
         <h1 className="text-3xl font-semibold text-white text-left">Hesab ayarları</h1>
       </div>
 
