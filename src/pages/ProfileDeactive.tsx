@@ -44,7 +44,7 @@ const ProfileDeactive = () => {
             />
           )}
 
-          <ProfileButton value="Deaktiv et" width="w-xl"/>
+          <ProfileButton value="Deaktiv et" width="w-xl" onClick={handleSubmit}/>
         </div>
 
     </div>

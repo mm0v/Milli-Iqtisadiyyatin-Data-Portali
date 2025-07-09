@@ -1,4 +1,7 @@
 import ProfileSidebar from "@/components/ProfileSidebar"
+import ProfileSettings from "./ProfileSettings"
+import ProfileDeactive from "./ProfileDeactive"
+import SecuritySettings from "./SecuritySettings"
 
 
 
@@ -16,6 +19,11 @@ const Profile = () => {
 
       <div className="flex pt-14 px-8">
       <ProfileSidebar/>
+
+      {/* <ProfileSettings/> */}
+
+      {/* <ProfileDeactive/> */}
+      <SecuritySettings/>
 
       </div>
 
