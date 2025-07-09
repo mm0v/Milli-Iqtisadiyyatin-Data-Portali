@@ -29,7 +29,7 @@ const Analytics = () => {
         <LinearButton
           title="İqtisadi göstəricilər"
           pageRouter="/economic_Indicators"
-        
+
         />
         <LinearButton
           title="Beynəlxalq göstəricilər"

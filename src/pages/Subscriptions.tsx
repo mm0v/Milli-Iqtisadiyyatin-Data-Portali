@@ -71,7 +71,7 @@ const Subscriptions = () => {
       </div>
 
       <div className="absolute bottom-0">
-              {/* Profile Side bar */}
+        {/* Profile Side bar */}
       </div>
     </div>
   );

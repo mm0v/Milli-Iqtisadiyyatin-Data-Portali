@@ -92,11 +92,11 @@ function App() {
 
 
 
-        <Route path="/profile" element={<Profile/>} />
-        <Route path='/profile_settings' element={<ProfileSettings/>} />
+        <Route path="/profile" element={<Profile />} />
+        <Route path='/profile_settings' element={<ProfileSettings />} />
         <Route path="/economic_indicators" element={<EconomicIndicators />} />
         <Route path="/international_demonstrators" element={<InternationalDemonstrators />} />
-        <Route path="/open_infobase" element={<OpenInfobase/>} />
+        <Route path="/open_infobase" element={<OpenInfobase />} />
       </Route>
 
       <Route path="*" element={<NotFound />} />
