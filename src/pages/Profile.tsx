@@ -1,4 +1,5 @@
 import ProfileSidebar from "@/components/ProfileSidebar"
+
 const Profile = () => {
   return (
     <section >
@@ -10,6 +11,7 @@ const Profile = () => {
       </div>
 
       <div className="flex pt-14 px-8">
+
         <ProfileSidebar />
       </div>
     </section>

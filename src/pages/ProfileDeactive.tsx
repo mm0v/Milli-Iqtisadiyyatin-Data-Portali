@@ -34,17 +34,19 @@ const ProfileDeactive = () => {
         ))}
 
         {selectedReason === "Digər" && (
-          <input
-            type="text"
-            placeholder="Səbəbi daxil edin..."
-            value={customReason}
-            onChange={(e) => setCustomReason(e.target.value)}
-            className="mt-3 mb-8 w-xl px-4 py-2 bg-white text-black rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-          />
-        )}
 
-        <ProfileButton value="Deaktiv et" width="w-xl" />
-      </div>
+            <input
+              type="text"
+              placeholder="Səbəbi daxil edin..."
+              value={customReason}
+              onChange={(e) => setCustomReason(e.target.value)}
+              className="mt-3 mb-8 w-xl px-4 py-2 bg-white text-black rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            />
+          )}
+
+          <ProfileButton value="Deaktiv et" width="w-xl" onClick={handleSubmit}/>
+        </div>
+
 
     </div>
   )

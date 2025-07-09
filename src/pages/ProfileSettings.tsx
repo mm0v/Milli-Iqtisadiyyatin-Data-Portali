@@ -14,6 +14,8 @@ const ProfileSettings = () => {
 
   return (
     <div className="w-full">
+
+
       <AccountSettingsNav />
 
 
@@ -48,6 +50,7 @@ const ProfileSettings = () => {
               },
             }}
           >
+
             <MenuItem sx={{
 
             }} value="az">Azərbaycan dili</MenuItem>
