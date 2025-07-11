@@ -1,0 +1,27 @@
+.navbar {
+    position: absolute;
+    top: 40%;
+    z-index: 10;
+
+    nav {
+        display: flex;
+        flex-direction: column;
+
+        .nav-link {
+            color: #FFF;
+            transition: transform 0.5s ease-in-out, color 0.3s ease-in-out;
+            transform-origin: left bottom;
+            font-size: 23px;
+
+            &.active {
+                color: oklch(.623 .214 259.815);
+            }
+        }
+    }
+}
+
+@media (max-width: 1000px) {
+    .navbar {
+        display: none;
+    }
+}
