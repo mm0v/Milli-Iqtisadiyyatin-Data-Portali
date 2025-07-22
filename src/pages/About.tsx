@@ -63,7 +63,7 @@ const About = () => {
                 </div> */}
                 <div>
                     <LogoCarousel />
-                    
+
                 </div>
                 <div className="absolute bottom-0">
                     <Navbar />

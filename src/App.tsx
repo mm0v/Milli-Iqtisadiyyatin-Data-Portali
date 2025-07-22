@@ -20,7 +20,19 @@ import ScienceReports from './pages/ScienceReports'
 import PublicationEconomic from './pages/PublicationEconomic'
 import PublicationFinancial from './pages/PublicationFinancial'
 import PublicationScience from './pages/PublicationScience'
+import EconomicIndicators from './pages/EconomicIndicators'
 import Register from './auth/Register'
+
+import Profile from './pages/Profile'
+import ProfileSettings from './pages/ProfileSettings'
+
+import InternationalDemonstrators from './pages/InternationalDemonstrators'
+import OpenInfobase from './pages/openInfobase'
+
+import Subscriptions from './pages/Subscriptions'
+import SubscriptionsInfo from './pages/SubscriptionsInfo'
+import PaymentDetails from './pages/PaymentInfo.tsx'
+
 
 const MainLayout = () => {
   const location = useLocation();
@@ -83,6 +95,20 @@ function App() {
         <Route path="/academic_publications/financial_publication" element={<PublicationFinancial />} />
         <Route path="/academic_publications/science_publication" element={<PublicationScience />} />
         <Route path="/academic_publications" element={<AcademicPublications />} />
+<<<<<<< Updated upstream
+
+
+
+        <Route path="/profile" element={<Profile />} />
+        <Route path='/profile_settings' element={<ProfileSettings />} />
+        <Route path="/economic_indicators" element={<EconomicIndicators />} />
+        <Route path="/international_demonstrators" element={<InternationalDemonstrators />} />
+        <Route path="/open_infobase" element={<OpenInfobase />} />
+=======
+        <Route path="/subscriptions" element={<Subscriptions />} />
+        <Route path="/subscriptions/:planId" element={<SubscriptionsInfo />} />
+        <Route path="/payment" element={<PaymentDetails />} />
+>>>>>>> Stashed changes
       </Route>
 
       <Route path="*" element={<NotFound />} />
