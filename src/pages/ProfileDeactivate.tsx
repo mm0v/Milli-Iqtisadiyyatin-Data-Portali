@@ -1,4 +1,3 @@
-import AccountSettingsNav from "@/components/AccountSettingsNav"
 import Checkbox from "@/components/Checkbox";
 import ProfileButton from "@/components/ProfileButton";
 import { useState } from "react";
@@ -12,7 +11,7 @@ const reasons = [
   "Digər",
 ];
 
-const ProfileDeactive = () => {
+const ProfileDeactivate = () => {
 
   const [selectedReason, setSelectedReason] = useState("");
   const [customReason, setCustomReason] = useState("");
@@ -25,7 +24,6 @@ const ProfileDeactive = () => {
 
   return (
     <div className="w-full">
-      <AccountSettingsNav />
       <h3 className="text-white text-lg font-medium mb-14">Profiliniz və məzmununuz silinməyəcək, amma görünməz olacaq. Sonradan yenidən aktivləşdirə bilərsiniz. Zəhmət olmasa, səbəb seçin.</h3>
 
       <div className="deactive-form flex flex-col">
@@ -52,4 +50,4 @@ const ProfileDeactive = () => {
   )
 }
 
-export default ProfileDeactive
+export default ProfileDeactivate
