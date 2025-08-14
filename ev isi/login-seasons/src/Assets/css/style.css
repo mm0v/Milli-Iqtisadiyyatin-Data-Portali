@@ -1,0 +1,65 @@
+.season{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('https://wallpaperbat.com/img/769006-daily-wallpaper-a-sunset-at-the-dock-i-like-to-waste-my-time.jpg');
+    background-size: cover;
+}
+
+form{
+    width: 400px;
+    height: 300px;
+    border: 1px solid #fff;
+    color: #fff;
+    border-radius: 20px;
+    padding: 20px;
+    backdrop-filter: blur(25px);
+    flex-direction: column;
+    text-align: center;
+    font-family: "Playwrite DE Grund", cursive;
+    display: grid;
+    gap: 20px;
+    h1{
+        text-align: center;
+    }
+    .form-control{
+        &:focus{
+            outline: noone;
+        }
+        &::placeholder{
+            color: rgb(184, 184, 184);
+        }
+    }
+    .btn{
+        background-color: #192541;
+        border: none;
+    }
+}
+
+.fall{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('https://www.pixelstalk.net/wp-content/uploads/image10/Fall-wallpaper-HD-features-a-serene-forest-path-covered-with-vibrant-fall-leaves-sunlight-filtering-through-the-trees.jpg');
+    background-size: cover;
+}
+
+.spring{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../img/spring.png);
+    background-size: cover;
+}
+
+.winter{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('https://wallup.net/wp-content/uploads/2019/09/555324-winter-snow-river-forest-reflection.jpg');
+    background-size: cover;
+}

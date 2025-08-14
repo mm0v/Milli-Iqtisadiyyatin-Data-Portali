@@ -1,0 +1,81 @@
+body, *{
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.preloader{
+    width: 100%;
+    height: 100vh;
+    background-image: url('https://i.pinimg.com/originals/2a/12/3e/2a123e196bea0c213da8d6be602ec908.gif');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #F4C042;
+}
+
+.background {
+    width: 100%;
+    height: 100vh;
+    background-image: url(img/weather-bg-enhanced.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .box{
+        width: 28%;
+        height: 35%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        position: relative;
+        h1{
+            color: #fff;
+            font-size: 85px;
+            font-weight: 500;
+            position: absolute;
+            top: 15px;
+            left: 15px;
+        }
+        .location-back{
+            width: 97%;
+            height: 28%;
+            border: 1px solid #fff;
+            background-color: transparent;
+            border-radius: 10px;
+            box-shadow: -webkit-box-shadow: 0px 0px 100px 0px rgba(0,0,0,0.5);
+            -moz-box-shadow: 0px 0px 100px 0px rgba(0,0,0,0.5);
+            box-shadow: 0px 0px 100px 0px rgba(0,0,0,0.5);
+            position: absolute;
+            bottom: 0;
+        }
+        .location-front{
+            width: 100%;
+            height: 33%;
+            background-image: url('https://i.gifer.com/embedded/download/b8z.gif');
+            background-size: cover;
+            background-repeat: no-repeat;
+            border: 1px solid #fff;
+            border-radius: 10px;
+            box-shadow: -webkit-box-shadow: 0px 0px 100px 0px rgba(0,0,0,1.6);
+            -moz-box-shadow: 0px 0px 100px 0px rgba(0,0,0,1.6);
+            box-shadow: 0px 0px 100px 0px rgba(0,0,0,0.1.6);
+            position: absolute;
+            bottom: 10px;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            img{
+                width: 35px;
+            }
+            p{
+                color: #fff;
+                font-weight: 600;
+            }
+            span{
+                color: #fff;
+                font-weight: 500;
+            }
+        }
+    }
+}

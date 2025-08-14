@@ -1,0 +1,277 @@
+header {
+    .top-header {
+        padding: 10px 50px;
+        background-color: #F5F5F5;
+        display: flex;
+        justify-content: space-between;
+
+        .left-side {
+            display: flex;
+
+            i {
+                padding: 7px;
+            }
+        }
+
+        .right-side {
+            display: flex;
+
+            .email {
+                display: flex;
+                padding-right: 20px;
+
+                i {
+                    padding: 7px 7px 0;
+                }
+            }
+
+            .gift {
+                display: flex;
+
+                p {
+                    margin-bottom: 0;
+                }
+
+                i {
+                    padding: 3px 7px 0;
+                }
+            }
+        }
+    }
+
+    .main-header {
+        padding: 0 50px;
+
+        .search-bar {
+            width: 40%;
+            border: 3px solid #F5F5F5;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+
+            .search {
+                border: none;
+
+                &:focus {
+                    outline: none;
+                    /* Remove default outline */
+                    border: 1px solid #fff;
+                }
+
+
+            }
+
+            .btn {
+                display: flex;
+                border: none;
+                background-color: #FCC916;
+                padding: 15px 25px;
+                color: #000;
+                font-weight: bold;
+                transition: all .3s ease;
+
+                &:hover {
+                    background-color: #000;
+                    color: #fff;
+                }
+
+                i {
+                    margin: 5px 10px 0 0;
+                }
+            }
+        }
+
+        .call {
+            padding: 20px;
+            display: grid;
+            gap: 10px;
+
+            i {
+                font-size: 30px;
+            }
+
+            p {
+                font-size: 14px;
+                margin: 0;
+            }
+
+            span {
+                font-size: 14px;
+                font-weight: 700;
+            }
+        }
+
+        .icons {
+            width: 10%;
+            display: flex;
+            justify-content: space-between;
+
+            i {
+                font-size: 20px;
+            }
+        }
+    }
+
+    .down-header {
+        background-color: #FCC916;
+
+        .navbar {
+            padding: 10px 50px;
+            .navbar-collapse {
+                .navbar-nav {
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+
+                    .nav-item {
+                        .menu{
+                            background-color: #000;
+                            color: #fff !important;
+                            i{
+                                padding-right: 10px;
+                            }
+                        }
+                        .nav-link {
+                            font-weight: 500;
+                            color: #000;
+                            transition: all .3s ease;
+                            &:hover{
+                                background-color: #000;
+                                color: #fff;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+main{
+    .promotion{
+        height: 110vh;
+        padding: 30px;
+        .left-menu{
+            width: 20%;
+            background-color: #FCC916;
+
+        }
+        .carousel{
+            width: 60%;
+        }
+        .right-add{
+            width: 20%;
+            display: grid;
+            gap: 30px;
+            .top-add{
+                width: 100%;
+                background-image: url('https://cdn11.bigcommerce.com/s-uszeqex11r/product_images/uploaded_images/top-banner-01.jpg');
+                background-size: cover;
+            }
+            .bottom-add{
+                width: 100%;
+                background-image: url('https://cdn11.bigcommerce.com/s-uszeqex11r/product_images/uploaded_images/top-bannre-02.jpg');
+                background-size: cover;
+            }
+        }
+        .samples{
+            width: 100%;
+            display: flex;
+            .box{
+                width: 33%;
+                height: 100%;
+                display: flex;
+                padding-top: 30px;
+                img{
+                    border-right: 1px solid rgb(206, 206, 206);
+                }
+                .text{
+                    display: grid;
+                    padding-left: 20px;
+                    span{
+                        color: rgb(215, 23, 23);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.shop-categories {
+    height: 100vh;
+    background-color: #F7F7F7;
+    display: flex;
+    align-items: center;
+
+    h3 {
+        padding-bottom: 20px;
+    }
+
+    .card {
+        border: 1px solid rgb(223, 223, 223);
+        padding: 20px;
+
+        h4 {
+            font-size: 20px;
+        }
+
+        ul {
+            padding: 0;
+            display: grid;
+            gap: 5px;
+
+            li {
+                font-size: 13px;
+                color: #666;
+            }
+        }
+    }
+}
+
+.featured-products {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+
+    h3 {
+        padding-bottom: 20px;
+    }
+
+    .card {
+        height: 400px;
+        border: 1px solid rgb(223, 223, 223);
+        padding: 10px;
+
+
+        img {
+            height: 50%;
+            object-fit: contain;
+        }
+
+        .stars {
+            padding-top: 10px;
+
+            i {
+                color: yellow;
+            }
+        }
+
+        span {
+            font-weight: 500;
+        }
+
+        .buttons {
+            button {
+                border: none;
+                padding: 10px;
+                background-color: #eee;
+                margin-right: 10px;
+                transition: all .3s ease;
+
+                &:hover {
+                    background-color: #FCC916;
+                }
+            }
+        }
+    }
+}

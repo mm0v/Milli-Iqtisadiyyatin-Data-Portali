@@ -1,0 +1,68 @@
+header {
+    background-color: #375B7F;
+
+    .navbar {
+        .navbar-brand {
+            color: #fff;
+        }
+    }
+}
+
+main {
+    background-color: #222;
+    .search-panel {
+        padding-bottom: 50px;
+        .search-box{
+            background-color: #303030;
+            padding: 30px;
+            h1 {
+                font-weight: 400;
+                color: #fff;
+            }
+    
+            p {
+                font-size: larger;
+                color: rgb(143, 143, 143);
+            }
+    
+        }
+    }
+
+    .box{
+        color: #fff;
+        display: flex;
+        padding: 50px;
+        .profile{
+            width: 30%;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            .btn{
+                margin-top: 30px;
+                background-color: #375B7F;
+                border: none;
+                transition: all .3s ease;
+                &:hover{
+                    background-color: #fff;
+                    color: #375B7F;
+                }
+            }
+        }
+        .card-body{
+            padding-left: 50px;
+            a{
+                color: #fff;
+                text-decoration: none;
+                padding: 5px;
+                
+                margin-right: 10px;
+                border-radius: 8px;
+            }
+            .card-title{
+                font-size: 80px;
+                padding-bottom: 30px;
+            }
+        }
+    }
+
+}

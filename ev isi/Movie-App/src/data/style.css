@@ -1,0 +1,8 @@
+.card{
+    width: 100%;
+    border: none;
+    text-align: start;
+    img{
+        object-fit: cover;
+    }
+}
