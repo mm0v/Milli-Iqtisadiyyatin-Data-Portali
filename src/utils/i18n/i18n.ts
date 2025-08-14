@@ -17,6 +17,9 @@ const resources = {
       help: "Help and Support",
       "data-portal": "National Economy <br /> Data portal",
       "data-world": "Journey into the World of Data",
+      faq:"FAQ",
+       "user_instructions": "User \ninstructions",
+       "contact_form": "Contact \nform"
     },
   },
   az: {
@@ -33,6 +36,11 @@ const resources = {
       help: "Yardım və Dəstək",
       "data-portal": "Milli iqtisadiyyatın <br /> Data portalı",
       "data-world": "Data dünyasına səyahət edin",
+      faq: "Tez-tez \nverilən suallar",
+        "user_instructions": "İstifadəçi \ntəlimatları",
+        "contact_form": "Əlaqə \nforması"
+
+        
     },
   },
   ru: {
@@ -49,6 +57,9 @@ const resources = {
       help: "Помощь и поддержка",
       "data-portal": "Портал данных <br /> национальной экономики",
       "data-world": "Путешествуйте по миру данных",
+      faq: "Часто \nзадаваемые вопросы",
+      "user_instructions": "Инструкция \nпользователя",
+      "contact_form": "Форма \nобратной связи"
     },
   },
 };

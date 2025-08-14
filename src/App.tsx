@@ -1,42 +1,46 @@
-import { Routes, Route, Outlet, useLocation } from 'react-router-dom'
-import './App.css'
-import Home from './pages/Home'
-import Header from './layout/Header'
-import Footer from './layout/Footer'
-import Login from './auth/Login'
-import About from './pages/About'
-import HelpAndContact from './pages/HelpAndContact'
-import Analytics from './pages/Analytics'
-import ForgotPassword from './pages/ForgotPassword'
-import NotFound from './pages/NotFound'
-import Terms from './pages/Terms'
-import Privacy from './pages/Privacy'
-import Report from './pages/Report'
-import Academic_reports from './pages/AcademicReports'
-import AcademicPublications from './pages/AcademicPublications'
-import EconomicReports from './pages/EconomicReports'
-import FinancialReports from './pages/FinancialReports'
-import ScienceReports from './pages/ScienceReports'
-import PublicationEconomic from './pages/PublicationEconomic'
-import PublicationFinancial from './pages/PublicationFinancial'
-import PublicationScience from './pages/PublicationScience'
-import EconomicIndicators from './pages/EconomicIndicators'
-import Register from './auth/Register'
+import { Routes, Route, Outlet, useLocation } from "react-router-dom";
+import "./App.css";
+import Home from "./pages/Home";
+import Header from "./layout/Header";
+import Footer from "./layout/Footer";
+import Login from "./auth/Login";
+import About from "./pages/About";
+import HelpAndContact from "./pages/HelpAndContact";
+import Analytics from "./pages/Analytics";
+import ForgotPassword from "./pages/ForgotPassword";
+import NotFound from "./pages/NotFound";
+import Terms from "./pages/Terms";
+import Privacy from "./pages/Privacy";
+import Report from "./pages/Report";
+import Academic_reports from "./pages/AcademicReports";
+import AcademicPublications from "./pages/AcademicPublications";
+import EconomicReports from "./pages/EconomicReports";
+import FinancialReports from "./pages/FinancialReports";
+import ScienceReports from "./pages/ScienceReports";
+import PublicationEconomic from "./pages/PublicationEconomic";
+import PublicationFinancial from "./pages/PublicationFinancial";
+import PublicationScience from "./pages/PublicationScience";
+import EconomicIndicators from "./pages/EconomicIndicators";
+import Register from "./auth/Register";
 
-import Profile from './pages/Profile'
-import ProfileSettings from './pages/ProfileSettings'
+import PersonalInfo from "./pages/PersonalInfo";
+import ProfileSettings from "./pages/ProfileSettings";
 
-import InternationalDemonstrators from './pages/InternationalDemonstrators'
-import OpenInfobase from './pages/openInfobase'
+import InternationalDemonstrators from "./pages/InternationalDemonstrators";
+import OpenInfobase from "./pages/openInfobase";
 
-import Subscriptions from './pages/Subscriptions'
-import SubscriptionsInfo from './pages/SubscriptionsInfo'
-import PaymentDetails from './pages/PaymentInfo.tsx'
-
+import Subscriptions from "./pages/Subscriptions";
+import SubscriptionsInfo from "./pages/SubscriptionsInfo";
+import PaymentDetails from "./pages/PaymentInfo.tsx";
+import Profile from "./pages/Profile.tsx";
+import SecuritySettings from "./pages/SecuritySettings.tsx";
+import LanguageSwitch from "./pages/LanguageSwitch.tsx";
+import ProfileDeactivate from "./pages/ProfileDeactivate.tsx";
+import PaymentHistory from "./pages/PaymentHistory.tsx";
 
 const MainLayout = () => {
   const location = useLocation();
-  const isHomePage = location.pathname === '/' || location.pathname === '';
+  const isHomePage = location.pathname === "/" || location.pathname === "";
 
   return (
     <div>
@@ -53,31 +57,20 @@ const MainLayout = () => {
           <Footer />
         </div>
       )}
-
     </div>
-  )
-}
+  );
+};
 
 function App() {
   return (
     <Routes>
       {/* Auth routes without layout */}
-      <Route path="/login" element={
-        <Login />
-      } />
+      <Route path="/login" element={<Login />} />
 
-      <Route path="/register" element={
-        <Register />
-      } />
-      <Route path="/forgot-password" element={
-        <ForgotPassword />
-      } />
-      <Route path="/terms" element={
-        <Terms />
-      } />
-      <Route path="/privacy" element={
-        <Privacy />
-      } />
+      <Route path="/register" element={<Register />} />
+      <Route path="/forgot-password" element={<ForgotPassword />} />
+      <Route path="/terms" element={<Terms />} />
+      <Route path="/privacy" element={<Privacy />} />
 
       {/* Main layout with nested routes */}
       <Route element={<MainLayout />}>
@@ -95,30 +88,34 @@ function App() {
         <Route path="/academic_publications/financial_publication" element={<PublicationFinancial />} />
         <Route path="/academic_publications/science_publication" element={<PublicationScience />} />
         <Route path="/academic_publications" element={<AcademicPublications />} />
-<<<<<<< Updated upstream
+        <Route path="/profile" element={<Profile />}>
+          <Route index element={<PersonalInfo />} />
+          <Route path="settings" element={<ProfileSettings />}>
+            <Route index element={<LanguageSwitch />} />
+            <Route path="language" element={<LanguageSwitch />} />
+            <Route path="subscriptions" element={<Subscriptions />} />
+            <Route path="subscriptions/:planId" element={<SubscriptionsInfo />} />
+            <Route path="deactivate" element={<ProfileDeactivate />} />
+            <Route path="subscriptions/payment" element={<PaymentDetails />} /> 
+          </Route>
+          <Route path="security" element={<SecuritySettings />} />
+          <Route path="payment-history" element={<PaymentHistory />} />
+        </Route>
 
-
-
-        <Route path="/profile" element={<Profile />} />
-        <Route path='/profile_settings' element={<ProfileSettings />} />
         <Route path="/economic_indicators" element={<EconomicIndicators />} />
-        <Route path="/international_demonstrators" element={<InternationalDemonstrators />} />
+        <Route
+          path="/international_demonstrators"
+          element={<InternationalDemonstrators />}
+        />
         <Route path="/open_infobase" element={<OpenInfobase />} />
-=======
-        <Route path="/subscriptions" element={<Subscriptions />} />
-        <Route path="/subscriptions/:planId" element={<SubscriptionsInfo />} />
-        <Route path="/payment" element={<PaymentDetails />} />
->>>>>>> Stashed changes
       </Route>
 
       <Route path="*" element={<NotFound />} />
     </Routes>
-  )
+  );
 }
 
-export default App
-
-
+export default App;
 
 // import { Routes, Route, Outlet, useLocation } from 'react-router-dom';
 // import { useState, useEffect, ReactElement } from 'react';

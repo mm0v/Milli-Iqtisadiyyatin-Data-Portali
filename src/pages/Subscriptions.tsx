@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Card from "../components/SubscriptionCard";
-import AccountSettingsNav from "@/components/AccountSettingsNav";
 
 const Subscriptions = () => {
   const navigate = useNavigate();
@@ -63,20 +62,14 @@ const Subscriptions = () => {
   ];
 
   const handleClick = (plan) => {
-    navigate(`/subscriptions/${plan.id}`, { state: plan });
+    navigate(`/profile/settings/subscriptions/${plan.id}`, { state: plan });
   };
 
   return (
     <div className="min-h-screen relative">
-      <div className="fixed inset-0 -z-10">
-        <video autoPlay loop muted className="w-full h-full object-cover">
-          <source src="./about/bg-about.mp4" type="video/mp4" />
-        </video>
-      </div>
 
       <div className="flex justify-end pr-8 pt-8 min-h-screen">
         <div className="w-full max-w-[900px] flex flex-col">
-          <AccountSettingsNav activeTab="subscriptions" />
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6 cursor-pointer">
             {plans.map((plan) => (
               <div
