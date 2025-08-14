@@ -1,27 +1,36 @@
 import { Routes, Route, Outlet, useLocation } from 'react-router-dom'
 import './App.css'
+import "./assets/sass/styles.scss"
 import Home from './pages/Home'
 import Header from './layout/Header'
 import Footer from './layout/Footer'
 import Login from './auth/Login'
+import Register from './auth/Register'
 import About from './pages/About'
 import HelpAndContact from './pages/HelpAndContact'
+
 import Analytics from './pages/Analytics'
+import EconomicIndicators from './pages/EconomicIndicators.tsx'
+import MacroEconomic from './pages/MacroEconomic.tsx'
+import SectorEconomic from './pages/SectorEcenomic.tsx'
+import DemoEconomic from './pages/DemoEconomic.tsx'
+import StateServices from './pages/StateServices.tsx'
+import Crimes from './pages/Crimes.tsx'
+import LaborMarket from './pages/LaborMarket.tsx'
+
 import ForgotPassword from './pages/ForgotPassword'
 import NotFound from './pages/NotFound'
 import Terms from './pages/Terms'
 import Privacy from './pages/Privacy'
 import Report from './pages/Report'
 import Academic_reports from './pages/AcademicReports'
-import AcademicPublications from './pages/AcademicPublications'
 import EconomicReports from './pages/EconomicReports'
 import FinancialReports from './pages/FinancialReports'
 import ScienceReports from './pages/ScienceReports'
+import AcademicPublications from './pages/AcademicPublications'
 import PublicationEconomic from './pages/PublicationEconomic'
 import PublicationFinancial from './pages/PublicationFinancial'
 import PublicationScience from './pages/PublicationScience'
-import EconomicIndicators from './pages/EconomicIndicators'
-import Register from './auth/Register'
 
 import Profile from './pages/Profile'
 import ProfileSettings from './pages/ProfileSettings'
@@ -87,13 +96,13 @@ function App() {
       <Route path="/forgot-password" element={
         <ForgotPassword />
       } />
-           <Route path="/recapcha" element={
+      <Route path="/recapcha" element={
         <ReCapcha />
       } />
-       <Route path="/confirm-details" element={
+      <Route path="/confirm-details" element={
         <ConfirmDetails />
       } />
-       <Route path="/new-password" element={
+      <Route path="/new-password" element={
         <NewPassword />
       } />
       <Route path="/terms" element={
@@ -107,7 +116,19 @@ function App() {
       <Route element={<MainLayout />}>
         <Route index element={<Home />} />
         <Route path="/about" element={<About />} />
-        <Route path="/analytics" element={<Analytics />} />
+        <Route path="/analytics" element={<Analytics />}>
+          <Route path="economic_indicators" element={<EconomicIndicators />} >
+            <Route path="macro" element={<MacroEconomic />} />
+            <Route path="sector" element={<SectorEconomic />} />
+            <Route path="demo" element={<DemoEconomic />} />
+            <Route path='state_services' element={<StateServices/>}/>
+            <Route path='crimes' element={<Crimes/>}/>
+            <Route path='labor_market' element={<LaborMarket/>}/>
+          </Route>
+          <Route path="international_demonstrators" element={<InternationalDemonstrators />} />
+          <Route path="open_infobase" element={<OpenInfobase />} />
+        </Route>
+
         <Route path="/report" element={<Report />} />
         <Route path="/contact" element={<HelpAndContact />} />
         <Route path="/academic_reports" element={<Academic_reports />} />
@@ -124,9 +145,6 @@ function App() {
 
         <Route path="/profile" element={<Profile />} />
         <Route path='/profile_settings' element={<ProfileSettings />} />
-        <Route path="/economic_indicators" element={<EconomicIndicators />} />
-        <Route path="/international_demonstrators" element={<InternationalDemonstrators />} />
-        <Route path="/open_infobase" element={<OpenInfobase />} />
         {/* ======= */}
         <Route path="/subscriptions" element={<Subscriptions />} />
         <Route path="/subscriptions/:planId" element={<SubscriptionsInfo />} />

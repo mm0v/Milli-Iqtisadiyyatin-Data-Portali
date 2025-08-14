@@ -1,21 +1,75 @@
 import BackgroundVideo from "@/components/bg-video/BackgroundVideo";
-import "../assets/sass/about.scss";
 import LinearButton from "@/components/ui/linearButton";
-import { useTranslation } from "react-i18next";
+import { NavLink } from "react-router-dom";
+import { useMatch } from "react-router-dom";
+import { Outlet } from "react-router-dom";
+
 const Analytics = () => {
-  const { t } = useTranslation()
+  const isButton = useMatch("/analytics");
+  const isEconomic = useMatch("/analytics/economic_indicators");
 
   return (
-    <div>
+    <div className="analytics">
       <div className="video-background">
         <BackgroundVideo videoSrc="/about/bg-about.mp4" />
+      </div>
 
-      </div>
-      <div className="absolute top-[60px] right-10 flex flex-wrap gap-6 max-w-[800px] pt-[60px]">
-        <LinearButton title={t('analytic.indicators')} pageRouter="/economic_Indicators" />
-        <LinearButton title={t('analytic.demonstrators')} pageRouter="/international_demonstrators" />
-        <LinearButton title={t('analytic.infobase')} pageRouter="/open_infobase" />
-      </div>
+      {isButton ? (
+        <div className="absolute top-[60px] right-10 flex flex-wrap gap-6 max-w-[800px] pt-[60px]">
+          <LinearButton title="Iqtisadi Göstəricilər" pageRouter="economic_indicators" />
+          <LinearButton title="Beynəlxalq Göstəricilər" pageRouter="international_demonstrators" />
+          <LinearButton title="Açıq İnformasiya Bazası" pageRouter="open_infobase" />
+        </div>
+      ) : (
+        <div className="absolute top-30 left-10 ">
+          <div>
+            <NavLink to="/analytics" className={({ isActive }) => (isActive ? "text-blue-500" : "text-white")}>
+              Analitika
+            </NavLink>
+          </div>
+          <div className="mt-4 ml-4">
+            <NavLink to="/analytics/economic_indicators" className={({ isActive }) => (isActive ? "text-blue-500 flex" : "text-white flex")}>
+              Iqtisadi Göstəricilər
+            </NavLink>
+            {isEconomic ? (
+              <div></div>
+            ) : (
+              <div className="ml-6 mt-2 flex flex-col gap-4">
+                <NavLink to="/analytics/economic_indicators/macro" className={({ isActive }) => (isActive ? "text-blue-400" : "text-white")}>
+                  Makro və mikro iqtisadi göstəricilər
+                </NavLink>
+                <NavLink to="/analytics/economic_indicators/sector" className={({ isActive }) => (isActive ? "text-blue-400" : "text-white")}>
+                  Sektorlar üzrə iqtisadi göstəricilər
+                </NavLink>
+                <NavLink to="/analytics/economic_indicators/demo" className={({ isActive }) => (isActive ? "text-blue-400" : "text-white")}>
+                  Demoqrafik göstəricilər
+                </NavLink>
+                <NavLink to="/analytics/economic_indicators/state_services" className={({ isActive }) => (isActive ? "text-blue-400" : "text-white")}>
+                  Dövlət xidmətləri üzrə göstəricilər
+                </NavLink>
+                <NavLink to="/analytics/economic_indicators/crimes" className={({ isActive }) => (isActive ? "text-blue-400" : "text-white")}>
+                  Cinayətkarlıq və hüquqpozmalar üzrə göstəricilər
+                </NavLink>
+                <NavLink to="/analytics/economic_indicators/labor_market" className={({ isActive }) => (isActive ? "text-blue-400" : "text-white")}>
+                  Əmək bazarı üzrə göstəricilər
+                </NavLink>
+              </div>
+            )}
+          </div>
+          <div className="mt-4 ml-4">
+            <NavLink to="/analytics/international_demonstrators" className={({ isActive }) => (isActive ? "text-blue-500 flex" : "text-white flex")}>
+              Beynəlxalq Göstəricilər
+            </NavLink>
+          </div>
+          <div className="mt-4 ml-4">
+            <NavLink to="/analytics/open_infobase" className={({ isActive }) => (isActive ? "text-blue-500 flex" : "text-white flex")}>
+              Açıq İnformasiya Bazası
+            </NavLink>
+          </div>
+        </div>
+      )}
+
+      <Outlet />
     </div>
   );
 };

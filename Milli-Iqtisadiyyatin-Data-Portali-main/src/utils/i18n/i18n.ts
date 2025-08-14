@@ -297,7 +297,7 @@ const resources = {
 
 i18n.use(initReactI18next).init({
   resources,
-  lng: "ru", // Default dil
+  lng: "az", // Default dil
   interpolation: {
     escapeValue: false,
   },

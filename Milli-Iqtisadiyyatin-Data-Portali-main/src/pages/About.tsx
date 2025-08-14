@@ -8,16 +8,17 @@ import BackgroundVideo from "@/components/bg-video/BackgroundVideo"
 
 const About = () => {
     return (
-        <div className="aboutPage  h-[114vh]">
+        <div className="aboutPage h-[114vh]">
             <div>
                 {/* <div className="absolute top-0 left-0 w-full h-full object-cover -z-10"
                     style={{ top: 0, left: 0, width: '100%', height: '100%', backgroundColor: '#050412' }}>
 
                 </div> */}
 
-                <div className="fixed inset-0 -z-10">
+                <div className="video-background">
                     <BackgroundVideo videoSrc="/about/bg-about.mp4" />
                 </div>
+
 
                 <div>
                     <CustomizedAccordions />
