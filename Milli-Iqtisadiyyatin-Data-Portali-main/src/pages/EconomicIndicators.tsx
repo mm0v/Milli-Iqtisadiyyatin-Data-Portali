@@ -61,7 +61,7 @@ const EconomicIndicators = () => {
           <Link to={"/analytics/economic_indicators/crime"}>
             <div className='flex justify-between items-center mt-6 border-1 rounded-[8px] p-5' style={{ borderColor: '#373641' }}>
               <div>
-                <h1>Cinayətkarlıq və hüquq pozmalar üzrə göstəricilər</h1>
+                <h1>Cinayətkarlıq və hüquq  pozmalar üzrə göstəricilər</h1>
               </div>
               <div>
                 <img className='w-7' src={IconAccordion} alt="IconAccordion" />
