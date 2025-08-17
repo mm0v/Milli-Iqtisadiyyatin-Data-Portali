@@ -1,0 +1,41 @@
+.homePage {
+    height: 90vh;
+}
+
+
+.mainWord {
+    color: #FFF;
+    font-style: normal;
+    text-align: center;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    .texth1 {
+        font-size: 64px;
+        font-weight: 700;
+    }
+
+    .texth6 {
+        font-size: 24px;
+    }
+
+}
+
+
+@media (max-width: 1000px) {
+    .homePage {
+        height: 80vh;
+    }
+    .mainWord {
+        .texth1 {
+            font-size: 44px;
+            font-weight: 700;
+        }
+
+        .texth6 {
+            font-size: 18px;
+        }
+    }
+}

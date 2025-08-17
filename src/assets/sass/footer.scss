@@ -1,0 +1,12 @@
+@media (max-width: 1000px) {
+    .footer-info .footer-info-inside {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .footer-about {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+}
