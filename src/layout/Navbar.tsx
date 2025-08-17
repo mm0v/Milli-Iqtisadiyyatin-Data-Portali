@@ -1,40 +1,34 @@
-import { Link, useLocation } from "react-router-dom";
-import { useTranslation } from "react-i18next"; 
+import { NavLink } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import "../../src/assets/sass/navbar.scss";
 
 const Navbar = () => {
-    const { t } = useTranslation(); // useTranslation() istifadə olunur
-    const location = useLocation();
+    const { t } = useTranslation();
 
     return (
         <div className="navbar">
-            <div className="p-6 flex items-center">
-                <nav>
-                    <div className="space-x-4 ">
-                        <Link to={"/"}>
-                            <p className="nav-link mt-3 text-white">{t('home')}</p>
-                        </Link>
-                        <Link to={"/about"}>
-                            <p className={`nav-link mt-3 ${location.pathname === "/about" ? "text-blue-500" : "text-white"}`}>
-                                {t('about')}
-                            </p>
-                        </Link>
-                        <Link to={"/analytics"}>
-                            <p className={`nav-link mt-3 ${location.pathname === "/analytics" ? "text-blue-500" : "text-white"}`}>
-                                {t('analytics')}
-                            </p>
-                        </Link>
-                        <Link to={"/report"}>
-                            <p className={`nav-link mt-3 ${location.pathname === "/report" ? "text-blue-500" : "text-white"}`}>
-                                {t('report')}
-                            </p>
-                        </Link>
-                        <Link to={"/contact"}>
+            <div className="p-6 flex flex-col items-center">
+                <nav className="space-y-7 ">
+                    <NavLink to="/" className="nav-link mt-3">
+                        {t("home")}
+                    </NavLink>
+                    <NavLink to="/about" className="nav-link mt-3">
+                        {t("aboutUs")}
+                    </NavLink>
+                    <NavLink to="/analytics" className="nav-link mt-3">
+                        {t("analytics")}
+                    </NavLink>
+                    <NavLink to="/report" className="nav-link mt-3">
+                        {t("reports")}
+                    </NavLink>
+                    <NavLink to="/contact" className="nav-link mt-3">
+                        {t("help")}
+                    </NavLink>
+                    {/* <Link to={"/contact"}>
                             <p className={`nav-link mt-3 ${location.pathname === "/contact" ? "text-blue-500" : "text-white"}`}>
                                 {t('help')}
                             </p>
-                        </Link>
-                    </div>
+                        </Link> */}
                 </nav>
             </div>
         </div>

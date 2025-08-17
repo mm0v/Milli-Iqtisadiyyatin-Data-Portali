@@ -1,5 +1,4 @@
 @import "tailwindcss";
-@import "./assets/sass/styles.scss";
 
 @plugin "tailwindcss-animate";
 
@@ -125,4 +124,16 @@
     background-color: var(--color-background);
     color: var(--color-foreground);
   }
+}
+
+.video-background {
+    position: fixed;
+    inset: 0;
+    z-index: -10;
+
+    video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
 }

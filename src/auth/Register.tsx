@@ -9,8 +9,11 @@ import CustomPhoneInput from "@/components/PhoneInput";
 import { Link } from "react-router-dom";
 import FileUpload from "@/components/FileUpload";
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import BackgroundVideo from "@/components/bg-video/BackgroundVideo";
+import { Trans, useTranslation } from "react-i18next";
 
 const Register = () => {
+    const { t } = useTranslation()
     const [showPassword, setShowPassword] = useState(false);
     const handleFileChange = (file: File | null) => {
         if (file) {
@@ -21,16 +24,8 @@ const Register = () => {
     return (
         <div>
             <div>
-                <div className="fixed inset-0 -z-10">
-                    <video
-                        autoPlay
-                        loop
-                        muted
-                        className="w-full h-full object-cover"
-                    >
-                        <source src="./signIn/bg-video-signIn.mp4" type="video/mp4" />
-                        Your browser does not support the video tag.
-                    </video>
+                <div className="video-background">
+                    <BackgroundVideo videoSrc="./signIn/bg-video-signIn.mp4" />
                 </div>
                 {/* <div className="absolute top-0 left-0 w-full h-full object-cover -z-10"
                     style={{ top: 0, left: 0, width: '100%', height: '100%', backgroundColor: '#050412' }}>
@@ -47,7 +42,7 @@ const Register = () => {
                         {/* bg-transparent */}
                         <div className="w-full">
                             <CardHeader className="text-center">
-                                <CardTitle className="text-white">Hesab Yarat</CardTitle>
+                                <CardTitle className="text-2xl pr-10">{t('register')}</CardTitle>
                             </CardHeader>
                         </div>
                     </div>
@@ -55,22 +50,22 @@ const Register = () => {
                         <form>
                             <div className="flex flex-col md:flex-row mb-4 gap-2">
                                 <div className="space-y-2 w-full md:w-1/2">
-                                    <Label className="text-white" htmlFor="firstName">Ad</Label>
+                                    <Label className="text-white" htmlFor="firstName">{t('auth.register.name')}</Label>
                                     <Input id="firstName" className="h-12" />
                                 </div>
                                 <div className="space-y-2 w-full md:w-1/2">
-                                    <Label className="text-white" htmlFor="lastName">Soyad</Label>
+                                    <Label className="text-white" htmlFor="lastName">{t('auth.register.surname')}</Label>
                                     <Input id="lastName" className="h-12" />
                                 </div>
                             </div>
 
                             <div className="space-y-2 mb-4">
-                                <Label className="text-white" htmlFor="email">E-mail</Label>
+                                <Label className="text-white" htmlFor="email">{t('auth.register.eMail')}</Label>
                                 <Input id="email" type="email" className="h-12" />
                             </div>
 
                             <div className="space-y-2 mb-4">
-                                <Label className="text-white" htmlFor="password">Şifrə</Label>
+                                <Label className="text-white" htmlFor="password">{t('auth.password')}</Label>
                                 <div className="relative">
                                     <Input
                                         id="password"
@@ -85,9 +80,9 @@ const Register = () => {
                                     </button>
                                 </div>
                                 <p className="text-xs text-gray-500">
-                                    8 və ya daha çox karakter, simvoldan istifadə edin
+                                    {t('auth.register.alert')}
                                 </p>
-                                <Label className="text-white" htmlFor="password">Şifrə təkrar daxil edin</Label>
+                                <Label className="text-white" htmlFor="password">{t('auth.register.confirmPass')}</Label>
                                 <div className="relative">
                                     <Input
                                         id="password"
@@ -105,9 +100,9 @@ const Register = () => {
 
                             <div className="flex flex-col lg:flex-row">
                                 <div className=" space-y-2 mb-6 w-full lg:w-9/12">
-                                    <Label htmlFor="phone"><p className="text-white">Nömrə</p></Label>
+                                    <Label htmlFor="phone"><p className="text-white">{t('auth.number')}</p></Label>
                                     <CustomPhoneInput />
-                                    <Label className="text-white" htmlFor="workplace">İş Yeri</Label>
+                                    <Label className="text-white" htmlFor="workplace">{t('auth.workPlace')}</Label>
                                     <Input id="workplace" className="h-12" />
                                 </div>
                                 <div className="w-full lg:w-3/12 text-white">
@@ -128,25 +123,25 @@ const Register = () => {
                                         htmlFor="terms"
                                         className="text-sm font-medium leading-none text-white"
                                     >
-                                        Hesabla yaratmaqla Sizin{" "}
-                                        <a href="#" className="text-blue-600 hover:underline">
-                                            İstifadə şərtləri
-                                        </a>{" "}
-                                        və{" "}
-                                        <a href="#" className="text-blue-600 hover:underline">
-                                            Gizlilik Siyasəti
-                                        </a>{" "}
-                                        şərtlərlə razısınızam
+                                        <Trans i18nKey="auth.policy"
+                                            components={{
+                                                1: <a href="/terms" className="text-blue-600 hover:underline" />,
+                                                3: <a href="/privacy" className="text-blue-600 hover:underline" />
+                                            }} />
                                     </label>
                                 </div>
                             </div>
 
                             <Button type="submit" className="w-full h-12 bg-blue-600 hover:bg-blue-700 text-white cursor-pointer">
-                                Daxil ol
+                                {t('register')}
                             </Button>
 
                             <div className="text-center mt-4">
-                                <p className="text-sm text-white">Hesabın var? <Link to={"/login"} className='hover:underline'>Daxil ol</Link></p>
+                                <Trans i18nKey="auth.register.haveAccount"
+                                    components={{
+                                        1: <Link to="/login" className="hover:underline text-blue-500" />
+                                    }} />
+
                             </div>
                         </form>
                     </CardContent>

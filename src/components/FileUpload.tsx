@@ -3,6 +3,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Plus, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Alert, AlertDescription } from '@/components/ui/alert';
+import { useTranslation } from 'react-i18next';
 
 interface FileUploadProps {
     onFileChange: (file: File | null) => void;
@@ -15,7 +16,7 @@ const FileUpload: React.FC<FileUploadProps> = ({
     onFileChange,
     maxSizeInMB = 3,
     acceptedFormats = ['image/jpeg', 'image/png'],
-    label = 'Şəkil'
+    label
 }) => {
     const [file, setFile] = useState<File | null>(null);
     const [preview, setPreview] = useState<string | null>(null);
@@ -81,9 +82,12 @@ const FileUpload: React.FC<FileUploadProps> = ({
         onFileChange(null);
     };
 
+    const { t } = useTranslation()
+
     return (
         <div className="w-full max-w-md ml-2">
-            <p className="text-sm font-medium mb-1">{label}</p>
+            <p className="text-sm font-medium mb-1">{label ?? t('auth.photo')}</p>
+
 
             <Card className={`bg-[#070618] text-white border-2 ${isDragging ? 'border-blue-500' : 'border-dashed border-gray-300'} p-0`}>
                 <CardContent className="p-2">
@@ -99,7 +103,7 @@ const FileUpload: React.FC<FileUploadProps> = ({
                                 <Plus className="h-6 w-6 text-gray-500" />
                             </div>
                             <p className="text-xs text-gray-500 text-center">
-                                {maxSizeInMB} MB-dan çox olmamalıdır. JPEG, PNG formatında
+                                {maxSizeInMB}{t('auth.photoSize')}
                             </p>
                             <input
                                 id="file-upload"

@@ -3,14 +3,13 @@ import { styled } from '@mui/material/styles';
 import AddIcon from '@mui/icons-material/Add';
 import RemoveIcon from '@mui/icons-material/Remove';
 import MuiAccordion, { AccordionProps } from '@mui/material/Accordion';
-import MuiAccordionSummary, {
-    AccordionSummaryProps,
-    accordionSummaryClasses,
-} from '@mui/material/AccordionSummary';
+import MuiAccordionSummary, { AccordionSummaryProps, accordionSummaryClasses, } from '@mui/material/AccordionSummary';
 import MuiAccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 import Meqsed from '/about/meqsed.png';
 import Missya from '/about/missya.png';
+import { useTranslation } from "react-i18next";
+
 
 const Accordion = styled((props: AccordionProps) => (
     <MuiAccordion disableGutters elevation={0} square {...props} />
@@ -60,6 +59,9 @@ export default function CustomizedAccordions() {
             setExpanded(newExpanded ? panel : false);
         };
 
+    const { t } = useTranslation();
+
+
     return (
         <div className="flex justify-end px-4 sm:px-6 md:px-20 h-[94vh] py-8">
             <div className="w-full max-w-[820px]">
@@ -75,15 +77,12 @@ export default function CustomizedAccordions() {
                             color: "#8994D7",
                             lineHeight: 1.2
                         }} component="span">
-                            Biz Kimik?
+                            <h1>{t('about.heroTitle')}</h1>
                         </Typography>
                     </AccordionSummary>
                     <AccordionDetails>
                         <Typography className='text-white' sx={{ fontSize: { xs: '0.895rem' } }}>
-                            Milli İqtisadiyyatın Data Portalı, Dördüncü Sənaye İnqilabının Təhlili və Koordinasiya Mərkəzi (4SİM)
-                            tərəfindən yaradılan innovativ məlumat platformasıdır. Portalın məqsədi Azərbaycan iqtisadiyyatı
-                            üzrə açıq, etibarlı və real vaxt rejimində yenilənən məlumatları vahid məkanda cəmləşdirmək,
-                            analitik imkanları genişləndirmək və qərarvermə proseslərini dəstəkləməkdir.
+                            {t('about.paragraph')}
                         </Typography>
                     </AccordionDetails>
                 </Accordion>
@@ -100,7 +99,7 @@ export default function CustomizedAccordions() {
                             color: "#8994D7",
                             lineHeight: 1.2
                         }} component="span">
-                            Məqsəd
+                            {t('about.goal.title')}
                         </Typography>
                     </AccordionSummary>
                     <AccordionDetails>
@@ -108,10 +107,7 @@ export default function CustomizedAccordions() {
                             <img className='w-full max-w-[400px]' src={Meqsed} alt="Meqsed" />
                         </div>
                         <Typography className='text-white' sx={{ fontSize: { xs: '0.895rem' } }}>
-                            Milli İqtisadiyyatın Data Portalı Azərbaycan iqtisadiyyatına dair məlumatların
-                            şəffaflığını və əlçatanlığını artıraraq dövlət qurumlarını, biznesləri, investorları
-                            və tədqiqatçıları etibarlı məlumatlarla təmin etməyi hədəfləyir. Portal vasitəsilə iqtisadi
-                            trendləri izləmək, data əsaslı qərarlar vermək və effektiv siyasət formalaşdırmaq mümkün olacaq.
+                            {t('about.goal.description')}
                         </Typography>
                     </AccordionDetails>
                 </Accordion>
@@ -128,7 +124,7 @@ export default function CustomizedAccordions() {
                             color: "#8994D7",
                             lineHeight: 1.2
                         }} component="span">
-                            Missiya
+                            {t('about.mission.title')}
                         </Typography>
                     </AccordionSummary>
                     <AccordionDetails>
@@ -136,10 +132,7 @@ export default function CustomizedAccordions() {
                             <img className='w-full max-w-[400px]' src={Missya} alt="Missya" />
                         </div>
                         <Typography className='text-white' sx={{ fontSize: { xs: '0.895rem' } }}>
-                            Müasir data analitika metodları və rəqəmsal texnologiyalar əsasında milli
-                            iqtisadiyyata dair açıq və sistemli məlumat mühitini formalaşdırmaqdır. Portal, məlumatların
-                            vahid platformada toplanmasını, vizuallaşdırılmasını və analitik imkanların genişləndirilməsini
-                            təmin edərək, iqtisadi proseslərin daha dərin və dəqiq anlaşılmasına töhfə verəcək.
+                            {t('about.mission.description')}
                         </Typography>
                     </AccordionDetails>
                 </Accordion>
