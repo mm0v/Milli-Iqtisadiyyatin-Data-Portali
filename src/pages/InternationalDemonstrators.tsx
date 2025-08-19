@@ -11,7 +11,7 @@ const InternationalDemonstrators = () => {
           </h1>
         </div>
         <div className="text-white">
-          <Link to={"/academic_reports/economic_reports"}>
+          <Link to={""}>
             <div className='flex justify-between items-center mt-6 border-1 rounded-[8px] p-5' style={{ borderColor: '#373641' }}>
               <div>
                 <h1>Qlobal innovasiyalar indeksi</h1>
@@ -21,7 +21,7 @@ const InternationalDemonstrators = () => {
               </div>
             </div>
           </Link>
-          <Link to={"/academic_reports/financial_reports"}>
+          <Link to={""}>
             <div className='flex justify-between items-center mt-6 border-1 rounded-[8px] p-5' style={{ borderColor: '#373641' }}>
               <div>
                 <h1>Süni intellekt hazırlıq indeksi</h1>
@@ -31,7 +31,7 @@ const InternationalDemonstrators = () => {
               </div>
             </div>
           </Link>
-          <Link to={"/academic_reports/science_reports"}>
+          <Link to={""}>
             <div className='flex justify-between items-center mt-6 border-1 rounded-[8px] p-5' style={{ borderColor: '#373641' }}>
               <div>
                 <h1>Elektron Hökümətin İnkişafı indeksi</h1>

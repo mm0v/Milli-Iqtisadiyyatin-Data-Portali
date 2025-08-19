@@ -31,7 +31,6 @@ import PublicationEconomic from './pages/PublicationEconomic'
 import PublicationFinancial from './pages/PublicationFinancial'
 import PublicationScience from './pages/PublicationScience'
 
-import PersonalInfo from "./pages/PersonalInfo";
 import ProfileSettings from "./pages/ProfileSettings";
 
 import InternationalDemonstrators from './pages/InternationalDemonstrators'
