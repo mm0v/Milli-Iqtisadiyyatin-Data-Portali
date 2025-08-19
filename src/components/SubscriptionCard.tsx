@@ -1,6 +1,15 @@
 import React from "react";
 
-const Card = ({
+type CardProps = {
+  title: string;
+  price: number | string;
+  originalPrice?: number | string;
+  period?: string;
+  features: string[];
+  isCurrent?: boolean;
+};
+
+const Card:React.FC<CardProps> = ({
   title,
   price,
   originalPrice,
@@ -8,7 +17,7 @@ const Card = ({
   features,
   isCurrent = false
 }) => {
-  const planColors = {
+  const planColors:Record<string,string> = {
     "Pulsuz Paket": "#5D80E3",
     "Standart Paket": "#2F57C8",
     "Premium Paket": "#1D3579",

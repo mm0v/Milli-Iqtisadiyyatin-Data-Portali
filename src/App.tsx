@@ -4,10 +4,10 @@ import './assets/sass/styles.scss'
 import Home from './pages/Home'
 import Header from './layout/Header'
 import Footer from './layout/Footer'
+import Navbar from './layout/Navbar'
 import Login from './auth/Login'
 import Register from './auth/Register'
 import About from './pages/About'
-import HelpAndContact from './pages/HelpAndContact'
 
 import Analytics from './pages/Analytics'
 import EconomicIndicators from './pages/EconomicIndicators'
@@ -15,7 +15,13 @@ import MacroEconomic from './pages/MacroEconomic'
 import DemoEconomic from './pages/DemoEconomic'
 import StateServices from './pages/StateServices'
 import Crimes from './pages/Crimes'
+import SectorEconomic from './pages/SectorEcenomic'
 import LaborMarket from './pages/LaborMarket'
+
+import HelpAndContact from './pages/HelpAndContact'
+import FAQ from './pages/FAQ'
+import UserManual from './pages/UserManual'
+import ContactForm from './pages/ContactForm'
 
 import ForgotPassword from './pages/ForgotPassword'
 import NotFound from './pages/NotFound'
@@ -39,12 +45,10 @@ import OpenInfobase from './pages/OpenInfobase'
 import Subscriptions from './pages/Subscriptions'
 import SubscriptionsInfo from './pages/SubscriptionsInfo'
 import PaymentDetails from './pages/PaymentInfo'
-import Navbar from './layout/Navbar'
 import ReCapcha from './pages/ReCapcha'
 import ConfirmDetails from './pages/ConfirmDetails'
 import NewPassword from './pages/NewPassword'
 import Profile from './pages/Profile'
-import SectorEconomic from './pages/SectorEcenomic'
 
 
 const MainLayout = () => {
@@ -126,7 +130,11 @@ function App() {
         </Route>
 
         <Route path="/report" element={<Report />} />
-        <Route path="/contact" element={<HelpAndContact />} />
+        <Route path="/contact" element={<HelpAndContact />} >
+          <Route path="faq" element={<FAQ />} />
+          <Route path="user_manual" element={<UserManual />} />
+          <Route path="contact_form" element={<ContactForm />} />
+        </Route>
         <Route path="/academic_reports" element={<AcademicReports />} />
         <Route path="/academic_reports/economic_reports" element={<EconomicReports />} />
         <Route path="/academic_reports/financial_reports" element={<FinancialReports />} />

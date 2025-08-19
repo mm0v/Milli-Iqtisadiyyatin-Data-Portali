@@ -21,7 +21,7 @@ const Analytics = () => {
           <LinearButton title="Açıq İnformasiya Bazası" pageRouter="open_infobase" />
         </div>
       ) : (
-        <div className="absolute top-30 left-10 ">
+        <div className="w-[300px] absolute top-30 left-10 wayOfReportsAndPublications">
           <div>
             <NavLink to="/analytics" className={({ isActive }) => (isActive ? "text-blue-500" : "text-white")}>
               Analitika

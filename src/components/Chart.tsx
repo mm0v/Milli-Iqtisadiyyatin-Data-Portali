@@ -1,5 +1,5 @@
 import React from 'react';
-import { BarChart, Bar, Rectangle, XAxis, YAxis, Legend, ResponsiveContainer } from 'recharts';
+import { BarChart, Bar, Rectangle, XAxis, YAxis, Legend, ResponsiveContainer, LabelList } from 'recharts';
 
 type ChartDataItem = {
     name: string;
@@ -30,30 +30,59 @@ const Chart: React.FC<MacroEconomicChartProps> = ({ data }) => {
             <div className='title pt-[40px] pl-[24px]'>
                 <h1 className='text-[#0047A6] text-lg font-medium'>Analitika</h1>
             </div>
-            <ResponsiveContainer width="100%" height={566}>
-                <BarChart
-                    layout="vertical"
-                    data={data}
-                    margin={{
-                        top: 20,
-                        right: 30,
-                        left: 20,
-                        bottom: 20,
-                    }}
-                >
-                    <XAxis
-                        type="number"
-                        orientation="top"
-                        ticks={[0, 40, 80, 120, 160, 200, 240, 280, 320, 360, 400]}
-                    />
+            <ResponsiveContainer width="100%" height="100%" minHeight={570} >
+                <BarChart layout="vertical" data={data} margin={{ top: 20, right: 30, left: 20, bottom: 20, }} >
+                    <XAxis type="number" orientation="top" ticks={[0, 40, 80, 120, 160, 200, 240, 280, 320, 360, 400]} />
                     <YAxis dataKey="name" type="category" orientation="left" />
                     <Legend />
-                    <Bar dataKey="2020" fill={colors['2020']} activeBar={<Rectangle />} />
-                    <Bar dataKey="2021" fill={colors['2021']} activeBar={<Rectangle />} />
-                    <Bar dataKey="2022" fill={colors['2022']} activeBar={<Rectangle />} />
-                    <Bar dataKey="2023" fill={colors['2023']} activeBar={<Rectangle />} />
-                    <Bar dataKey="2024" fill={colors['2024']} activeBar={<Rectangle />} />
-                    <Bar dataKey="2025" fill={colors['2025']} activeBar={<Rectangle />} />
+                    <Bar dataKey="2020" fill={colors['2020']} activeBar={<Rectangle />}>
+                        <LabelList
+                            dataKey="2020"
+                            position="insideRight"
+                            fill="#fff"
+                            formatter={(val: any) => `${val}`}
+                        />
+                    </Bar>
+                    <Bar dataKey="2021" fill={colors['2021']} activeBar={<Rectangle />}>
+                        <LabelList
+                            dataKey="2021"
+                            position="insideRight"
+                            fill="#fff"
+                            formatter={(val: any) => `${val}`}
+                        />
+                    </Bar>
+                    <Bar dataKey="2022" fill={colors['2022']} activeBar={<Rectangle />}>
+                        <LabelList
+                            dataKey="2022"
+                            position="insideRight"
+                            fill="#fff"
+                            formatter={(val: any) => `${val}`}
+                        />
+                    </Bar>
+                    <Bar dataKey="2023" fill={colors['2023']} activeBar={<Rectangle />}>
+                        <LabelList
+                            dataKey="2023"
+                            position="insideRight"
+                            fill="#fff"
+                            formatter={(val: any) => `${val}`}
+                        />
+                    </Bar>
+                    <Bar dataKey="2024" fill={colors['2024']} activeBar={<Rectangle />}>
+                        <LabelList
+                            dataKey="2024"
+                            position="insideRight"
+                            fill="#fff"
+                            formatter={(val: any) => `${val}`}
+                        />
+                    </Bar>
+                    <Bar dataKey="2025" fill={colors['2025']} activeBar={<Rectangle />}>
+                        <LabelList
+                            dataKey="2025"
+                            position="insideRight"
+                            fill="#fff"
+                            formatter={(val: any) => `${val}`}
+                        />
+                    </Bar>
                 </BarChart>
             </ResponsiveContainer>
         </div>
