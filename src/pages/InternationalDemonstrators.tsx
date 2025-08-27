@@ -1,7 +1,12 @@
-import { Link } from "react-router-dom"
-import IconAccordion from "/report/IconAccordion.png"
+import { Link, Outlet, useMatch } from "react-router-dom";
+import IconAccordion from "/report/IconAccordion.png";
 
 const InternationalDemonstrators = () => {
+  const isGlobal = useMatch("/analytics/international_demonstrators");
+
+  if (!isGlobal) {
+    return <Outlet />;
+  }
   return (
     <div className="px-4 lg:px-8 xl:px-10 py-6 flex justify-end items-center">
       <div className="w-[830px]">
@@ -11,7 +16,7 @@ const InternationalDemonstrators = () => {
           </h1>
         </div>
         <div className="text-white">
-          <Link to={""}>
+          <Link to={"/analytics/international_demonstrators/global_innovation"}>
             <div className='flex justify-between items-center mt-6 border-1 rounded-[8px] p-5' style={{ borderColor: '#373641' }}>
               <div>
                 <h1>Qlobal innovasiyalar indeksi</h1>
@@ -21,7 +26,7 @@ const InternationalDemonstrators = () => {
               </div>
             </div>
           </Link>
-          <Link to={""}>
+          <Link to={"/analytics/international_demonstrators/ai_readness"}>
             <div className='flex justify-between items-center mt-6 border-1 rounded-[8px] p-5' style={{ borderColor: '#373641' }}>
               <div>
                 <h1>Süni intellekt hazırlıq indeksi</h1>
@@ -31,7 +36,7 @@ const InternationalDemonstrators = () => {
               </div>
             </div>
           </Link>
-          <Link to={""}>
+          <Link to={"/analytics/international_demonstrators/e_gov"}>
             <div className='flex justify-between items-center mt-6 border-1 rounded-[8px] p-5' style={{ borderColor: '#373641' }}>
               <div>
                 <h1>Elektron Hökümətin İnkişafı indeksi</h1>

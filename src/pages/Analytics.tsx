@@ -7,6 +7,7 @@ import { Outlet } from "react-router-dom";
 const Analytics = () => {
   const isButton = useMatch("/analytics");
   const isEconomic = useMatch("/analytics/economic_indicators");
+  const isGlobal = useMatch("/analytics/international_demonstrators");
 
   return (
     <div className="analytics">
@@ -60,6 +61,21 @@ const Analytics = () => {
             <NavLink to="/analytics/international_demonstrators" className={({ isActive }) => (isActive ? "text-blue-500 flex" : "text-white flex")}>
               Beynəlxalq Göstəricilər
             </NavLink>
+            {isGlobal ? (
+              <div></div>
+            ) : (
+              <div className="ml-6 mt-2 flex flex-col gap-4">
+                <NavLink to="/analytics/international_demonstrators/global_innovation" className={({ isActive }) => (isActive ? "text-blue-400" : "text-white")}>
+                  Qlobal innovasiyal indeksi
+                </NavLink>
+                <NavLink to="/analytics/international_demonstrators/ai_readness" className={({ isActive }) => (isActive ? "text-blue-400" : "text-white")}>
+                  Suni intellekt hazirliq indeksi
+                </NavLink>
+                <NavLink to="/analytics/international_demonstrators/e_gov" className={({ isActive }) => (isActive ? "text-blue-400" : "text-white")}>
+                  Elektron hokumetin inkisafi indeksi
+                </NavLink>
+              </div>
+            )}
           </div>
           <div className="mt-4 ml-4">
             <NavLink to="/analytics/open_infobase" className={({ isActive }) => (isActive ? "text-blue-500 flex" : "text-white flex")}>
