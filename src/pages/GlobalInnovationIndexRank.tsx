@@ -2,6 +2,7 @@ import { FiMousePointer } from 'react-icons/fi'
 import Chart from '@/components/Chart';
 import { BarChart, Bar, XAxis, YAxis, Legend, ResponsiveContainer, LabelList, Tooltip } from 'recharts';
 
+//test
 
 const GlobalInnovationIndexRank = () => {
   const chartData = [
