@@ -49,6 +49,9 @@ import ReCapcha from './pages/ReCapcha'
 import ConfirmDetails from './pages/ConfirmDetails'
 import NewPassword from './pages/NewPassword'
 import Profile from './pages/Profile'
+import GlobalInnovationIndexRank from './pages/GlobalInnovationIndexRank'
+import AiReadinessRank from './pages/AiReadinessRank'
+import EGovernmentDevelopmentIndex from './pages/EGovernmentDevelopmentIndex'
 
 
 const MainLayout = () => {
@@ -125,7 +128,11 @@ function App() {
             <Route path='crimes' element={<Crimes />} />
             <Route path='labor_market' element={<LaborMarket />} />
           </Route>
-          <Route path="international_demonstrators" element={<InternationalDemonstrators />} />
+          <Route path="international_demonstrators" element={<InternationalDemonstrators />} >
+            <Route path="global_innovation" element={<GlobalInnovationIndexRank />} />
+            <Route path="ai_readness" element={<AiReadinessRank />} />
+            <Route path="e_gov" element={<EGovernmentDevelopmentIndex />} />
+          </Route>
           <Route path="open_infobase" element={<OpenInfobase />} />
         </Route>
 

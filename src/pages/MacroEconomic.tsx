@@ -3,7 +3,6 @@ import Chart from '@/components/Chart';
 import { BarChart, Bar, XAxis, YAxis, Legend, ResponsiveContainer, LabelList } from 'recharts';
 import { FiMousePointer } from "react-icons/fi";
 
-// Temporary chartData; after API integration, it should be an array of three objects
 const chartData = [
   { name: 'Figma', 2020: 72.01, 2021: 30.82, 2022: 49.42, 2023: 345, 2024: 34, 2025: 2 },
   { name: 'Sketch', 2020: 74.75, 2021: 65.6, 2022: 94.44, 2023: 54, 2024: 53, 2025: 43 },
@@ -16,7 +15,7 @@ const colors = {
   2022: '#3CC3DF',
   2023: '#FFAE4C',
   2024: '#537FF1',
-  2025: '#6FD195',
+  2025: '#6FD195', 
 };
 
 const MacroEconomic: React.FC = () => {

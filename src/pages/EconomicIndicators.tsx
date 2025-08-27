@@ -15,13 +15,13 @@ const EconomicIndicators = () => {
           <div className="text-3xl md:text-4xl lg:text-5xl text-white font-bold text-center md:text-left">
             <h1>Iqtisadi Göstəricilər</h1>
           </div>
-        </div>
+        </div> 
         <div className="text-white">
           <Link to={"/analytics/economic_indicators/macro"}>
             <div className='flex justify-between items-center mt-6 border-1 rounded-[8px] p-5' style={{ borderColor: '#373641' }}>
               <div>
                 <h1>Makro və mikro iqtisadi göstəricilər</h1>
-              </div>
+              </div> 
               <div>
                 <img className='w-7' src={IconAccordion} alt="IconAccordion" />
               </div>
