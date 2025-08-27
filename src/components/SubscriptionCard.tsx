@@ -24,7 +24,7 @@ const Card:React.FC<CardProps> = ({
   };
 
   return (
-    <div className="relative bg-gray-800 rounded-2xl overflow-hidden text-white flex flex-col h-[410px] max-w-[280px]">
+    <div className="relative bg-gray-800 rounded-2xl overflow-hidden text-white flex flex-col h-[410px] max-w-[260px]">
       <div
         className="relative w-full"
         style={{ backgroundColor: planColors[title], height: "28%" }}

@@ -68,13 +68,14 @@ const Subscriptions = () => {
   return (
     <div className="min-h-screen relative">
 
-      <div className="flex justify-end pr-8 pt-8 min-h-screen">
+      <div className="flex justify-end md:pr-8 pt-8 min-h-screen">
         <div className="w-full max-w-[900px] flex flex-col">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6 cursor-pointer">
             {plans.map((plan) => (
               <div
                 key={plan.id}
                 onClick={() => handleClick(plan)}
+                className="w-full flex justify-center"
               >
                 <Card {...plan} />
               </div>
