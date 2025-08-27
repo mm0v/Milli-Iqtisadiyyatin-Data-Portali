@@ -20,7 +20,7 @@ const LanguageSwitch = () => {
           borderRadius: "8px",
           border: "1px solid rgb(166, 166, 166)",
           color: "#C6C6C6",
-          width: "538px",
+          width: "min-538px",
         }}>
           <Select
             labelId="language-select-label"

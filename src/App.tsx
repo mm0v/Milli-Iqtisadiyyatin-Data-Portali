@@ -48,7 +48,13 @@ import PaymentDetails from './pages/PaymentInfo'
 import ReCapcha from './pages/ReCapcha'
 import ConfirmDetails from './pages/ConfirmDetails'
 import NewPassword from './pages/NewPassword'
+
 import Profile from './pages/Profile'
+import PersonalInfo from './pages/PersonalInfo'
+import SecuritySettings from './pages/SecuritySettings'
+import PaymentHistory from './pages/PaymentHistory'
+import LanguageSwitch from './pages/LanguageSwitch'
+import ProfileDeactivate from './pages/ProfileDeactivate'
 import GlobalInnovationIndexRank from './pages/GlobalInnovationIndexRank'
 import AiReadinessRank from './pages/AiReadinessRank'
 import EGovernmentDevelopmentIndex from './pages/EGovernmentDevelopmentIndex'
@@ -151,11 +157,20 @@ function App() {
         <Route path="/academic_publications/science_publication" element={<PublicationScience />} />
         <Route path="/academic_publications" element={<AcademicPublications />} />
 
-        <Route path="/profile" element={<Profile />} />
-        <Route path='/profile_settings' element={<ProfileSettings />} />
-        <Route path="/subscriptions" element={<Subscriptions />} />
-        <Route path="/subscriptions/:planId" element={<SubscriptionsInfo />} />
-        <Route path="/payment" element={<PaymentDetails />} />
+        <Route path="/profile" element={<Profile />}>
+          <Route index element={<PersonalInfo />} />
+          <Route path='personal_info' element={<PersonalInfo />} />
+          <Route path='settings' element={<ProfileSettings />} >
+            <Route index element={<LanguageSwitch />} />
+            <Route path="language" element={<LanguageSwitch />} />
+            <Route path="subscriptions" element={<Subscriptions />} />
+            <Route path="subscriptions/:planId" element={<SubscriptionsInfo />} />
+            <Route path="payment" element={<PaymentDetails />} />
+            <Route path="deactivate" element={<ProfileDeactivate />} />
+          </Route>
+          <Route path='security' element={<SecuritySettings />} />
+          <Route path='payment-history' element={<PaymentHistory />} />
+        </Route>
       </Route>
 
       <Route path="*" element={<NotFound />} />

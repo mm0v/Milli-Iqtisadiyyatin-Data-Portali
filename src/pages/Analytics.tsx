@@ -16,7 +16,7 @@ const Analytics = () => {
       </div>
 
       {isButton ? (
-        <div className="absolute top-[60px] right-10 flex flex-wrap gap-6 max-w-[800px] pt-[60px]">
+        <div className="absolute top-[60px] md:right-10 grid grid-cols-1 md:grid-cols-2 grid-rows-2 gap-6 w-full lg:max-w-[800px] items-center justify-center p-10 md:p-[60px]">
           <LinearButton title="Iqtisadi Göstəricilər" pageRouter="economic_indicators" />
           <LinearButton title="Beynəlxalq Göstəricilər" pageRouter="international_demonstrators" />
           <LinearButton title="Açıq İnformasiya Bazası" pageRouter="open_infobase" />

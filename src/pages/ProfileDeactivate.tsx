@@ -24,8 +24,8 @@ const ProfileDeactivate = () => {
 
 
   return (
-    <div className="w-full">
-      <AccountSettingsNav />
+    <div className="w-full h-screen">
+      {/* <AccountSettingsNav /> */}
       <h3 className="text-white text-lg font-medium mb-14">Profiliniz və məzmununuz silinməyəcək, amma görünməz olacaq. Sonradan yenidən aktivləşdirə bilərsiniz. Zəhmət olmasa, səbəb seçin.</h3>
 
       <div className="deactive-form flex flex-col">
