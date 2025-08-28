@@ -7,7 +7,7 @@ const PersonalInfo = () => {
     return (
         <section className="flex flex-col" >
             <h3 className="text-white text-center lg:text-start text-4xl font-semibold">Şəxsi məlumatlar</h3>
-            <div className="grid grid-cols-1 md:grid-cols-5 px-4 md:px-10 w-full py-8 md:py-11 pb-[100px] md:pb-[310px] mt-5 md:mt-9 rounded-2xl gap-6 md:gap-20 bg-[rgba(7,6,24,0.7)]">
+            <div className="grid grid-cols-1 md:grid-cols-5 px-4 md:px-10 w-full py-8 md:py-11 pb-[100px] md:pb-[310px] mt-5 md:mt-9 rounded-2xl gap-6 md:gap-20 bg-[#0706186E]">
                 <div className="md:col-span-5 lg:col-span-1 flex flex-col items-center">
                     <img src={profilePhoto} alt="" className="w-full h-full md:w-40 md:h-40 object-contain rounded-full" />
                     <div className="w-full md:w-24 flex flex-col items-center mt-4">

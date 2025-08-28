@@ -53,6 +53,7 @@ import Profile from './pages/Profile'
 import PersonalInfo from './pages/PersonalInfo'
 import SecuritySettings from './pages/SecuritySettings'
 import PaymentHistory from './pages/PaymentHistory'
+import ReceiptDetails from './pages/ReceiptDetails'
 import LanguageSwitch from './pages/LanguageSwitch'
 import ProfileDeactivate from './pages/ProfileDeactivate'
 import GlobalInnovationIndexRank from './pages/GlobalInnovationIndexRank'
@@ -169,7 +170,9 @@ function App() {
             <Route path="deactivate" element={<ProfileDeactivate />} />
           </Route>
           <Route path='security' element={<SecuritySettings />} />
-          <Route path='payment-history' element={<PaymentHistory />} />
+          <Route path='payment-history' element={<PaymentHistory />}>
+            <Route path='receipt' element={<ReceiptDetails />} />
+          </Route>
         </Route>
       </Route>
 

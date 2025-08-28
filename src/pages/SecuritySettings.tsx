@@ -1,5 +1,4 @@
 import PasswordInput from "@/components/PasswordInput";
-import PhoneInput from 'react-phone-number-input'
 import { useState } from "react";
 import { IoMdMail, IoIosPhonePortrait } from "react-icons/io";
 
@@ -13,7 +12,7 @@ const SecuritySettings = () => {
     return (
         <section className="flex flex-col" >
             <h3 className="text-white text-4xl font-semibold">Təhlükəsizlik</h3>
-            <div className="grid grid-cols-1 px-6 md:px-12 w-full py-11  mt-9 rounded-2xl gap-5 bg-[rgba(7,6,24,0.7)]">
+            <div className="grid grid-cols-1 px-6 md:px-12 w-full py-11  mt-9 rounded-2xl gap-5 bg-[#0706186E]">
                 <h2 className="text-white font-bold text-xl">Şifrənizini yeniləyin</h2>
                 <form className="text-white flex flex-col w-full lg:w-[550px] gap-4">
                     <PasswordInput label="Mövcud şifrə" value={showPasswordFirst} setValue={setShowPasswordFirst} />

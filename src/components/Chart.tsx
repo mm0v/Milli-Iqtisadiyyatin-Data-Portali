@@ -33,7 +33,7 @@ const Chart: React.FC<MacroEconomicChartProps> = ({ data }) => {
             <ResponsiveContainer width="100%" height="100%" minHeight={570} >
                 <BarChart layout="vertical" data={data} margin={{ top: 20, right: 30, left: 20, bottom: 20, }} >
                     <XAxis type="number" orientation="top" ticks={[0, 40, 80, 120, 160, 200, 240, 280, 320, 360, 400]} />
-                    <YAxis dataKey="name" type="category" orientation="left" />
+                    <YAxis dataKey="name" type="category" orientation="left" width={window.innerWidth < 768 ? 35 : 60} />
                     <Legend />
                     <Bar dataKey="2020" fill={colors['2020']} activeBar={<Rectangle />}>
                         <LabelList
@@ -41,6 +41,8 @@ const Chart: React.FC<MacroEconomicChartProps> = ({ data }) => {
                             position="insideRight"
                             fill="#fff"
                             formatter={(val: any) => `${val}`}
+                            style={{ fontSize: window.innerWidth < 768 ? 13 : 15 }}
+
                         />
                     </Bar>
                     <Bar dataKey="2021" fill={colors['2021']} activeBar={<Rectangle />}>
@@ -49,6 +51,8 @@ const Chart: React.FC<MacroEconomicChartProps> = ({ data }) => {
                             position="insideRight"
                             fill="#fff"
                             formatter={(val: any) => `${val}`}
+                            style={{ fontSize: window.innerWidth < 768 ? 13 : 15 }}
+
                         />
                     </Bar>
                     <Bar dataKey="2022" fill={colors['2022']} activeBar={<Rectangle />}>
@@ -57,6 +61,8 @@ const Chart: React.FC<MacroEconomicChartProps> = ({ data }) => {
                             position="insideRight"
                             fill="#fff"
                             formatter={(val: any) => `${val}`}
+                            style={{ fontSize: window.innerWidth < 768 ? 13 : 15 }}
+
                         />
                     </Bar>
                     <Bar dataKey="2023" fill={colors['2023']} activeBar={<Rectangle />}>
@@ -65,6 +71,8 @@ const Chart: React.FC<MacroEconomicChartProps> = ({ data }) => {
                             position="insideRight"
                             fill="#fff"
                             formatter={(val: any) => `${val}`}
+                            style={{ fontSize: window.innerWidth < 768 ? 13 : 15 }}
+
                         />
                     </Bar>
                     <Bar dataKey="2024" fill={colors['2024']} activeBar={<Rectangle />}>
@@ -73,6 +81,8 @@ const Chart: React.FC<MacroEconomicChartProps> = ({ data }) => {
                             position="insideRight"
                             fill="#fff"
                             formatter={(val: any) => `${val}`}
+                            style={{ fontSize: window.innerWidth < 768 ? 13 : 15 }}
+
                         />
                     </Bar>
                     <Bar dataKey="2025" fill={colors['2025']} activeBar={<Rectangle />}>
@@ -81,6 +91,8 @@ const Chart: React.FC<MacroEconomicChartProps> = ({ data }) => {
                             position="insideRight"
                             fill="#fff"
                             formatter={(val: any) => `${val}`}
+                            style={{ fontSize: window.innerWidth < 768 ? 13 : 15 }}
+
                         />
                     </Bar>
                 </BarChart>

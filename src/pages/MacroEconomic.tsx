@@ -15,7 +15,7 @@ const colors = {
   2022: '#3CC3DF',
   2023: '#FFAE4C',
   2024: '#537FF1',
-  2025: '#6FD195', 
+  2025: '#6FD195',
 };
 
 const MacroEconomic: React.FC = () => {
@@ -29,7 +29,7 @@ const MacroEconomic: React.FC = () => {
 
           <div className="mt-10 w-full h-[300px] md:h-[400px] rounded-3xl overflow-hidden bg-white">
             <img
-              src="your-image-url.jpg" 
+              src="your-image-url.jpg"
               alt="Economic Indicators"
               className="w-full h-full object-cover"
             />
@@ -62,33 +62,30 @@ const MacroEconomic: React.FC = () => {
           <Chart data={chartData} />
         </div>
 
-        <div className="w-full bg-white rounded-[8px] col-span-1 lg:col-span-2 p-5">
-          <h2 className="text-lg font-medium text-[#0047A6] mb-4">Analitika</h2>
-          <ResponsiveContainer width="100%" height={400}>
-            <BarChart
-              data={chartData}
-              margin={{ top: 20, right: 30, left: 20, bottom: 20 }}
-            >
+        <div className="relative w-full bg-white rounded-[8px] col-span-1 lg:col-span-2 p-0 md:p-5">
+          <h2 className="text-lg font-medium text-[#0047A6] my-4 md:mt-0 text-center md:text-start">Analitika</h2>
+          <ResponsiveContainer width="100%" height={400} >
+            <BarChart data={chartData} className='m-0 md:m-[20px] md:mr-[30px]' barCategoryGap={window.innerWidth < 768 ? 0 : 60} barGap={window.innerWidth < 768 ? 0 : 5} >
               <XAxis dataKey="name" />
-              <YAxis />
+              <YAxis width={window.innerWidth < 768 ? 35 : 60} />
               <Legend />
               <Bar dataKey="2020" fill={colors['2020']}>
-                <LabelList dataKey="2020" position="insideTop" fill="#fff" formatter={(val) => `${val}`} />
+                <LabelList dataKey="2020" position="insideTop" fill="#fff" formatter={(val) => `${val}`}  className="text-10px md:text-auto"   />
               </Bar>
               <Bar dataKey="2021" fill={colors['2021']}>
-                <LabelList dataKey="2021" position="insideTop" fill="#fff" formatter={(val) => `${val}`} />
+                <LabelList dataKey="2021" position="insideTop" fill="#fff" formatter={(val) => `${val}`}  className="text-10px md:text-auto"   />
               </Bar>
               <Bar dataKey="2022" fill={colors['2022']}>
-                <LabelList dataKey="2022" position="insideTop" fill="#fff" formatter={(val) => `${val}`} />
+                <LabelList dataKey="2022" position="insideTop" fill="#fff" formatter={(val) => `${val}`}  className="text-10px md:text-auto"   />
               </Bar>
               <Bar dataKey="2023" fill={colors['2023']}>
-                <LabelList dataKey="2023" position="insideTop" fill="#fff" formatter={(val) => `${val}`} />
+                <LabelList dataKey="2023" position="insideTop" fill="#fff" formatter={(val) => `${val}`}  className="text-10px md:text-auto"   />
               </Bar>
               <Bar dataKey="2024" fill={colors['2024']}>
-                <LabelList dataKey="2024" position="insideTop" fill="#fff" formatter={(val) => `${val}`} />
+                <LabelList dataKey="2024" position="insideTop" fill="#fff" formatter={(val) => `${val}`}  className="text-10px md:text-auto"   />
               </Bar>
               <Bar dataKey="2025" fill={colors['2025']}>
-                <LabelList dataKey="2025" position="insideTop" fill="#fff" formatter={(val) => `${val}`} />
+                <LabelList dataKey="2025" position="insideTop" fill="#fff" formatter={(val) => `${val}`}  className="text-10px md:text-auto"   />
               </Bar>
             </BarChart>
           </ResponsiveContainer>
