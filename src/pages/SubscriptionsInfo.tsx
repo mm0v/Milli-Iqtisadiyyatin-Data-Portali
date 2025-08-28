@@ -1,15 +1,19 @@
 import React, { useState } from "react";
 import { useLocation, useNavigate, useParams } from "react-router-dom";
 
-const planOrder = ["free", "standard", "premium"];
+type Plan = {
+  title: string;
+  price: string;
+  period: string;
+  features: string[];
+};
 
-const plansData = {
-  free: {
-    title: "Pulsuz Paket",
-    price: "0",
-    period: "Aylıq",
-    features: [],
-  },
+type LocationState = Plan & { planId?: string };
+
+const planOrder = ["free", "standard", "premium"] as const;
+
+const plansData: Record<typeof planOrder[number], Plan> = {
+  free: { title: "Pulsuz Paket", price: "0", period: "Aylıq", features: [] },
   standard: {
     title: "Standart Paket",
     price: "10",
@@ -37,7 +41,7 @@ const plansData = {
   },
 };
 
-function formatDate(date) {
+function formatDate(date: Date): string {
   const d = date.getDate().toString().padStart(2, "0");
   const m = (date.getMonth() + 1).toString().padStart(2, "0");
   const y = date.getFullYear();
@@ -46,15 +50,12 @@ function formatDate(date) {
   return `${d}.${m}.${y} ${h}:${min}`;
 }
 
-const SubscriptionInfo = () => {
-  const { state } = useLocation();
+const SubscriptionInfo: React.FC = () => {
+  const { state } = useLocation() as { state?: LocationState };
   const navigate = useNavigate();
-  const { planId } = useParams();
+  const { planId } = useParams<{ planId: string }>();
 
-  const currentPlanId = localStorage.getItem("currentPlanId") || "free";
-  const isCurrent = planId === currentPlanId;
-
-  const plan = state || plansData[planId] || {
+  const plan: Plan = state || (planId && plansData[planId as keyof typeof plansData]) || {
     title: "Unknown",
     price: "-",
     period: "-",
@@ -71,7 +72,7 @@ const SubscriptionInfo = () => {
   const [upgradeMode, setUpgradeMode] = useState(false);
 
   const handleUpgrade = () => {
-    const currentIndex = planOrder.indexOf(planId);
+    const currentIndex = planOrder.indexOf(planId as typeof planOrder[number]);
     const nextPlanId = planOrder[currentIndex + 1];
     if (nextPlanId) {
       navigate(`/profile/settings/subscriptions/${nextPlanId}`, {
@@ -81,20 +82,17 @@ const SubscriptionInfo = () => {
     }
   };
 
+  // Always send to payment page, even for free plan
   const handleBuy = () => {
-    if (planId === "free") {
-      localStorage.setItem("currentPlanId", "free");
-      navigate("/profile/settings/subscriptions");
-    } else {
-      navigate("/profile/settings/subscriptions/payment", {
-        state: {
-          planId,
-          price: plan.price,
-          title: plan.title.replace(" Paket", ""),
-        },
-      });
-    }
+    navigate(`/profile/settings/subscriptions/${planId}/payment`, {
+      state: {
+        planId,
+        price: plan.price,
+        title: plan.title.replace(" Paket", ""),
+      },
+    });
   };
+
 
   return (
     <div className="min-h-screen text-white p-4 sm:p-6 relative overflow-x-hidden">
@@ -125,14 +123,11 @@ const SubscriptionInfo = () => {
 
                 <div className="pt-4 text-right space-y-1 text-sm mt-6">
                   <div
-                    onClick={
-                      planId === "premium" ? undefined : handleUpgrade
-                    }
-                    className={`${
-                      planId === "premium"
+                    onClick={planId === "premium" ? undefined : handleUpgrade}
+                    className={`${planId === "premium"
                         ? "text-[#94A3B8] cursor-default"
                         : "text-[#FFDB00] cursor-pointer"
-                    }`}
+                      }`}
                   >
                     Planı təkminləşdirmək
                   </div>
@@ -161,15 +156,9 @@ const SubscriptionInfo = () => {
 
               <div className="flex flex-col sm:flex-row gap-4 mt-6">
                 <button
-                  onClick={!isCurrent ? handleBuy : undefined}
-                  disabled={isCurrent}
-                  className={`${
-                    upgradeMode ? "flex-1" : "w-full"
-                  } bg-[#3460DC] text-white py-3 px-4 rounded-lg font-medium transition-colors ${
-                    isCurrent
-                      ? "opacity-50 cursor-not-allowed"
-                      : "hover:bg-[#2a50ba] cursor-pointer"
-                  }`}
+                  onClick={handleBuy}
+                  className={`${upgradeMode ? "flex-1" : "w-full"
+                    } bg-[#3460DC] text-white py-3 px-4 rounded-lg font-medium transition-colors hover:bg-[#2a50ba] cursor-pointer`}
                 >
                   Almaq
                 </button>
@@ -192,5 +181,3 @@ const SubscriptionInfo = () => {
 };
 
 export default SubscriptionInfo;
-
-

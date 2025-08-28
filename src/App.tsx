@@ -44,7 +44,7 @@ import OpenInfobase from './pages/OpenInfobase'
 
 import Subscriptions from './pages/Subscriptions'
 import SubscriptionsInfo from './pages/SubscriptionsInfo'
-import PaymentDetails from './pages/PaymentInfo'
+import PaymentInfo from './pages/PaymentInfo'
 import ReCapcha from './pages/ReCapcha'
 import ConfirmDetails from './pages/ConfirmDetails'
 import NewPassword from './pages/NewPassword'
@@ -166,7 +166,7 @@ function App() {
             <Route path="language" element={<LanguageSwitch />} />
             <Route path="subscriptions" element={<Subscriptions />} />
             <Route path="subscriptions/:planId" element={<SubscriptionsInfo />} />
-            <Route path="payment" element={<PaymentDetails />} />
+            <Route path="subscriptions/:planId/payment" element={<PaymentInfo />} />
             <Route path="deactivate" element={<ProfileDeactivate />} />
           </Route>
           <Route path='security' element={<SecuritySettings />} />
