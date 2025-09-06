@@ -1,11 +1,9 @@
 import { useState } from "react";
 import { FiMenu, FiX } from "react-icons/fi";
-import { NavLink, useLocation, useMatch } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
-interface AnalyticsSidebarProps { }
-
-const AnalyticsSidebar: React.FC<AnalyticsSidebarProps> = () => {
+const AnalyticsSidebar = () => {
     const { t } = useTranslation();
     const location = useLocation();
     const path = location.pathname;
@@ -81,12 +79,13 @@ const AnalyticsSidebar: React.FC<AnalyticsSidebarProps> = () => {
         <>
             {/* Overlay */}
             <div
-                className={`fixed lg:hidden top-0 left-0 w-full h-full bg-[rgba(29,7,22,0.5)] z-40 transition-opacity duration-300 ${isOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"}`}
+                className={`fixed lg:hidden top-0 left-0 w-full h-full bg-[rgba(29,7,22,0.5)] z-40 transition-opacity duration-300 
+                    ${isOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"}`}
                 onClick={togglePanel}
             />
 
             {/* Sidebar */}
-            <aside className={`fixed top-18 left-0 h-full w-64 bg-[#180718] z-50 shadow-xl transform transition-transform duration-300 ease-in-out lg:relative lg:translate-x-0 lg:shadow-none lg:bg-transparent
+            <aside className={`fixed top-21 left-0 h-full w-80 bg-[#180718] z-50 shadow-xl transform transition-transform duration-300 ease-in-out lg:relative lg:translate-x-0 lg:shadow-none lg:bg-transparent
                             ${isOpen ? "translate-x-0" : "-translate-x-full"}`}>
                 <div className="p-4 flex justify-end lg:hidden">
                     <FiX size={24} onClick={togglePanel} className="text-white cursor-pointer hover:text-red-400 transition-colors" />

@@ -119,9 +119,9 @@ const FAQ = () => {
     };
 
     return (
-        <div className="px-4 lg:px-8 xl:px-10 py-6 flex justify-end items-center">
+        <div className="md:w-[90%] px-4 lg:px-8 xl:px-10 py-6 flex justify-end items-center">
             <div className="w-[830px]">
-                <h1 className="text-2xl sm:text-5xl font-medium mb-10 text-[#F9F9F9]">Tez-tez verilən suallar</h1>
+                <h1 className="text-2xl sm:text-4xl font-medium mb-10 text-[#F9F9F9]">Tez-tez verilən suallar</h1>
 
                 {sections.map((section, sectionIndex) => (
                     <div key={sectionIndex} className="mb-10">

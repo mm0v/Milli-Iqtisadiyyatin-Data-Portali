@@ -1,6 +1,6 @@
-import { useState, Fragment } from "react";
+import { useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
-import { Listbox, Transition } from '@headlessui/react';
+import { Listbox} from '@headlessui/react';
 import { ChevronDownIcon } from "lucide-react";
 
 const ContactForm = () => {
@@ -35,7 +35,7 @@ const ContactForm = () => {
     };
 
     return (
-        <div className="min-h-screen text-white p-6 relative overflow-x-hidden">
+        <div className="md:w-[90%] min-h-screen text-white p-6 relative overflow-x-hidden">
             <div className="flex justify-end min-h-screen">
                 <div className="w-full max-w-[800px] flex flex-col px-4">
                     <div className={`bg-[#070618CC]/85 p-8 sm:p-16 rounded-xl space-y-6 ${formCompleted ? "max-w-[600px] mx-auto" : ""}`}>
