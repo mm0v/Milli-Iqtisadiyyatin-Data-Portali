@@ -1,4 +1,9 @@
-// header.scss
+.page {
+    @media (max-width: 1000px) {
+        padding-top: 50px;
+    }
+}
+
 .header {
     position: sticky;
     top: 0;
@@ -59,14 +64,25 @@
     }
 
     .mobile-header {
-        display: none;
+        position: fixed;
+        width: 100%;
+        height: 82px;
+        top: 0;
+        left: 0;
+        z-index: 999; // ensure it's above other elements
+        display: flex; // make sure it's visible
         padding: 1rem;
         justify-content: space-between;
         align-items: center;
-        background: linear-gradient(90deg, rgba(117, 8, 61, 1) 0%, rgb(77, 14, 57) 50%, rgba(7, 5, 13, 1) 100%);
+        background: linear-gradient(90deg,
+                rgba(117, 8, 61, 1) 0%,
+                rgb(77, 14, 57) 50%,
+                rgba(7, 5, 13, 1) 100%);
 
         .logo {
-            height: 32px;
+            width: 132px;
+            height: 50px;
+            object-fit: contain;
         }
 
         .menu-icon {
@@ -76,13 +92,14 @@
             cursor: pointer;
             padding: 8px;
             border-radius: 8px;
-            transition: background 0.3s ease;
+            transition: all 0.3s ease;
 
             &:hover {
                 background: rgba(255, 255, 255, 0.1);
             }
         }
     }
+
 
     .mobile-nav {
         position: fixed;

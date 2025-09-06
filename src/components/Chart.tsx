@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { BarChart, Bar, Rectangle, XAxis, YAxis, Legend, ResponsiveContainer, LabelList } from 'recharts';
 
 type ChartDataItem = {
@@ -25,10 +26,11 @@ const colors = {
 };
 
 const Chart: React.FC<MacroEconomicChartProps> = ({ data }) => {
+    const { t } = useTranslation()
     return (
         <div>
             <div className='title pt-[40px] pl-[24px]'>
-                <h1 className='text-[#0047A6] text-lg font-medium'>Analitika</h1>
+                <h1 className='text-[#0047A6] text-lg font-medium'>{t('analytics')}</h1>
             </div>
             <ResponsiveContainer width="100%" height="100%" minHeight={570} >
                 <BarChart layout="vertical" data={data} margin={{ top: 20, right: 30, left: 20, bottom: 20, }} >

@@ -75,7 +75,7 @@ const MainLayout = () => {
   const showNavbar = navbarRoutes.includes(location.pathname);
 
   return (
-    <div>
+    <div className='page'>
       <div>
         <Header />
       </div>

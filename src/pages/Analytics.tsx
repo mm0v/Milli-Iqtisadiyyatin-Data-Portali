@@ -1,91 +1,33 @@
+import AnalyticsSidebar from "@/components/AnalyticsSidebar";
 import BackgroundVideo from "@/components/bg-video/BackgroundVideo";
 import LinearButton from "@/components/ui/linearButton";
-import { NavLink } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import { useMatch } from "react-router-dom";
 import { Outlet } from "react-router-dom";
 
 const Analytics = () => {
+  const { t } = useTranslation();
   const isButton = useMatch("/analytics");
-  const isEconomic = useMatch("/analytics/economic_indicators");
-  const isGlobal = useMatch("/analytics/international_demonstrators");
+
 
   return (
     <div className="analytics">
       <div className="video-background">
         <BackgroundVideo videoSrc="/about/bg-about.mp4" />
       </div>
+      <div className="">
+        {isButton ? (
+          <div className="absolute top-[60px] md:right-10 grid grid-cols-1 md:grid-cols-2 grid-rows-2 gap-6 w-full lg:max-w-[800px] items-center justify-center p-10 md:p-[60px]">
+            <LinearButton title={t('analytic.indicators')} pageRouter="economic_indicators" />
+            <LinearButton title={t('analytic.demonstrators')} pageRouter="international_demonstrators" />
+            <LinearButton title={t('analytic.infobase')} pageRouter="open_infobase" />
+          </div>
+        ) : (
+          <AnalyticsSidebar />
+        )}
 
-      {isButton ? (
-        <div className="absolute top-[60px] md:right-10 grid grid-cols-1 md:grid-cols-2 grid-rows-2 gap-6 w-full lg:max-w-[800px] items-center justify-center p-10 md:p-[60px]">
-          <LinearButton title="Iqtisadi Göstəricilər" pageRouter="economic_indicators" />
-          <LinearButton title="Beynəlxalq Göstəricilər" pageRouter="international_demonstrators" />
-          <LinearButton title="Açıq İnformasiya Bazası" pageRouter="open_infobase" />
-        </div>
-      ) : (
-        <div className="w-[300px] absolute top-30 left-10 wayOfReportsAndPublications">
-          <div>
-            <NavLink to="/analytics" className={({ isActive }) => (isActive ? "text-blue-500" : "text-white")}>
-              Analitika
-            </NavLink>
-          </div>
-          <div className="mt-4 ml-4">
-            <NavLink to="/analytics/economic_indicators" className={({ isActive }) => (isActive ? "text-blue-500 flex" : "text-white flex")}>
-              Iqtisadi Göstəricilər
-            </NavLink>
-            {isEconomic ? (
-              <div></div>
-            ) : (
-              <div className="ml-6 mt-2 flex flex-col gap-4">
-                <NavLink to="/analytics/economic_indicators/macro" className={({ isActive }) => (isActive ? "text-blue-400" : "text-white")}>
-                  Makro və mikro iqtisadi göstəricilər
-                </NavLink>
-                <NavLink to="/analytics/economic_indicators/sector" className={({ isActive }) => (isActive ? "text-blue-400" : "text-white")}>
-                  Sektorlar üzrə iqtisadi göstəricilər
-                </NavLink>
-                <NavLink to="/analytics/economic_indicators/demo" className={({ isActive }) => (isActive ? "text-blue-400" : "text-white")}>
-                  Demoqrafik göstəricilər
-                </NavLink>
-                <NavLink to="/analytics/economic_indicators/state_services" className={({ isActive }) => (isActive ? "text-blue-400" : "text-white")}>
-                  Dövlət xidmətləri üzrə göstəricilər
-                </NavLink>
-                <NavLink to="/analytics/economic_indicators/crimes" className={({ isActive }) => (isActive ? "text-blue-400" : "text-white")}>
-                  Cinayətkarlıq və hüquqpozmalar üzrə göstəricilər
-                </NavLink>
-                <NavLink to="/analytics/economic_indicators/labor_market" className={({ isActive }) => (isActive ? "text-blue-400" : "text-white")}>
-                  Əmək bazarı üzrə göstəricilər
-                </NavLink>
-              </div>
-            )}
-          </div>
-          <div className="mt-4 ml-4">
-            <NavLink to="/analytics/international_demonstrators" className={({ isActive }) => (isActive ? "text-blue-500 flex" : "text-white flex")}>
-              Beynəlxalq Göstəricilər
-            </NavLink>
-            {isGlobal ? (
-              <div></div>
-            ) : (
-              <div className="ml-6 mt-2 flex flex-col gap-4">
-                <NavLink to="/analytics/international_demonstrators/global_innovation" className={({ isActive }) => (isActive ? "text-blue-400" : "text-white")}>
-                  Qlobal innovasiyal indeksi
-                </NavLink>
-                <NavLink to="/analytics/international_demonstrators/ai_readness" className={({ isActive }) => (isActive ? "text-blue-400" : "text-white")}>
-                  Suni intellekt hazirliq indeksi
-                </NavLink>
-                <NavLink to="/analytics/international_demonstrators/e_gov" className={({ isActive }) => (isActive ? "text-blue-400" : "text-white")}>
-                  Elektron hokumetin inkisafi indeksi
-                </NavLink>
-              </div>
-            )}
-          </div>
-          <div className="mt-4 ml-4">
-            <NavLink to="/analytics/open_infobase" className={({ isActive }) => (isActive ? "text-blue-500 flex" : "text-white flex")}>
-              Açıq İnformasiya Bazası
-            </NavLink>
-          </div>
-        </div>
-      )}
-
-      <Outlet />
+        <Outlet />
+      </div>
     </div>
   );
 };

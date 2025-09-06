@@ -25,9 +25,9 @@ const resources = {
         magnifier: "Magnifier",
         language: "Language"
       },
-      chatBot:{
-        contactUs:"Contact us...",
-        message:"What types of statistics and visualization tools are available on the national economy data portal?"
+      chatBot: {
+        contactUs: "Contact us...",
+        message: "What types of statistics and visualization tools are available on the national economy data portal?"
       },
       about: {
         heroTitle: "Who Are We?",
@@ -44,7 +44,17 @@ const resources = {
       analytic: {
         indicators: "Economic indicators",
         demonstrators: "International indicators",
-        infobase: "Open database"
+        infobase: "Open database",
+        macro: "Macro and Microeconomic Indicators",
+        sectors: "Economic Indicators by Sectors",
+        demo: "Demographic Indicators",
+        state: "State services indicators",
+        crime: "Crime and Legal Violations Indicators",
+        market: "Labor Market Indicators",
+        global: "Global Innovation Index",
+        aiIndex: "Artificial Intelligence Readiness Index",
+        eGov: "E-Government Development Index",
+        visualization: "If you want your data to be visualized, you can contact us."
       },
       report: {
         publications: "Academic Publications",
@@ -121,9 +131,9 @@ const resources = {
         magnifier: "Böyüdücü",
         language: "Dil"
       },
-      chatBot:{
-        contactUs:"Bizə Yazın...",
-        message:"Milli iqtisadiyyatın data portalında hansı statistika növləri və vizuallaşdırma alətləri var?"
+      chatBot: {
+        contactUs: "Bizə Yazın...",
+        message: "Milli iqtisadiyyatın data portalında hansı statistika növləri və vizuallaşdırma alətləri var?"
       },
       about: {
         heroTitle: "Biz Kimik?",
@@ -140,7 +150,17 @@ const resources = {
       analytic: {
         indicators: "İqtisadi göstəricilər",
         demonstrators: "Beynəlxalq göstəricilər",
-        infobase: "Açıq Məlumat Bazası"
+        infobase: "Açıq Məlumat Bazası",
+        macro: "Makro və mikro iqtisadi göstəricilər",
+        sectors: "Sektorlar üzrə iqtisadi göstəricilər",
+        demo: "Demoqrafik göstəricilər",
+        state: "Dövlət xidmətləri üzrə göstəricilər",
+        crime: "Cinayətkarlıq və hüquqpozmalar üzrə göstəricilər",
+        market: "Əmək bazarı üzrə göstəricilər",
+        global: "Qlobal innovasiyal indeksi",
+        aiIndex: "Süni intellekt hazırlıq indeksi",
+        eGov: "Elektron hökumətin inkişafı indeksi",
+        visualization: "Məlumatlarınızın vizuallaşdırılmasını istəyirsinizsə, bizə müraciət edə bilərsiniz.",
       },
       report: {
         publications: "Akademik Nəşrlər",
@@ -219,9 +239,9 @@ const resources = {
         magnifier: "Лупа",
         language: "Язык"
       },
-      chatBot:{
-        contactUs:"Свяжитесь с нами...",
-        message:"Какие типы статистики и инструменты визуализации доступны на портале данных по национальной экономике?",
+      chatBot: {
+        contactUs: "Свяжитесь с нами...",
+        message: "Какие типы статистики и инструменты визуализации доступны на портале данных по национальной экономике?",
       },
       about: {
         heroTitle: "Кто мы??",
@@ -238,7 +258,17 @@ const resources = {
       analytic: {
         indicators: "Экономические показатели",
         demonstrators: "Международные показатели",
-        infobase: "Открытая база данных"
+        infobase: "Открытая база данных",
+        macro: "Макро- и микроэкономические показатели",
+        sectors: "Экономические показатели по секторам",
+        demo: "Демографические показатели",
+        state: "Показатели государственных услуг",
+        crime: "Показатели преступности и нарушений закона",
+        market: "Показатели рынка труда",
+        global: "Глобальный индекс инноваций",
+        aiIndex: "Индекс готовности к искусственному интеллекту",
+        eGov: "Индекс развития электронного правительства",
+        visualization: "Если вы хотите визуализировать свои данные, вы можете связаться с нами."
       },
       report: {
         publications: "Академические публикации",

@@ -2,6 +2,7 @@ import React from 'react';
 import Chart from '@/components/Chart';
 import { BarChart, Bar, XAxis, YAxis, Legend, ResponsiveContainer, LabelList } from 'recharts';
 import { FiMousePointer } from "react-icons/fi";
+import { useTranslation } from 'react-i18next';
 
 const chartData = [
   { name: 'Figma', 2020: 72.01, 2021: 30.82, 2022: 49.42, 2023: 345, 2024: 34, 2025: 2 },
@@ -19,20 +20,24 @@ const colors = {
 };
 
 const MacroEconomic: React.FC = () => {
+  const { t } = useTranslation();
+
   return (
     <div className="economics-outlet p-5">
       <div className="w-full max-w-[830px]">
-        <div className="right-side mb-8">
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center md:text-left">
-            Makro və mikro iqtisadi göstəricilər
-          </h1>
+        <div className="flex-1 p-5">
+          <div className="right-side mb-8">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center md:text-left">
+              {t('analytic.macro')}
+            </h1>
 
-          <div className="mt-10 w-full h-[300px] md:h-[400px] rounded-3xl overflow-hidden bg-white">
-            <img
-              src="your-image-url.jpg"
-              alt="Economic Indicators"
-              className="w-full h-full object-cover"
-            />
+            <div className="mt-10 w-full h-[300px] md:h-[400px] rounded-3xl overflow-hidden bg-white">
+              <img
+                src="your-image-url.jpg"
+                alt="Economic Indicators"
+                className="w-full h-full object-cover"
+              />
+            </div>
           </div>
         </div>
       </div>
@@ -48,7 +53,7 @@ const MacroEconomic: React.FC = () => {
 
       <div className="apply mb-6">
         <div className="apply-box flex items-center gap-2 p-4 m-4 rounded-md">
-          Məlumatlarınızın vizuallaşdırılmasını istəyirsinizsə, bizə müraciət edə bilərsiniz.
+          {t('analytic.visualization')}
           <FiMousePointer className='icon' />
         </div>
       </div>
@@ -70,22 +75,22 @@ const MacroEconomic: React.FC = () => {
               <YAxis width={window.innerWidth < 768 ? 35 : 60} />
               <Legend />
               <Bar dataKey="2020" fill={colors['2020']}>
-                <LabelList dataKey="2020" position="insideTop" fill="#fff" formatter={(val) => `${val}`}  className="text-10px md:text-auto"   />
+                <LabelList dataKey="2020" position="insideTop" fill="#fff" formatter={(val) => `${val}`} className="text-10px md:text-auto" />
               </Bar>
               <Bar dataKey="2021" fill={colors['2021']}>
-                <LabelList dataKey="2021" position="insideTop" fill="#fff" formatter={(val) => `${val}`}  className="text-10px md:text-auto"   />
+                <LabelList dataKey="2021" position="insideTop" fill="#fff" formatter={(val) => `${val}`} className="text-10px md:text-auto" />
               </Bar>
               <Bar dataKey="2022" fill={colors['2022']}>
-                <LabelList dataKey="2022" position="insideTop" fill="#fff" formatter={(val) => `${val}`}  className="text-10px md:text-auto"   />
+                <LabelList dataKey="2022" position="insideTop" fill="#fff" formatter={(val) => `${val}`} className="text-10px md:text-auto" />
               </Bar>
               <Bar dataKey="2023" fill={colors['2023']}>
-                <LabelList dataKey="2023" position="insideTop" fill="#fff" formatter={(val) => `${val}`}  className="text-10px md:text-auto"   />
+                <LabelList dataKey="2023" position="insideTop" fill="#fff" formatter={(val) => `${val}`} className="text-10px md:text-auto" />
               </Bar>
               <Bar dataKey="2024" fill={colors['2024']}>
-                <LabelList dataKey="2024" position="insideTop" fill="#fff" formatter={(val) => `${val}`}  className="text-10px md:text-auto"   />
+                <LabelList dataKey="2024" position="insideTop" fill="#fff" formatter={(val) => `${val}`} className="text-10px md:text-auto" />
               </Bar>
               <Bar dataKey="2025" fill={colors['2025']}>
-                <LabelList dataKey="2025" position="insideTop" fill="#fff" formatter={(val) => `${val}`}  className="text-10px md:text-auto"   />
+                <LabelList dataKey="2025" position="insideTop" fill="#fff" formatter={(val) => `${val}`} className="text-10px md:text-auto" />
               </Bar>
             </BarChart>
           </ResponsiveContainer>

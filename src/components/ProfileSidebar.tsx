@@ -27,14 +27,13 @@ const ProfileSidebar: React.FC<ProfileSidebarProps> = ({ isOpen, togglePanel }) 
 
   return (
     <>
-      {/* Overlay */}
       <div 
         className={`
-          fixed lg:hidden top-0 left-0 w-full h-full  bg-[rgba(29,7,22,0.5)] bg-opacity-50 z-40 transition-opacity duration-300 ${isOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"}`} 
+          fixed lg:hidden top-0 left-0 w-full h-full  bg-[rgba(29,7,22,0.5)] bg-opacity-50 transition-opacity duration-300 ${isOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"}`} 
         onClick={togglePanel}
       />
       
-     <aside className={`fixed top-18 left-0 h-full w-64 bg-[#180718] z-50 shadow-xl transform transition-transform duration-300 ease-in-out
+     <aside className={`fixed top-20 left-0 h-full w-64 bg-[#180718] z-50 shadow-xl transform transition-transform duration-300 ease-in-out
         lg:relative lg:translate-x-0 lg:shadow-none lg:bg-transparent
       ${isOpen ? "translate-x-0" : "-translate-x-full"}`}>
          <div className="p-4 flex justify-end">
