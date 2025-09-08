@@ -1,5 +1,5 @@
 import BackgroundVideo from "@/components/bg-video/BackgroundVideo";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { useState } from "react";
 import { Button } from "@mui/material";
 import { useTranslation } from "react-i18next";
@@ -132,10 +132,12 @@ const EconomicReports = () => {
                     <Dropdown
                       placeholder={t("report.filter.author")}
                       options={[
-                        { title: "2024-2025", value: "2024-2025" },
-                        { title: "2023-2024", value: "2023-2024" },
-                        { title: "2022-2023", value: "2022-2023" },
-                        { title: "2021-2022", value: "2021-2022" },
+                        {
+                          title: "Asim Abbdullayev",
+                          value: "Asim Abbdullayev",
+                        },
+                        { title: "Asim Ağayev", value: "Asim Ağayev" },
+                        { title: "Asim Ağayev", value: "Asim Ağayev" },
                       ]}
                     ></Dropdown>
                   </div>
@@ -178,7 +180,9 @@ const EconomicReports = () => {
                 </div>
               </div>
               <div className="text-center text-black bg-[#c0cef3] p-2 rounded-2xl mt-8 mb-2 cursor-pointer">
-                <h1>Daha ətraflı</h1>
+                <Link to={"/report/1"}>
+                  <h1>Daha ətraflı</h1>
+                </Link>
               </div>
             </div>
             <div className="w-80 border-1 p-6 mt-4 rounded-2xl ml-4">
