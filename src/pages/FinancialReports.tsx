@@ -1,8 +1,12 @@
-import installImage from '/report/install.png';
-import PDFIqtisadi from '/report/İqtisadi_Tədqiqatlar.pdf';
+import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
+import Dropdown from '@/components/ui/Dropdown';
+import { Button } from '@mui/material';
 
 const FinancialReports = () => {
+  const [isFilterActive, setIsFilterActive] = useState(false);
+  const { t } = useTranslation();
 
   return (
     <div className='p-5 mr-2'>
@@ -57,26 +61,68 @@ const FinancialReports = () => {
           </NavLink>
         </div>
       </div>
-
-
       <div className='flex justify-end text-white'>
         <div className='w-[830px]'>
           <div className='flex items-center justify-between'>
             <div>
               <h1 className='text-white text-4xl font-bold'>Maliyyə Tədqiqatlar</h1>
             </div>
-            <div>
-              <a
-                href={PDFIqtisadi}
-                download
-                aria-label="Download PDF"
+            <div className="relative">
+              <div
+                hidden={!isFilterActive}
+                className="absolute top-[110%] right-0 w-100 bg-[#18171F] rounded-2xl px-4 py-6 "
               >
-                <img
-                  className="w-6 h-6 md:w-8 md:h-8"
-                  src={installImage}
-                  alt="Download"
-                />
-              </a>
+                <div className="flex flex-col gap-4">
+                  <h1 className="text-2xl">{t("report.filter.title")}</h1>
+                  <div>
+                    <Dropdown
+                      placeholder={t("report.filter.date")}
+                      options={[
+                        { title: "2024-2025", value: "2024-2025" },
+                        { title: "2023-2024", value: "2023-2024" },
+                        { title: "2022-2023", value: "2022-2023" },
+                        { title: "2021-2022", value: "2021-2022" },
+                      ]}
+                    ></Dropdown>
+                  </div>
+                  <div>
+                    <Dropdown
+                      placeholder={t("report.filter.field")}
+                      options={[
+                        {
+                          title: "Sənaye və İstehsalat",
+                          value: "Sənaye və İstehsalat",
+                        },
+                        {
+                          title: "Energetika və Resurslar",
+                          value: "Energetika və Resurslar",
+                        },
+                        {
+                          title: "Kənd Təsərrüfatıi",
+                          value: "Kənd Təsərrüfatıi",
+                        },
+                        {
+                          title: "Maliyyə və Bankçılıq",
+                          value: "Maliyyə və Bankçılıq",
+                        },
+                      ]}
+                    ></Dropdown>
+                  </div>
+                  <div>
+                    <Dropdown
+                      placeholder={t("report.filter.author")}
+                      options={[
+                        { title: "Asim Abbdullayev", value: "Asim Abbdullayev" },
+                        { title: "Asim Ağayev", value: "Asim Ağayev" },
+                        { title: "Asim Ağayev", value: "Asim Ağayev" },
+                      ]}
+                    ></Dropdown>
+                  </div>
+                </div>
+              </div>
+              <Button onClick={() => setIsFilterActive(!isFilterActive)}>
+                <img src="/public/report/filter_icon.svg" alt="" />
+              </Button>
             </div>
           </div>
           <div className='flex'>
