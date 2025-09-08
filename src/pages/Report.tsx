@@ -1,5 +1,4 @@
-import { useMatch, useNavigate } from "react-router-dom";
-import IconAccordion from "/report/IconAccordion.png";
+import { useMatch } from "react-router-dom";
 import BackgroundVideo from "@/components/bg-video/BackgroundVideo";
 import { useTranslation } from "react-i18next";
 import LinearButton from "@/components/ui/linearButton";
@@ -8,16 +7,6 @@ import HelpSidebar from "@/components/HelpSidebar";
 const Report = () => {
   const { t } = useTranslation();
   const isButton = useMatch("/report");
-
-  const navigate = useNavigate();
-
-  const handleClickAcademicReport = () => {
-    navigate("/academic_reports");
-  };
-
-  const handleClickAcademicPublications = () => {
-    navigate("/academic_publications");
-  };
 
   return (
     <div className="help-and-contact flex flex-col lg:flex-row">

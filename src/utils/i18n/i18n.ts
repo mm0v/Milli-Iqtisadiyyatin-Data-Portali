@@ -59,6 +59,12 @@ const resources = {
       report: {
         publications: "Academic Publications",
         reports: "Reports",
+        filter: {
+          title: "Filter",
+          date: "Date",
+          field: "Field",
+          author: "Author"
+        }
       },
       auth: {
         password: "Password",
@@ -165,6 +171,12 @@ const resources = {
       report: {
         publications: "Akademik Nəşrlər",
         reports: "Hesabatlar",
+        filter: {
+          title: "Filter",
+          date: "Tarix",
+          field: "Sektor",
+          author: "Müəllif"
+        }
       },
       auth: {
         verify: "Zəhmət olmasa, davam etmək üçün qutunu işarələyin.",
@@ -273,6 +285,12 @@ const resources = {
       report: {
         publications: "Академические публикации",
         reports: "Отчеты",
+        filter: {
+          title: "Фильтр",
+          date: "Дата",
+          field: "Область",
+          author: "Автор"
+        }
       },
       auth: {
         password: "Пароль",
