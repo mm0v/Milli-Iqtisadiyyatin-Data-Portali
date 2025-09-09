@@ -18,18 +18,18 @@ const Footer = () => {
                         <nav className="footer-nav">
                             <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6 md:gap-8">
                                 <div className="col-span-2 flex flex-col footer-about">
-                                    <Link to={"/about"} className="w-36 text-gray-300 text-xl mb-3 md:mb-4 hover:text-blue-600 transition-colors">
-                                        {t('about')} {/* t() fonksiyonu ile çeviri yapılır */}
+                                    <Link to={"/about"} className="text-gray-300 text-xl mb-3 md:mb-4 hover:text-blue-600 transition-colors">
+                                        {t('aboutUs')} {/* t() fonksiyonu ile çeviri yapılır */}
                                     </Link>
-                                    <Link to={"/contact"} className="w-36 text-gray-300 text-xl hover:text-blue-600 transition-colors">
+                                    <Link to={"/contact"} className="text-gray-300 text-xl hover:text-blue-600 transition-colors">
                                         {t('contact')} {/* t() fonksiyonu ile çeviri yapılır */}
                                     </Link>
                                 </div>
                                 <div className="col-span-2 flex flex-col footer-about">
-                                    <Link to={"/terms"} className="w-100 text-gray-300 text-xl mb-3 md:mb-4 hover:text-blue-600 transition-colors">
+                                    <Link to={"/terms"} className="text-gray-300 text-xl mb-3 md:mb-4 hover:text-blue-600 transition-colors">
                                         {t('terms')} {/* t() fonksiyonu ile çeviri yapılır */}
                                     </Link>
-                                    <Link to={"/privacy"} className="w-100 text-gray-300 text-xl hover:text-blue-600 transition-colors">
+                                    <Link to={"/privacy"} className="text-gray-300 text-xl hover:text-blue-600 transition-colors">
                                         {t('privacy')} {/* t() fonksiyonu ile çeviri yapılır */}
                                     </Link>
                                 </div>

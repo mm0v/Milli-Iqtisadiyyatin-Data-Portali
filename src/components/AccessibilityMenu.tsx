@@ -76,7 +76,7 @@ const AccessibilityMenu = ({
                                     <path d="M10 14h4v4h-4z" />
                                 </svg>
                             </div>
-                            <span className="font-bold text-lg">{t('Accessibility Menu')}</span>
+                            <span className="font-bold text-lg">{t('accessibility.menuTitle')}</span>
                         </div>
                         <button onClick={toggleMenu} className="text-white hover:text-gray-200">
                             <svg className="w-6 h-6 cursor-pointer" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -88,7 +88,7 @@ const AccessibilityMenu = ({
                     <div className="p-4 space-y-4">
                         {/* Dark Mode Toggle */}
                         <div className="flex justify-between items-center">
-                            <span>{t('DarkMode')}</span>
+                            <span>{t('accessibility.darkMode')}</span>
                             <label className="relative inline-flex items-center cursor-pointer">
                                 <input
                                     type="checkbox"
@@ -102,7 +102,7 @@ const AccessibilityMenu = ({
 
                         {/* Language Selector */}
                         <div className="flex justify-between items-center">
-                            <span>{t('Language')}</span>
+                            <span>{t('accessibility.language')}</span>
                             <select
                                 value={currentLanguage}
                                 onChange={(e) => handleLanguageChange(e.target.value)}
@@ -116,7 +116,7 @@ const AccessibilityMenu = ({
 
                         {/* Voice Access Toggle */}
                         <div className="flex justify-between items-center">
-                            <span>{t('Voice Access')}</span>
+                            <span>{t('accessibility.voiceAccess')}</span>
                             <label className="relative inline-flex items-center cursor-pointer">
                                 <input
                                     type="checkbox"
@@ -130,7 +130,7 @@ const AccessibilityMenu = ({
 
                         {/* Magnifier Toggle */}
                         <div className="flex justify-between items-center">
-                            <span>{t('Magnifier')}</span>
+                            <span>{t('accessibility.magnifier')}</span>
                             <label className="relative inline-flex items-center cursor-pointer">
                                 <input
                                     type="checkbox"

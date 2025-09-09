@@ -1,8 +1,8 @@
-import Navbar from "@/layout/Navbar";
 import "../assets/sass/home.scss";
 import { useTranslation } from "react-i18next";
 import Chatbot from "../components/Chatbot"; // Adjust the path as needed
 import AccessibilityMenu from "@/components/AccessibilityMenu";
+import BackgroundVideo from "@/components/bg-video/BackgroundVideo";
 
 const Home = () => {
   const { t } = useTranslation();
@@ -27,9 +27,7 @@ const Home = () => {
     <div className="homePage">
       {/* Video Background */}
       <div className="video-background">
-        <video autoPlay loop muted>
-          <source src="/header/bg-video-header.mp4" type="video/mp4" />
-        </video>
+        <BackgroundVideo videoSrc="/header/bg-video-header.mp4" />
       </div>
 
       <div className="mainWord">
@@ -39,9 +37,6 @@ const Home = () => {
         <h6 className="texth6 mt-2">
           <span dangerouslySetInnerHTML={{ __html: t('data-world') }} />
         </h6>
-      </div>
-      <div className="absolute bottom-0">
-        <Navbar />
       </div>
 
       {/* Add accessibility menu component */}

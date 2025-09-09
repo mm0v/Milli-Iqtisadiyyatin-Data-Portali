@@ -10,7 +10,7 @@ const Chatbot = () => {
     const { t } = useTranslation();
     const [isOpen, setIsOpen] = useState(false);
     const [messages, setMessages] = useState<Message[]>([
-        { text: t('Milli iqtisadiyyatın data portalında hansı statistika növləri və vizuallaşdırma alətləri var? '), sender: 'bot' }
+        { text: t('chatBot.message'), sender: 'bot' }
     ]);
     const [userInput, setUserInput] = useState('');
 
@@ -83,7 +83,7 @@ const Chatbot = () => {
                             onChange={(e) => setUserInput(e.target.value)}
                             onKeyPress={handleKeyPress}
                             className="flex-1 border border-gray-300 rounded-l-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-600"
-                            placeholder={t('Bizə yazın...')}
+                            placeholder={t('chatBot.contactUs')}
                         />
                         <button
                             onClick={handleSendMessage}

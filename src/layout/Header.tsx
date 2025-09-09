@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { FiMenu, FiSearch, FiX } from 'react-icons/fi';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import i18n from '@/utils/i18n/i18n';
 import "../../src/assets/sass/header.scss";
 import { InputBase } from '@mui/material';
@@ -9,7 +9,6 @@ import { InputBase } from '@mui/material';
 const Header = () => {
     const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
     const [isMobile, setIsMobile] = useState(false);
-    const location = useLocation();
 
     const [searchQuery, setSearchQuery] = useState('');
     const [selectedLanguage, setSelectedLanguage] = useState('az'); // Default dil Azərbaycan
@@ -89,12 +88,7 @@ const Header = () => {
                         <div className="header-actions">
                             <div className="mr-3 rounded-2xl bg-white/10 backdrop-blur-sm transition-all hover:bg-white/20 focus-within:ring-2 focus-within:ring-blue-500 focus-within:ring-offset-2 focus-within:ring-offset-gray-900">
                                 <div className="relative">
-                                    <select
-                                        value={selectedLanguage}
-                                        onChange={handleLanguageChange}
-                                        aria-label="Select language"
-                                        className="w-full cursor-pointer appearance-none border-none bg-transparent py-2 pl-4 pr-8 text-base font-medium text-white outline-none ring-0 focus:border-none focus:outline-none focus:ring-0"
-                                    >
+                                    <select value={selectedLanguage} onChange={handleLanguageChange} aria-label="Select language" className="w-full cursor-pointer appearance-none border-none bg-transparent py-2 pl-4 pr-8 text-base font-medium text-white outline-none ring-0 focus:border-none focus:outline-none focus:ring-0" >
                                         <option value="az" className="bg-gray-800 text-white">
                                             {i18n.t('AZE')}
                                         </option>
@@ -147,27 +141,33 @@ const Header = () => {
 
                     <div className={`mobile-nav ${isMobileNavOpen ? 'open' : ''}`}>
                         <nav className="nav-content">
-                            <Link to="/" onClick={toggleMobileNav} className={location.pathname === "/" ? "active" : ""}>
-                                {i18n.t('Ana Səhifə')}
-                            </Link>
-                            <Link to="/about" onClick={toggleMobileNav} className={location.pathname === "/about" ? "active" : ""}>
-                                {i18n.t('Haqqımızda')}
-                            </Link>
-                            <Link to="/analytics" onClick={toggleMobileNav} className={location.pathname === "/analytics" ? "active" : ""}>
-                                {i18n.t('Analitika')}
-                            </Link>
-                            <Link to="/report" onClick={toggleMobileNav} className={location.pathname === "/report" ? "active" : ""}>
-                                {i18n.t('Araşdırma və hesabatlar')}
-                            </Link>
-                            <Link to="/contact" onClick={toggleMobileNav} className={location.pathname === "/contact" ? "active" : ""}>
-                                {i18n.t('Yardım və Dəstək')}
-                            </Link>
-                            <Link to="/login" onClick={toggleMobileNav} className={location.pathname === "/login" ? "active" : "bg-blue-900"}>
-                                <h1 className='text-white'>{i18n.t('Daxil ol')}</h1>
-                            </Link>
-                            <Link to="/register" onClick={toggleMobileNav} className={location.pathname === "/registr" ? "active" : "bg-blue-900"}>
-                                <h1 className='text-white'>{i18n.t('Qeydiyyatdan keç')}</h1>
-                            </Link>
+                            <NavLink to="/" onClick={toggleMobileNav}>
+                                {i18n.t("home")}
+                            </NavLink>
+
+                            <NavLink to="/about" onClick={toggleMobileNav}>
+                                {i18n.t("aboutUs")}
+                            </NavLink>
+
+                            <NavLink to="/analytics" onClick={toggleMobileNav}>
+                                {i18n.t("analytics")}
+                            </NavLink>
+
+                            <NavLink to="/report" onClick={toggleMobileNav}>
+                                {i18n.t("reports")}
+                            </NavLink>
+
+                            <NavLink to="/contact" onClick={toggleMobileNav}>
+                                {i18n.t("help")}
+                            </NavLink>
+
+                            <NavLink to="/login" onClick={toggleMobileNav} className='btn'>
+                                <h1>{i18n.t("login")}</h1>
+                            </NavLink>
+
+                            <NavLink to="/register" onClick={toggleMobileNav} className='btn'>
+                                <h1>{i18n.t("register")}</h1>
+                            </NavLink>
                         </nav>
                     </div>
                 </>

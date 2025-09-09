@@ -1,13 +1,12 @@
 import CustomizedAccordionsAcademic from "@/components/AccordionAcademicReports"
+import BackgroundVideo from "@/components/bg-video/BackgroundVideo"
 import { NavLink } from "react-router-dom"
 
 const AcademicReports = () => {
     return (
         <div>
             <div className="video-background">
-                <video autoPlay loop muted>
-                    <source src="./about/bg-about.mp4" type="video/mp4" />
-                </video>
+                <BackgroundVideo videoSrc="/about/bg-about.mp4" />
             </div>
 
             <div className="absolute top-30 left-10 wayOfReportsAndPublications">

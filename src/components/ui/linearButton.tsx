@@ -16,7 +16,7 @@ const linearButton: React.FC<LinearButtonProps> = ({ title, pageRouter }) => {
       to={pageRouter}
     >
       <img className=" self-end" src="/Analytics/Icon1.svg" />
-      <div className="text-white text-[30px] h-[80px] font-medium font-poppins max-w-[250px]">
+      <div className="text-white text-[30px] max-h-[80px] font-medium font-poppins max-w-[250px]">
         {title}
       </div>
     </Link>
