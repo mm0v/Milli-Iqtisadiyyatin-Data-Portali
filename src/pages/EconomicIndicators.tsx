@@ -2,8 +2,10 @@ import { Link, Outlet, useMatch } from "react-router-dom";
 import IconAccordion from "/report/IconAccordion.png";
 import { useTranslation } from "react-i18next";
 
+
 const EconomicIndicators = () => {
   const { t } = useTranslation();
+
   const isEconomic = useMatch("/analytics/economic_indicators");
 
   if (!isEconomic) {

@@ -40,6 +40,19 @@ import PublicationScience from "./pages/PublicationScience";
 import ProfileSettings from "./pages/ProfileSettings";
 
 import InternationalDemonstrators from "./pages/InternationalDemonstrators";
+
+
+import ProfileDeactivate from "./pages/ProfileDeactivate.tsx";
+import PaymentHistory from "./pages/PaymentHistory.tsx";
+import Navbar from './layout/Navbar.tsx'
+import ReCapcha from './pages/ReCapcha.tsx'
+import ConfirmDetails from './pages/ConfirmDetails.tsx'
+import NewPassword from './pages/NewPassword.tsx'
+import SectorEconomic from './pages/SectorEcenomic.tsx'
+import OpenInfobase from './pages/OpenInfobase.tsx'
+import OpenInfoAllData from './pages/OpenInfoAllData.tsx'
+import OpenInfoPages from './pages/OpenInfoPages.tsx'
+
 import OpenInfobase from "./pages/OpenInfobase";
 
 import Subscriptions from "./pages/Subscriptions";
@@ -63,6 +76,7 @@ import ReportDetails from "./pages/ReportDetails";
 import Purpose from "./pages/Purpose";
 import Mission from "./pages/Mission";
 import AboutLayout from "./layout/AboutLayout";
+
 
 const MainLayout = () => {
   const location = useLocation();
@@ -133,8 +147,21 @@ function App() {
             <Route path="ai_readness" element={<AiReadinessRank />} />
             <Route path="e_gov" element={<EGovernmentDevelopmentIndex />} />
           </Route>
-          <Route path="open_infobase" element={<OpenInfobase />} />
+
+          
+          <Route path="international_demonstrators" element={<InternationalDemonstrators />} />
+          <Route path='open_info' element={<OpenInfoPages/>}>
+            <Route path='all_data' element={<OpenInfoAllData/>}/>
+            <Route path='health' /> 
+            <Route path='tourism' /> 
+            <Route path='energy' /> 
+            <Route path='demographic_indicators' /> 
+            <Route path='agriculture' /> 
+          </Route>
+          
+
         </Route>
+          <Route path="open_infobase" element={<OpenInfobase />} />
 
         <Route path="/report" element={<Report />} />
         <Route path="/report/:type/:id" element={<ReportDetails />} />
@@ -180,6 +207,7 @@ function App() {
             <Route index element={<LanguageSwitch />} />
             <Route path="language" element={<LanguageSwitch />} />
             <Route path="subscriptions" element={<Subscriptions />} />
+
             <Route
               path="subscriptions/:planId"
               element={<SubscriptionsInfo />}

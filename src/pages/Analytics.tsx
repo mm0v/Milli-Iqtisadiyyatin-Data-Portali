@@ -11,7 +11,7 @@ const Analytics = () => {
 
 
   return (
-    <div className="analytics">
+ <div className="analytics">
       <div className="video-background">
         <BackgroundVideo videoSrc="/about/bg-about.mp4" />
       </div>
