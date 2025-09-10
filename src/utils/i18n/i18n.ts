@@ -145,7 +145,7 @@ const resources = {
       },
       about: {
         heroTitle: "Biz Kimik?",
-        paragraph: "Milli İqtisadiyyatın Data Portalı, Dördüncü Sənaye İnqilabının Təhlili və Koordinasiya Mərkəzi (4SİM) tərəfindən yaradılan innovativ məlumat platformasıdır.Portalın məqsədi Azərbaycan iqtisadiyyatı üzrə açıq, etibarlı və real vaxt rejimində yenilənən məlumatları vahid məkanda cəmləşdirmək, analitik imkanları genişləndirmək və qərarvermə proseslərini dəstəkləməkdir.",
+        paragraph: "Milli İqtisadiyyatın Data Portalı, Dördüncü Sənaye İnqilabının Təhlili və Koordinasiya Mərkəzi (4SİM) tərəfindən yaradılan innovativ məlumat platformasıdır. Portalın məqsədi Azərbaycan iqtisadiyyatı üzrə açıq, etibarlı və real vaxt rejimində yenilənən məlumatları vahid məkanda cəmləşdirmək, analitik imkanları genişləndirmək və qərarvermə proseslərini dəstəkləməkdir.",
         goal: {
           title: "Məqsəd",
           description: " Milli İqtisadiyyatın Data Portalı Azərbaycan iqtisadiyyatına dair məlumatların şəffaflığını və əlçatanlığını artıraraq dövlət qurumlarını, biznesləri, investorları və tədqiqatçıları etibarlı məlumatlarla təmin etməyi hədəfləyir. Portal vasitəsilə iqtisadi trendləri izləmək, data əsaslı qərarlar vermək və effektiv siyasət formalaşdırmaq mümkün olacaq."
