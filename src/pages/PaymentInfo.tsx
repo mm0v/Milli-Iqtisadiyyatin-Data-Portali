@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 
 const PaymentInfo = () => {
@@ -16,7 +16,7 @@ const PaymentInfo = () => {
     saveCard: false,
   });
 
-  const handleInputChange = (e) => {
+  const handleInputChange = (e:any) => {
     const { name, value, type, checked } = e.target;
     setFormData((prev) => ({
       ...prev,
@@ -136,7 +136,7 @@ const PaymentInfo = () => {
                         value={formData.cvv}
                         onChange={handleInputChange}
                         placeholder="***"
-                        maxLength="3"
+                        maxLength={3}
                         className="w-full border border-[#373641] rounded-md p-3 text-left text-[#7C88AA] placeholder-gray-500 focus:border-[#3460DC] focus:outline-none text-center"
                       />
                     </div>

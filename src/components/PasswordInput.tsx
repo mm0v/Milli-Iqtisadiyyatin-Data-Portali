@@ -9,7 +9,7 @@ interface PasswordInputProps {
 
 const PasswordInput = ({ label, value, setValue } : PasswordInputProps) => {
     return (
-        <div className="w-[610px]">
+        <div className="w-full lg:w-[550px]">
             <label className="block text-lg mb-1.5 ">{label}</label>
             <div className="relative">
                 <input type={value ? "text" : "password"} className="w-full relative px-4 py-2 rounded-md bg-transparent border border-gray-600" />

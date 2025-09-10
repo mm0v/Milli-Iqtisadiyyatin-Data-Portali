@@ -1,47 +1,47 @@
-import { Routes, Route, Outlet, useLocation } from 'react-router-dom'
-import './App.css'
-import './assets/sass/styles.scss'
-import Home from './pages/Home'
-import Header from './layout/Header'
-import Footer from './layout/Footer'
-import Login from './auth/Login'
-import Register from './auth/Register'
-import About from './pages/About'
-import HelpAndContact from './pages/HelpAndContact'
+import { Routes, Route, Outlet, useLocation } from "react-router-dom";
+import "./App.css";
+import "./assets/sass/styles.scss";
+import Home from "./pages/Home";
+import Header from "./layout/Header";
+import Footer from "./layout/Footer";
+import Navbar from "./layout/Navbar";
+import Login from "./auth/Login";
+import Register from "./auth/Register";
+import About from "./pages/About";
 
-import Analytics from './pages/Analytics'
-import EconomicIndicators from './pages/EconomicIndicators'
-import MacroEconomic from './pages/MacroEconomic'
-import DemoEconomic from './pages/DemoEconomic'
-import StateServices from './pages/StateServices'
-import Crimes from './pages/Crimes'
-import LaborMarket from './pages/LaborMarket'
+import Analytics from "./pages/Analytics";
+import EconomicIndicators from "./pages/EconomicIndicators";
+import MacroEconomic from "./pages/MacroEconomic";
+import DemoEconomic from "./pages/DemoEconomic";
+import StateServices from "./pages/StateServices";
+import Crimes from "./pages/Crimes";
+import SectorEconomic from "./pages/SectorEcenomic";
+import LaborMarket from "./pages/LaborMarket";
 
-import ForgotPassword from './pages/ForgotPassword'
-import NotFound from './pages/NotFound'
-import Terms from './pages/Terms'
-import Privacy from './pages/Privacy'
-import Report from './pages/Report'
-import AcademicReports from './pages/AcademicReports'
-import EconomicReports from './pages/EconomicReports'
-import FinancialReports from './pages/FinancialReports'
-import ScienceReports from './pages/ScienceReports'
-import AcademicPublications from './pages/AcademicPublications'
-import PublicationEconomic from './pages/PublicationEconomic'
-import PublicationFinancial from './pages/PublicationFinancial'
-import PublicationScience from './pages/PublicationScience'
+import HelpAndContact from "./pages/HelpAndContact";
+import FAQ from "./pages/FAQ";
+import UserManual from "./pages/UserManual";
+import ContactForm from "./pages/ContactForm";
+
+import ForgotPassword from "./pages/ForgotPassword";
+import NotFound from "./pages/NotFound";
+import Terms from "./pages/Terms";
+import Privacy from "./pages/Privacy";
+import Report from "./pages/Report";
+import AcademicReports from "./pages/AcademicReports";
+import EconomicReports from "./pages/EconomicReports";
+import FinancialReports from "./pages/FinancialReports";
+import ScienceReports from "./pages/ScienceReports";
+import AcademicPublications from "./pages/AcademicPublications";
+import PublicationEconomic from "./pages/PublicationEconomic";
+import PublicationFinancial from "./pages/PublicationFinancial";
+import PublicationScience from "./pages/PublicationScience";
 
 import ProfileSettings from "./pages/ProfileSettings";
 
 import InternationalDemonstrators from "./pages/InternationalDemonstrators";
 
 
-import Subscriptions from "./pages/Subscriptions";
-import SubscriptionsInfo from "./pages/SubscriptionsInfo";
-import PaymentDetails from "./pages/PaymentInfo.tsx";
-import Profile from "./pages/Profile.tsx";
-import SecuritySettings from "./pages/SecuritySettings.tsx";
-import LanguageSwitch from "./pages/LanguageSwitch.tsx";
 import ProfileDeactivate from "./pages/ProfileDeactivate.tsx";
 import PaymentHistory from "./pages/PaymentHistory.tsx";
 import Navbar from './layout/Navbar.tsx'
@@ -50,25 +50,43 @@ import ConfirmDetails from './pages/ConfirmDetails.tsx'
 import NewPassword from './pages/NewPassword.tsx'
 import SectorEconomic from './pages/SectorEcenomic.tsx'
 import OpenInfobase from './pages/OpenInfobase.tsx'
-import PersonalInfo from './pages/PersonalInfo.tsx'
 import OpenInfoAllData from './pages/OpenInfoAllData.tsx'
 import OpenInfoPages from './pages/OpenInfoPages.tsx'
 
+import OpenInfobase from "./pages/OpenInfobase";
+
+import Subscriptions from "./pages/Subscriptions";
+import SubscriptionsInfo from "./pages/SubscriptionsInfo";
+import PaymentInfo from "./pages/PaymentInfo";
+import ReCapcha from "./pages/ReCapcha";
+import ConfirmDetails from "./pages/ConfirmDetails";
+import NewPassword from "./pages/NewPassword";
+
+import Profile from "./pages/Profile";
+import PersonalInfo from "./pages/PersonalInfo";
+import SecuritySettings from "./pages/SecuritySettings";
+import PaymentHistory from "./pages/PaymentHistory";
+import ReceiptDetails from "./pages/ReceiptDetails";
+import LanguageSwitch from "./pages/LanguageSwitch";
+import ProfileDeactivate from "./pages/ProfileDeactivate";
+import GlobalInnovationIndexRank from "./pages/GlobalInnovationIndexRank";
+import AiReadinessRank from "./pages/AiReadinessRank";
+import EGovernmentDevelopmentIndex from "./pages/EGovernmentDevelopmentIndex";
+import ReportDetails from "./pages/ReportDetails";
+import Purpose from "./pages/Purpose";
+import Mission from "./pages/Mission";
+import AboutLayout from "./layout/AboutLayout";
+
+
 const MainLayout = () => {
   const location = useLocation();
-  const isHomePage = location.pathname === '/' || location.pathname === '';
+  const isHomePage = location.pathname === "/" || location.pathname === "";
 
-  const navbarRoutes = [
-    '/',
-    '/about',
-    '/analytics',
-    '/contact',
-    '/report',
-  ];
+  const navbarRoutes = ["/", "/about", "/analytics", "/contact", "/report"];
   const showNavbar = navbarRoutes.includes(location.pathname);
 
   return (
-    <div>
+    <div className="page">
       <div>
         <Header />
       </div>
@@ -93,41 +111,44 @@ function App() {
       {/* Auth routes without layout */}
       <Route path="/login" element={<Login />} />
 
-      <Route path="/register" element={
-        <Register />
-      } />
-      <Route path="/forgot-password" element={
-        <ForgotPassword />
-      } />
-      <Route path="/recapcha" element={
-        <ReCapcha />
-      } />
-      <Route path="/confirm-details" element={
-        <ConfirmDetails />
-      } />
-      <Route path="/new-password" element={
-        <NewPassword />
-      } />
-      <Route path="/terms" element={
-        <Terms />
-      } />
-      <Route path="/privacy" element={
-        <Privacy />
-      } />
+      <Route path="/register" element={<Register />} />
+      <Route path="/forgot-password" element={<ForgotPassword />} />
+      <Route path="/recapcha" element={<ReCapcha />} />
+      <Route path="/confirm-details" element={<ConfirmDetails />} />
+      <Route path="/new-password" element={<NewPassword />} />
+      <Route path="/terms" element={<Terms />} />
+      <Route path="/privacy" element={<Privacy />} />
 
       {/* Main layout with nested routes */}
       <Route element={<MainLayout />}>
         <Route index element={<Home />} />
         <Route path="/about" element={<About />} />
+        <Route path="/about" element={<AboutLayout />}>
+          <Route path="purpose" element={<Purpose />}></Route>
+          <Route path="mission" element={<Mission />}></Route>
+        </Route>
         <Route path="/analytics" element={<Analytics />}>
-          <Route path="economic_indicators" element={<EconomicIndicators />} >
+          <Route path="economic_indicators" element={<EconomicIndicators />}>
             <Route path="macro" element={<MacroEconomic />} />
             <Route path="sector" element={<SectorEconomic />} />
             <Route path="demo" element={<DemoEconomic />} />
-            <Route path='state_services' element={<StateServices />} />
-            <Route path='crimes' element={<Crimes />} />
-            <Route path='labor_market' element={<LaborMarket />} />
+            <Route path="state_services" element={<StateServices />} />
+            <Route path="crimes" element={<Crimes />} />
+            <Route path="labor_market" element={<LaborMarket />} />
           </Route>
+          <Route
+            path="international_demonstrators"
+            element={<InternationalDemonstrators />}
+          >
+            <Route
+              path="global_innovation"
+              element={<GlobalInnovationIndexRank />}
+            />
+            <Route path="ai_readness" element={<AiReadinessRank />} />
+            <Route path="e_gov" element={<EGovernmentDevelopmentIndex />} />
+          </Route>
+
+          
           <Route path="international_demonstrators" element={<InternationalDemonstrators />} />
           <Route path='open_info' element={<OpenInfoPages/>}>
             <Route path='all_data' element={<OpenInfoAllData/>}/>
@@ -138,39 +159,70 @@ function App() {
             <Route path='agriculture' /> 
           </Route>
           
+
         </Route>
           <Route path="open_infobase" element={<OpenInfobase />} />
 
         <Route path="/report" element={<Report />} />
-        <Route path="/contact" element={<HelpAndContact />} />
+        <Route path="/report/:type/:id" element={<ReportDetails />} />
+        <Route path="/contact" element={<HelpAndContact />}>
+          <Route path="faq" element={<FAQ />} />
+          <Route path="user_manual" element={<UserManual />} />
+          <Route path="contact_form" element={<ContactForm />} />
+        </Route>
         <Route path="/academic_reports" element={<AcademicReports />} />
-        <Route path="/academic_reports/economic_reports" element={<EconomicReports />} />
-        <Route path="/academic_reports/financial_reports" element={<FinancialReports />} />
-        <Route path="/academic_reports/science_reports" element={<ScienceReports />} />
-        <Route path="/academic_publications/economic_publication" element={<PublicationEconomic />} />
-        <Route path="/academic_publications/financial_publication" element={<PublicationFinancial />} />
-        <Route path="/academic_publications/science_publication" element={<PublicationScience />} />
-        <Route path="/academic_publications" element={<AcademicPublications />} />
+        <Route
+          path="/academic_reports/economic_reports"
+          element={<EconomicReports />}
+        />
+        <Route
+          path="/academic_reports/financial_reports"
+          element={<FinancialReports />}
+        />
+        <Route
+          path="/academic_reports/science_reports"
+          element={<ScienceReports />}
+        />
+        <Route
+          path="/academic_publications/economic_publication"
+          element={<PublicationEconomic />}
+        />
+        <Route
+          path="/academic_publications/financial_publication"
+          element={<PublicationFinancial />}
+        />
+        <Route
+          path="/academic_publications/science_publication"
+          element={<PublicationScience />}
+        />
+        <Route
+          path="/academic_publications"
+          element={<AcademicPublications />}
+        />
+
         <Route path="/profile" element={<Profile />}>
           <Route index element={<PersonalInfo />} />
+          <Route path="personal_info" element={<PersonalInfo />} />
           <Route path="settings" element={<ProfileSettings />}>
             <Route index element={<LanguageSwitch />} />
             <Route path="language" element={<LanguageSwitch />} />
             <Route path="subscriptions" element={<Subscriptions />} />
-            <Route path="subscriptions/:planId" element={<SubscriptionsInfo />} />
+
+            <Route
+              path="subscriptions/:planId"
+              element={<SubscriptionsInfo />}
+            />
+            <Route
+              path="subscriptions/:planId/payment"
+              element={<PaymentInfo />}
+            />
             <Route path="deactivate" element={<ProfileDeactivate />} />
-            <Route path="subscriptions/payment" element={<PaymentDetails />} /> 
           </Route>
           <Route path="security" element={<SecuritySettings />} />
-          <Route path="payment-history" element={<PaymentHistory />} />
+          <Route path="payment-history" element={<PaymentHistory />}>
+            <Route path="receipt" element={<ReceiptDetails />} />
+          </Route>
         </Route>
-
-        <Route path="/economic_indicators" element={<EconomicIndicators />} />
-        <Route
-          path="/international_demonstrators"
-          element={<InternationalDemonstrators />}
-        />
-        <Route path="/open_infobase" element={<OpenInfobase />} />
       </Route>
 
       <Route path="*" element={<NotFound />} />

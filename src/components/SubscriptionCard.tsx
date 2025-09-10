@@ -1,6 +1,15 @@
 import React from "react";
 
-const Card = ({
+type CardProps = {
+  title: string;
+  price: number | string;
+  originalPrice?: number | string;
+  period?: string;
+  features: string[];
+  isCurrent?: boolean;
+};
+
+const Card:React.FC<CardProps> = ({
   title,
   price,
   originalPrice,
@@ -8,14 +17,14 @@ const Card = ({
   features,
   isCurrent = false
 }) => {
-  const planColors = {
+  const planColors:Record<string,string> = {
     "Pulsuz Paket": "#5D80E3",
     "Standart Paket": "#2F57C8",
     "Premium Paket": "#1D3579",
   };
 
   return (
-    <div className="relative bg-gray-800 rounded-2xl overflow-hidden text-white flex flex-col h-[410px] max-w-[280px]">
+    <div className="relative bg-gray-800 rounded-2xl overflow-hidden text-white flex flex-col h-[410px] max-w-[260px]">
       <div
         className="relative w-full"
         style={{ backgroundColor: planColors[title], height: "28%" }}

@@ -1,67 +1,42 @@
-import CustomizedAccordions from "@/components/AccordionMUI"
-import "../assets/sass/about.scss"
-import LogoCarousel from "@/components/LogoCarousel"
-import BackgroundVideo from "@/components/bg-video/BackgroundVideo"
-// import iqtisadiyyat from "/logoMinistry/iqtisadiyyat.png";
-// import sim_center from "/logoMinistry/sim_center.png";
-// import four_center from "/logoMinistry/4SIM.png";
+import "../assets/sass/about.scss";
+import BackgroundVideo from "@/components/bg-video/BackgroundVideo";
+import AboutFooter from "@/layout/AboutFooter";
+import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 
 const About = () => {
-    return (
-        <div className="aboutPage h-[114vh]">
-            <div>
-                {/* <div className="absolute top-0 left-0 w-full h-full object-cover -z-10"
-                    style={{ top: 0, left: 0, width: '100%', height: '100%', backgroundColor: '#050412' }}>
-
-                </div> */}
-
-                <div className="video-background">
-                    <BackgroundVideo videoSrc="/about/bg-about.mp4" />
-                </div>
-
-
-                <div>
-                    <CustomizedAccordions />
-                </div>
-                {/* <div>
-                    <div className="pt-4 ">
-                        <div className="flex justify-around items-center flex-wrap">
-                            <div className="p-6">
-                                <a href="https://www.economy.gov.az" target="_blank" rel="noreferrer noopener">
-                                    <img className="w-[110px]" src={iqtisadiyyat} alt="iqtisadiyyat_center_logo" />
-                                </a>
-                            </div>
-                            <div className="p-6">
-                                <a href="https://4sim.gov.az/az" target="_blank" rel="noreferrer noopener">
-                                    <img className="w-[110px]" src={four_center} alt="iqtisadiyyat_center_logo" />
-                                </a>
-                            </div>
-                            <div className="p-6">
-                                <a href="https://4sim.gov.az/az" target="_blank" rel="noreferrer noopener">
-                                    <img className="w-[110px]" src={sim_center} alt="sim_center_logo" />
-                                </a>
-                            </div>
-                            <div className="p-6">
-                                <a href="https://www.economy.gov.az" target="_blank" rel="noreferrer noopener">
-                                    <img className="w-[110px]" src={iqtisadiyyat} alt="iqtisadiyyat_center_logo" />
-                                </a>
-                            </div>
-                            <div className="p-6">
-                                <a href="https://4sim.gov.az/az" target="_blank" rel="noreferrer noopener">
-                                    <img className="w-[110px]" src={four_center} alt="iqtisadiyyat_center_logo" />
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div> */}
-                <div>
-                    <LogoCarousel />
-
-                </div>
-
-            </div>
+  const { t } = useTranslation();
+  return (
+    <div className="aboutPage">
+      <div className="flex flex-col h-[90vh] justify-between">
+        <div className="video-background">
+          <BackgroundVideo videoSrc="/about/bg-about.mp4" />
         </div>
-    )
-}
 
-export default About
+        <div className="self-end flex flex-col max-w-[872px] mt-20">
+          <h1 className="text-6xl text-[#8994D7] font-semibold poppins">
+            {t("about.heroTitle")}
+          </h1>
+          <div className="flex flex-col justify-between w-[40vw] mr-8 h-[55vh]">
+            <p className="mt-5 text-[#E6E6E7] text-lg font-normal">
+              {t("about.paragraph")}
+            </p>
+            <div className="poppins font-normal text-4xl text-[#E6E6E7]">
+              <Link to="purpose" className="flex justify-between">
+                <h2>{t("about.goal.title")}</h2>
+                <img src="about\link_icon.svg" alt="link"></img>
+              </Link>
+              <Link to="mission" className="mt-3 flex justify-between">
+                <h2>{t("about.mission.title")}</h2>
+                <img src="about\link_icon.svg" alt="link"></img>
+              </Link>
+            </div>
+          </div>
+        </div>
+        <AboutFooter />
+      </div>
+    </div>
+  );
+};
+
+export default About;

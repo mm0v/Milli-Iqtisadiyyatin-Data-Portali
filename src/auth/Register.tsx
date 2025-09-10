@@ -80,9 +80,9 @@ const Register = () => {
                                     </button>
                                 </div>
                                 <p className="text-xs text-gray-500">
-                                    {t('auth.register.alert')}
+                                    {t('auth.alert')}
                                 </p>
-                                <Label className="text-white" htmlFor="password">{t('auth.register.confirmPass')}</Label>
+                                <Label className="text-white" htmlFor="password">{t('auth.confirmPass')}</Label>
                                 <div className="relative">
                                     <Input
                                         id="password"
