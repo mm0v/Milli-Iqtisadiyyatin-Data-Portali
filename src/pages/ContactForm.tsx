@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
-import { Listbox} from '@headlessui/react';
+import { Listbox } from '@headlessui/react';
 import { ChevronDownIcon } from "lucide-react";
 
 const ContactForm = () => {

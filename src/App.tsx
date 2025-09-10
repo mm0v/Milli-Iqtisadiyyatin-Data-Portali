@@ -41,15 +41,6 @@ import ProfileSettings from "./pages/ProfileSettings";
 
 import InternationalDemonstrators from "./pages/InternationalDemonstrators";
 
-
-import ProfileDeactivate from "./pages/ProfileDeactivate.tsx";
-import PaymentHistory from "./pages/PaymentHistory.tsx";
-import Navbar from './layout/Navbar.tsx'
-import ReCapcha from './pages/ReCapcha.tsx'
-import ConfirmDetails from './pages/ConfirmDetails.tsx'
-import NewPassword from './pages/NewPassword.tsx'
-import SectorEconomic from './pages/SectorEcenomic.tsx'
-import OpenInfobase from './pages/OpenInfobase.tsx'
 import OpenInfoAllData from './pages/OpenInfoAllData.tsx'
 import OpenInfoPages from './pages/OpenInfoPages.tsx'
 
@@ -76,6 +67,11 @@ import ReportDetails from "./pages/ReportDetails";
 import Purpose from "./pages/Purpose";
 import Mission from "./pages/Mission";
 import AboutLayout from "./layout/AboutLayout";
+import OpenInfoHealth from "./pages/OpenInfoHealth.tsx";
+import OpenInfoTourism from "./pages/OpenInfoTourism.tsx";
+import OpenInfoEnergy from "./pages/OpenInfoEnergy.tsx";
+import OpenInfoDemographicIndicators from "./pages/OpenInfoDemographicIndicators.tsx";
+import OpenInfoAgriculture from "./pages/OpenInfoAgriculture.tsx";
 
 
 const MainLayout = () => {
@@ -152,11 +148,11 @@ function App() {
           <Route path="international_demonstrators" element={<InternationalDemonstrators />} />
           <Route path='open_info' element={<OpenInfoPages/>}>
             <Route path='all_data' element={<OpenInfoAllData/>}/>
-            <Route path='health' /> 
-            <Route path='tourism' /> 
-            <Route path='energy' /> 
-            <Route path='demographic_indicators' /> 
-            <Route path='agriculture' /> 
+            <Route path='health'  element={<OpenInfoHealth/>}/> 
+            <Route path='tourism' element={<OpenInfoTourism/>}/> 
+            <Route path='energy' element={<OpenInfoEnergy/>}/> 
+            <Route path='demographic_indicators' element={<OpenInfoDemographicIndicators/>}/> 
+            <Route path='agriculture' element={<OpenInfoAgriculture/>}/> 
           </Route>
           
 
