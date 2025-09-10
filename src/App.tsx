@@ -72,6 +72,9 @@ import OpenInfoTourism from "./pages/OpenInfoTourism.tsx";
 import OpenInfoEnergy from "./pages/OpenInfoEnergy.tsx";
 import OpenInfoDemographicIndicators from "./pages/OpenInfoDemographicIndicators.tsx";
 import OpenInfoAgriculture from "./pages/OpenInfoAgriculture.tsx";
+import OpenInfoEconomicMap from "./pages/OpenInfoEconomicMap.tsx";
+import OpenInfoStaticCalendar from "./pages/OpenInfoStaticCalendar.tsx";
+import OpenInfoDataPolicy from "./pages/OpenInfoDataPolicy.tsx";
 
 
 const MainLayout = () => {
@@ -153,6 +156,10 @@ function App() {
             <Route path='energy' element={<OpenInfoEnergy/>}/> 
             <Route path='demographic_indicators' element={<OpenInfoDemographicIndicators/>}/> 
             <Route path='agriculture' element={<OpenInfoAgriculture/>}/> 
+            <Route path='economic_map' element={<OpenInfoEconomicMap/>}/> 
+            <Route path='statistical_calendar' element={<OpenInfoStaticCalendar/>}/> 
+            <Route path='open_data_policy' element={<OpenInfoDataPolicy/>}/> 
+            <Route path='data_request' element={<OpenInfoDataPolicy/>}/> 
           </Route>
           
 
