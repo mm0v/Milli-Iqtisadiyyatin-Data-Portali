@@ -44,7 +44,17 @@ const AnalyticsSidebar = () => {
                         { label: t("analytic.eGov"), route: "/analytics/international_demonstrators/e_gov" },
                     ],
                 },
-                { label: t("analytic.infobase"), route: "/analytics/open_infobase" },
+                {   label: t("analytic.infobase"), 
+                    route: "/analytics/open_info",
+                    subItems: [ 
+                        { label: t("analytic.allData"), route: "/analytics/open_info/all_data" },
+                        { label: t("analytic.health"), route: "/analytics/open_info/health" },
+                        { label: t("analytic.tourism"), route: "/analytics/open_info/tourism" },
+                        { label: t("analytic.energy"), route: "/analytics/open_info/energy" },
+                        { label: t("analytic.demographic_indicators"), route: "/analytics/open_info/demographic_indicators" },
+                        { label: t("analytic.agriculture"), route: "/analytics/open_info/agriculture" },
+                    ]
+                },
             ],
         },
     ];

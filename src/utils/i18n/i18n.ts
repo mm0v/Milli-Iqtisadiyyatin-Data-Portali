@@ -54,7 +54,13 @@ const resources = {
         global: "Global Innovation Index",
         aiIndex: "Artificial Intelligence Readiness Index",
         eGov: "E-Government Development Index",
-        visualization: "If you want your data to be visualized, you can contact us."
+        visualization: "If you want your data to be visualized, you can contact us.",
+        allData: "All Data",
+        health: "Health",
+        tourism: "Tourism",
+        energy: "Energy",
+        demographic_indicators: "Demographic Indicators",
+        agriculture: "Agriculture",
       },
       report: {
         publications: "Academic Publications",
@@ -169,6 +175,12 @@ const resources = {
         aiIndex: "Süni intellekt hazırlıq indeksi",
         eGov: "Elektron hökumətin inkişafı indeksi",
         visualization: "Məlumatlarınızın vizuallaşdırılmasını istəyirsinizsə, bizə müraciət edə bilərsiniz.",
+        allData: "Bütün datalar",
+        health: "Səhiyyə",
+        tourism: "Turizm",
+        energy: "Enerji",
+        demographic_indicators: "Demoqrafik göstəricilər",
+        agriculture: "Kənd təsərrüfatı",
       },
       report: {
         publications: "Akademik Nəşrlər",
@@ -284,7 +296,13 @@ const resources = {
         global: "Глобальный индекс инноваций",
         aiIndex: "Индекс готовности к искусственному интеллекту",
         eGov: "Индекс развития электронного правительства",
-        visualization: "Если вы хотите визуализировать свои данные, вы можете связаться с нами."
+        visualization: "Если вы хотите визуализировать свои данные, вы можете связаться с нами.",
+        allData: "Все данные",
+        health: "Здоровье",
+        tourism: "Туризм",
+        energy: "Энергия",
+        demographic_indicators: "Демографические показатели",
+        agriculture: "Аграрная сфера",
       },
       report: {
         publications: "Академические публикации",
