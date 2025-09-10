@@ -60,6 +60,9 @@ import GlobalInnovationIndexRank from "./pages/GlobalInnovationIndexRank";
 import AiReadinessRank from "./pages/AiReadinessRank";
 import EGovernmentDevelopmentIndex from "./pages/EGovernmentDevelopmentIndex";
 import ReportDetails from "./pages/ReportDetails";
+import Purpose from "./pages/Purpose";
+import Mission from "./pages/Mission";
+import AboutLayout from "./layout/AboutLayout";
 
 const MainLayout = () => {
   const location = useLocation();
@@ -106,6 +109,10 @@ function App() {
       <Route element={<MainLayout />}>
         <Route index element={<Home />} />
         <Route path="/about" element={<About />} />
+        <Route path="/about" element={<AboutLayout />}>
+          <Route path="purpose" element={<Purpose />}></Route>
+          <Route path="mission" element={<Mission />}></Route>
+        </Route>
         <Route path="/analytics" element={<Analytics />}>
           <Route path="economic_indicators" element={<EconomicIndicators />}>
             <Route path="macro" element={<MacroEconomic />} />
