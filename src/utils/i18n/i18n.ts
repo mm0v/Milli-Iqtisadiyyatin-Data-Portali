@@ -61,6 +61,10 @@ const resources = {
         energy: "Energy",
         demographic_indicators: "Demographic Indicators",
         agriculture: "Agriculture",
+        economic_map: "Interactive Economic Map",
+        statistical_calendar: "Statistical Calendar",
+        open_data_policy: "Azerbaijan Open Data Policy",
+        data_request: "Dataset Request"
       },
       report: {
         publications: "Academic Publications",
@@ -181,6 +185,10 @@ const resources = {
         energy: "Enerji",
         demographic_indicators: "Demoqrafik göstəricilər",
         agriculture: "Kənd təsərrüfatı",
+        economic_map: "Xəritə üzrə iqtisadi göstəricilər",
+        statistical_calendar: "Statistik təqvim",
+        open_data_policy: "Azərbaycan açıq məlumat siyasəti",
+        data_request: "Dataset sorğusu"
       },
       report: {
         publications: "Akademik Nəşrlər",
@@ -303,6 +311,10 @@ const resources = {
         energy: "Энергия",
         demographic_indicators: "Демографические показатели",
         agriculture: "Аграрная сфера",
+        economic_map: "Интерактивная экономическая карта",
+        statistical_calendar: "Статистический календарь",
+        open_data_policy: "Политика открытых данных Азербайджана",
+        data_request: "Запрос на набор данных",
       },
       report: {
         publications: "Академические публикации",

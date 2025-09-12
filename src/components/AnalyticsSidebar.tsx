@@ -53,6 +53,10 @@ const AnalyticsSidebar = () => {
                         { label: t("analytic.energy"), route: "/analytics/open_info/energy" },
                         { label: t("analytic.demographic_indicators"), route: "/analytics/open_info/demographic_indicators" },
                         { label: t("analytic.agriculture"), route: "/analytics/open_info/agriculture" },
+                        {label: t("analytic.economic_map"), route: "/analytics/open_info/economic_map"},
+                        {label: t("analytic.statistical_calendar"), route: "/analytics/open_info/statistical_calendar"},
+                        {label: t("analytic.open_data_policy"), route: "/analytics/open_info/open_data_policy"},
+                        {label: t("analytic.data_request"), route: "/analytics/open_info/data_request"},
                     ]
                 },
             ],
@@ -64,7 +68,7 @@ const AnalyticsSidebar = () => {
             const isActive = path.startsWith(item.route);
 
             return (
-                <div key={index} className=" mt-4 float-left">
+                <div key={index} className="mt-4 float-left">
                     <NavLink
                         to={item.route}
                         className={({ isActive: active }) =>
